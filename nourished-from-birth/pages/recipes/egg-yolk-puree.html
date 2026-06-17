@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egg Yolk Purée — Nourished From Birth</title>
+  <meta name="description" content="The perfect first food for babies 6 months+ — soft boiled egg yolk served with avocado, banana, or applesauce. Rich in choline, healthy fats, and brain-building nutrients." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+
+    /* HERO IMAGE */
+    .recipe-image-hero {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* RECIPE HEADER */
+    .recipe-header {
+      background: var(--cream);
+      padding: 2.5rem 6rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .recipe-header-top {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .age-badge {
+      background: var(--sage);
+      color: white;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .recipe-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 1.2rem;
+      color: var(--dark-brown);
+    }
+
+    .recipe-meta-strip {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .recipe-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .meta-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .meta-value {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--dark-brown);
+    }
+
+    /* RECIPE BODY */
+    .recipe-body {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    /* INGREDIENTS */
+    .recipe-ingredients {
+      padding-right: 3rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .recipe-ingredients h2,
+    .recipe-steps h2 {
+      font-size: 1rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--burgundy);
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .ingredients-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .ingredients-list li:last-child { border: none; }
+
+    .ingredients-list li::before {
+      content: '·';
+      color: var(--terracotta);
+      font-weight: bold;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .optional-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin: 1.2rem 0 0.6rem;
+    }
+
+    .source-note {
+      background: rgba(128,0,32,0.05);
+      border-left: 3px solid var(--burgundy);
+      padding: 0.8rem 1rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-top: 1.2rem;
+    }
+
+    /* STEPS */
+    .recipe-steps {
+      padding-left: 3rem;
+    }
+
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      background: var(--burgundy);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .step-text {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      padding-top: 0.25rem;
+    }
+
+    /* AGE TABLE */
+    .age-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      font-size: 0.88rem;
+    }
+
+    .age-table th {
+      background: var(--burgundy);
+      color: white;
+      padding: 0.6rem 1rem;
+      text-align: left;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .age-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+
+    .storage-note {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    /* MAKING IT FUN */
+    .fun-section, .nourishes-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .fun-section h2, .nourishes-section h2 {
+      font-size: 1rem;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--burgundy);
+    }
+
+    .fun-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .fun-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.2rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .nourishes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .nourish-item {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+    .nourish-desc { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+
+    @media (max-width: 900px) {
+      .recipe-image-hero { height: 300px; }
+      .recipe-header { padding: 2rem 1.5rem; }
+      .recipe-body { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+      .recipe-ingredients { padding-right: 0; border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem; }
+      .recipe-steps { padding-left: 0; }
+      .fun-list { grid-template-columns: 1fr; }
+      .nourishes-grid { grid-template-columns: repeat(2, 1fr); }
+      .fun-section, .nourishes-section { padding: 2rem 1.5rem; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO IMAGE -->
+  <img src="../../images/egg-yolk-puree.jpg" alt="Soft boiled egg cut in half showing golden jammy yolk with avocado and banana" class="recipe-image-hero" />
+
+  <!-- RECIPE HEADER -->
+  <div class="recipe-header">
+    <div class="recipe-header-top">
+      <span class="label">First Foods</span>
+      <span class="age-badge">✓ 6 Months+</span>
+    </div>
+    <h1>Egg Yolk Purée</h1>
+    <div class="recipe-meta-strip">
+      <div class="recipe-meta-item">
+        <span class="meta-label">Prep Time</span>
+        <span class="meta-value">2 min</span>
+      </div>
+      <div class="recipe-meta-item">
+        <span class="meta-label">Cook Time</span>
+        <span class="meta-value">5 min</span>
+      </div>
+      <div class="recipe-meta-item">
+        <span class="meta-label">Serves</span>
+        <span class="meta-value">1 baby</span>
+      </div>
+      <div class="recipe-meta-item">
+        <span class="meta-label">Age</span>
+        <span class="meta-value">6 months+</span>
+      </div>
+      <div class="recipe-meta-item">
+        <span class="meta-label">Storage</span>
+        <span class="meta-value">Best fresh · 24hr fridge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECIPE BODY -->
+  <div class="recipe-body">
+
+    <!-- INGREDIENTS -->
+    <div class="recipe-ingredients">
+      <h2>Ingredients</h2>
+      <ul class="ingredients-list">
+        <li>1 pasture-raised egg (freshest you can find)</li>
+        <li>Pinch of salt (omit under 12 months)</li>
+      </ul>
+
+      <p class="optional-label">Optional mix-ins — pick one</p>
+      <ul class="ingredients-list">
+        <li>½ ripe avocado</li>
+        <li>½ ripe banana</li>
+        <li>1 tbsp unsweetened applesauce</li>
+      </ul>
+
+      <div class="source-note">
+        Always use the freshest pasture-raised eggs from a trusted local farm — quality of your egg source matters more than anything.
+      </div>
+    </div>
+
+    <!-- STEPS -->
+    <div class="recipe-steps">
+      <h2>Instructions</h2>
+      <ol class="steps-list">
+        <li class="step-item">
+          <span class="step-number">1</span>
+          <span class="step-text">Bring a small pot of water to a gentle boil.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">2</span>
+          <span class="step-text">Lower the egg in carefully and cook for exactly 4 minutes — you want the white just set and the yolk still soft and jammy.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">3</span>
+          <span class="step-text">Remove from water and cut the egg in half.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">4</span>
+          <span class="step-text">Scoop out the yolk with a spoon — discard the white for now. Whites are a more common allergen; introduce them separately once yolk is well tolerated.</span>
+        </li>
+        <li class="step-item">
+          <span class="step-number">5</span>
+          <span class="step-text">Serve the yolk as is with a spoon, or mash with your choice of avocado, banana, or applesauce.</span>
+        </li>
+      </ol>
+
+      <h2>How to Serve by Age</h2>
+      <table class="age-table">
+        <thead>
+          <tr>
+            <th>Age</th>
+            <th>How to Serve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>6–9 months</strong></td>
+            <td>Smooth mash, spoon fed. Add a spoonful of butter or tallow for extra healthy fats.</td>
+          </tr>
+          <tr>
+            <td><strong>10–12 months</strong></td>
+            <td>Slightly textured, let them self feed with a preloaded spoon. Melt butter on top.</td>
+          </tr>
+          <tr>
+            <td><strong>12 months+</strong></td>
+            <td>Whole soft boiled egg as finger food.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="storage-note">⚠️ Always consult your pediatrician before introducing new foods. Introduce egg yolk as a single ingredient first and wait 3–5 days before adding other new foods.</p>
+    </div>
+  </div>
+
+  <!-- MAKING IT FUN -->
+  <div class="fun-section">
+    <h2>Making it Fun</h2>
+    <ul class="fun-list">
+      <li class="fun-item">🍽️ <strong>Colorful plate</strong> — serve on a small bright plate. Visual appeal matters even at 6 months.</li>
+      <li class="fun-item">🥄 <strong>Their own spoon</strong> — give them a cute baby spoon to hold while you feed them. Builds independence.</li>
+      <li class="fun-item">🍳 <strong>Eat together</strong> — crack your own egg at the same time. Babies copy what they see — it's their earliest food lesson.</li>
+    </ul>
+  </div>
+
+  <!-- WHY IT NOURISHES -->
+  <div class="nourishes-section">
+    <h2>Why This Nourishes</h2>
+    <div class="nourishes-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🧠</span>
+        <div class="nourish-title">Choline</div>
+        <div class="nourish-desc">One of the highest dietary sources — critical for brain development and memory</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Healthy Fats</div>
+        <div class="nourish-desc">Yolk fat is perfectly designed for a baby's rapidly developing brain</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🦴</span>
+        <div class="nourish-title">Vitamin D</div>
+        <div class="nourish-desc">Supports bone development and immune function from the very first bites</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">💛</span>
+        <div class="nourish-title">Vitamin A</div>
+        <div class="nourish-desc">Supports vision development and a healthy immune system</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">⚡</span>
+        <div class="nourish-title">Vitamin B12</div>
+        <div class="nourish-desc">Essential for nervous system development and healthy red blood cells</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
