@@ -651,7 +651,7 @@ footer {
 
 .cta-link:hover { background: rgba(255,255,255,0.22); }
 .cta-link .icon { font-size: 1.3rem; }
-.cta-link span { font-family: 'Jost', sans-serif; font-size: 0.85rem; }
+.cta-link span { font-family: 'Jost', sans-serif; font-size: 1.05rem; }
 
 /* RECIPES PAGE */
 .recipe-filters { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem; }
