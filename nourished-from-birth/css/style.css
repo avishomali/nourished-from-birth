@@ -177,7 +177,7 @@ nav {
 .hero h1 em { font-style: italic; color: var(--burgundy); }
 
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
@@ -396,7 +396,7 @@ section { padding: 6rem 6rem; }
 }
 
 .about-content h2 { margin-bottom: 1.5rem; }
-.about-content p { margin-bottom: 1.2rem; line-height: 1.85; }
+.about-content p { margin-bottom: 1.2rem; line-height: 1.85; font-size: 1.05rem; }
 
 .about-pillars {
   display: flex;
@@ -408,10 +408,10 @@ section { padding: 6rem 6rem; }
 .pillar-tag {
   background: var(--cream);
   border: 1px solid var(--border);
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 2rem;
   font-family: 'Jost', sans-serif;
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--warm-brown);
   letter-spacing: 0.05em;
 }
@@ -623,8 +623,8 @@ footer {
 }
 
 .prose-pillar .icon { font-size: 1.5rem; flex-shrink: 0; }
-.prose-pillar h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
-.prose-pillar p { font-size: 1rem; margin: 0; line-height: 1.6; }
+.prose-pillar h4 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.prose-pillar p { font-size: 1.05rem; margin: 0; line-height: 1.7; }
 
 .cta-box {
   background: linear-gradient(135deg, var(--burgundy), var(--burgundy-dark));
