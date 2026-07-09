@@ -195,7 +195,7 @@
       </div>
     </div>
 
-    <!-- 0-6 MONTHS -->
+    <!-- 6 MONTHS+ -->
     <div class="stage-section">
       <div class="stage-header">
         <span class="stage-icon">🍼</span>
@@ -214,6 +214,19 @@
             </div>
           </div>
         </a>
+        <a href="recipes/chicken-liver-pate.html" class="recipe-card" style="text-decoration:none; color:inherit;">
+          <div class="recipe-thumb" style="padding:0; overflow:hidden;">
+            <img src="../images/chicken-liver-pate.webp" alt="Chicken liver pâté for babies" style="width:100%; height:140px; object-fit:cover;" />
+          </div>
+          <div class="recipe-info">
+            <h4>Chicken Liver Pâté</h4>
+            <p>A creamy, mild pâté rich in iron, B12, and choline — one of the most nutrient-dense first foods you can offer at 6 months.</p>
+            <div class="recipe-meta">
+              <span class="recipe-tag">Iron</span>
+              <span class="recipe-tag">6+ Months</span>
+            </div>
+          </div>
+        </a>
         <div class="recipe-card">
           <div class="recipe-thumb">🦴</div>
           <div class="recipe-info">
@@ -222,17 +235,6 @@
             <div class="recipe-meta">
               <span class="recipe-tag">Gut Lining</span>
               <span class="recipe-tag">Gelatin-Rich</span>
-            </div>
-          </div>
-        </div>
-        <div class="recipe-card">
-          <div class="recipe-thumb">🥩</div>
-          <div class="recipe-info">
-            <h4>Beef Liver Purée</h4>
-            <p>One of the most nutrient-dense foods you can offer after 6 months — start with small amounts once or twice a week due to its high Vitamin A content.</p>
-            <div class="recipe-meta">
-              <span class="recipe-tag">Iron</span>
-              <span class="recipe-tag">6+ Months</span>
             </div>
           </div>
         </div>
@@ -341,13 +343,11 @@
     <p class="email-note">No spam. Unsubscribe anytime.</p>
   </section>
 
-  <!-- FOOTER -->
-
   <!-- DISCLAIMER -->
   <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
     <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
-      The content on this site is based on personal experience and research and is intended for informational purposes only. 
-      It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or 
+      The content on this site is based on personal experience and research and is intended for informational purposes only.
+      It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or
       a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
     </p>
   </div>
@@ -382,7 +382,7 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="#">Instagram</a></li>
-                    <li><a href="../index.html#newsletter">Newsletter</a></li>
+          <li><a href="../index.html#newsletter">Newsletter</a></li>
         </ul>
       </div>
     </div>
@@ -394,7 +394,6 @@
 
   <script src="../js/main.js"></script>
   <script>
-    // Filter buttons
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
