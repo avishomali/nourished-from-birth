@@ -8,115 +8,30 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
   <style>
-    .recipes-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.8rem;
-      margin-top: 1rem;
-    }
+    .recipes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 1rem; }
     .stage-section { margin-bottom: 4rem; }
-    .stage-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
+    .stage-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
     .stage-icon { font-size: 1.8rem; }
     .stage-header h2 { font-size: 1.4rem; margin: 0; }
-    .stage-header .stage-desc {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      background: rgba(199,109,53,0.1);
-      padding: 0.3rem 0.8rem;
-      border-radius: 2rem;
-    }
-    .recipe-card {
-      background: white;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: transform 0.25s, box-shadow 0.25s;
-      cursor: pointer;
-    }
-    .recipe-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px var(--shadow);
-    }
-    .recipe-thumb {
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      background: linear-gradient(135deg, var(--cream), var(--border));
-    }
+    .stage-header .stage-desc { font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); background: rgba(199,109,53,0.1); padding: 0.3rem 0.8rem; border-radius: 2rem; }
+    .recipe-card { background: white; border-radius: 1.2rem; overflow: hidden; border: 1px solid var(--border); transition: transform 0.25s, box-shadow 0.25s; cursor: pointer; }
+    .recipe-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow); }
+    .recipe-thumb { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; background: linear-gradient(135deg, var(--cream), var(--border)); }
     .recipe-info { padding: 1.2rem; }
-    .recipe-info h4 {
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-      color: var(--dark-brown);
-    }
-    .recipe-info p {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin: 0;
-    }
-    .recipe-meta {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: 0.8rem;
-      flex-wrap: wrap;
-    }
-    .recipe-tag {
-      font-family: 'Jost', sans-serif;
-      font-size: 0.65rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--sage-dark);
-      background: rgba(122,158,126,0.12);
-      padding: 0.2rem 0.6rem;
-      border-radius: 1rem;
-    }
-    .placeholder-notice {
-      background: var(--warm-white);
-      border: 2px dashed var(--border);
-      border-radius: 1.2rem;
-      padding: 2rem;
-      text-align: center;
-      grid-column: 1 / -1;
-    }
-    .placeholder-notice p {
-      font-size: 0.9rem;
-      color: var(--text-light);
-      margin: 0;
-    }
-    @media (max-width: 900px) {
-      .recipes-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .recipes-grid { grid-template-columns: 1fr; }
-    }
+    .recipe-info h4 { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--dark-brown); }
+    .recipe-info p { font-size: 0.8rem; color: var(--text-light); margin: 0; }
+    .recipe-meta { display: flex; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap; }
+    .recipe-tag { font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage-dark); background: rgba(122,158,126,0.12); padding: 0.2rem 0.6rem; border-radius: 1rem; }
+    .placeholder-notice { background: var(--warm-white); border: 2px dashed var(--border); border-radius: 1.2rem; padding: 2rem; text-align: center; grid-column: 1 / -1; }
+    .placeholder-notice p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+    @media (max-width: 900px) { .recipes-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .recipes-grid { grid-template-columns: 1fr; } }
   </style>
   <script>
   (function (s, e, n, d, er) {
-    s['Sender'] = er;
-    s[er] = s[er] || function () {
-      (s[er].q = s[er].q || []).push(arguments)
-    }, s[er].l = 1 * new Date();
-    s[er].on = function (event, callback) {
-      s[er].listeners = s[er].listeners || {};
-      (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
-    };
-    var a = e.createElement(n),
-        m = e.getElementsByTagName(n)[0];
-    a.async = 1;
-    a.src = d;
-    m.parentNode.insertBefore(a, m)
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
   sender('c55b498fbe1031')
   </script>
@@ -124,13 +39,8 @@
 <body>
 
   <nav>
-    <a href="../index.html" class="nav-logo">
-      Nourished From Birth
-      <span>Ancestral Wisdom · Real Food</span>
-    </a>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="start-here.html">Start Here</a></li>
       <li><a href="recipes.html">Recipes</a></li>
@@ -185,9 +95,9 @@
           <div class="recipe-thumb">🍌</div>
           <div class="recipe-info">
             <h4>Ghee & Banana Mash</h4>
-            <p>The simplest ancestral first food — no cooking, no equipment, ready in two minutes.</p>
+            <p>Ripe banana mashed with melted ghee and a pinch of cinnamon — simple, nourishing, and ready in minutes.</p>
             <div class="recipe-meta">
-              <span class="recipe-tag">No-Cook</span>
+              <span class="recipe-tag">Quick</span>
               <span class="recipe-tag">6+ Months</span>
             </div>
           </div>
@@ -257,19 +167,8 @@
         <span class="stage-desc">Under 5 Minutes</span>
       </div>
       <div class="recipes-grid">
-        <a href="recipes/ghee-banana-mash.html" class="recipe-card" style="text-decoration:none; color:inherit;">
-          <div class="recipe-thumb">🍌</div>
-          <div class="recipe-info">
-            <h4>Ghee & Banana Mash</h4>
-            <p>The simplest ancestral first food — no cooking, no equipment, ready in two minutes.</p>
-            <div class="recipe-meta">
-              <span class="recipe-tag">No-Cook</span>
-              <span class="recipe-tag">6+ Months</span>
-            </div>
-          </div>
-        </a>
         <div class="placeholder-notice">
-          <p>✨ More quick recipes coming soon. <a href="../index.html#newsletter" style="color: var(--terracotta);">Subscribe for updates.</a></p>
+          <p>✨ Quick & no-cook recipes coming soon. <a href="../index.html#newsletter" style="color: var(--terracotta);">Subscribe for updates.</a></p>
         </div>
       </div>
     </div>
@@ -319,45 +218,19 @@
   <!-- DISCLAIMER -->
   <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
     <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
-      The content on this site is based on personal experience and research and is intended for informational purposes only.
-      It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or
-      a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
     </p>
   </div>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="nav-logo">
-          Nourished From Birth
-          <span>Ancestral Wisdom · Real Food</span>
-        </a>
+        <a href="../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
         <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood.</p>
       </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="start-here.html">Start Here</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="learn.html">Learn</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Topics</h4>
-        <ul>
-          <li><a href="#">Gut Health</a></li>
-          <li><a href="#">Weston A. Price</a></li>
-          <li><a href="#">Meat Stock & Broths</a></li>
-          <li><a href="#">First Foods</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="../index.html#newsletter">Newsletter</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="start-here.html">Start Here</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Weston A. Price</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../index.html#newsletter">Newsletter</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Nourished From Birth. All rights reserved.</p>
