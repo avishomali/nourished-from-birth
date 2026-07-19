@@ -25,7 +25,10 @@
     .placeholder-notice { background: var(--warm-white); border: 2px dashed var(--border); border-radius: 1.2rem; padding: 2rem; text-align: center; grid-column: 1 / -1; }
     .placeholder-notice p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
     @media (max-width: 900px) { .recipes-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .recipes-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) {
+  .recipes-grid { grid-template-columns: 1fr; }
+  section { padding: 2rem 1.2rem !important; }
+}
   </style>
   <script>
   (function (s, e, n, d, er) {
