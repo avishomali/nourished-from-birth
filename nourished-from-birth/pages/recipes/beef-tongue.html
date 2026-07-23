@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian-Style Slow Simmered Beef Tongue — Nourished From Birth</title>
+  <meta name="description" content="A nourishing, melt-in-your-mouth nose-to-tail classic — gently simmered with aromatic vegetables and warm spices until impossibly tender. Baby-friendly from 6 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .serving-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .serving-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .serving-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.6rem; }
+    .serving-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.7; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .broth-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1.2rem 1.5rem; border-radius: 0 1rem 1rem 0; margin: 1.5rem 0 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .broth-box strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+      .serving-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/beef-tongue.webp" alt="Thinly sliced Persian-style beef tongue on a plate with golden turmeric broth alongside" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites · Slow-Cooked</span>
+      <span class="age-badge">✓ 6 Months+</span>
+      <h1>Persian-Style Slow Simmered Beef Tongue</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">10 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">3½–4 hrs</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">6–8</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">6 months+</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">3 days fridge / 2 months freezer</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>1 whole beef tongue (2½ to 4 lbs, grass-fed or organic if possible)</li>
+          <li>1 large yellow onion, quartered</li>
+          <li>6 garlic cloves, smashed</li>
+          <li>3 bay leaves</li>
+          <li>2 tsp ground turmeric</li>
+          <li>8 to 10 whole black peppercorns</li>
+          <li>2 tsp sea salt (added during the last 30 minutes)</li>
+          <li>Filtered water, enough to cover by about 2 inches</li>
+        </ul>
+        <span class="optional-label">Optional for serving</span>
+        <ul class="ingredients-list">
+          <li>Ghee, butter, or beef tallow (for searing slices)</li>
+        </ul>
+        <div class="source-note">Whole peppercorns give a cleaner, clearer broth than ground pepper. Salt added near the end of cooking keeps the meat tender and juicy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>Why beef tongue?</strong>
+      Beef tongue is one of the most overlooked cuts of meat in modern kitchens, but it has been a staple of traditional diets across Iran, Mexico, Eastern Europe, and beyond for centuries. It is rich in protein, iron, zinc, vitamin B12, choline, and healthy fats — a genuinely nourishing nose-to-tail food. Slow simmering transforms it into incredibly tender meat while creating a deeply flavorful golden broth. It is one of those dishes where the whole family eats together, each person at their own texture and serving style.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text">Rinse the beef tongue well under cold water. Trim away any loose fat or glands at the base if needed.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text">Place the tongue in a large Dutch oven or stockpot. Add onion, garlic, bay leaves, turmeric, and peppercorns.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text">Cover with filtered water by about 2 inches. Bring to a boil, then immediately reduce to the gentlest simmer.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text">Cover and cook for 3½ to 4 hours, or until a knife slides easily into the thickest part with no resistance.</span></li>
+      <li class="step-item"><span class="step-number">5</span><span class="step-text">Add sea salt during the last 30 minutes of cooking.</span></li>
+      <li class="step-item"><span class="step-number">6</span><span class="step-text">Transfer the tongue to a cutting board. While it is still warm, peel away the thick outer skin — it comes off easily when warm and becomes much harder to remove once it cools. Trim any excess fat or connective tissue from the base.</span></li>
+      <li class="step-item"><span class="step-number">7</span><span class="step-text">Slice thinly across the grain. Serve immediately, or lightly sear the slices in butter, ghee, or beef tallow for 1 to 2 minutes per side until lightly golden.</span></li>
+    </ol>
+
+    <h2 class="section-title">How to Serve</h2>
+    <div class="serving-grid">
+      <div class="serving-item">
+        <h4>👶 For babies and toddlers</h4>
+        <p>Ladle warm broth into a small cup and let them sip it alongside their meal. Serve thin slices of tongue — the meat is so tender after slow cooking that it requires almost no chewing. For younger babies, blend or finely mash the meat with a little broth.</p>
+      </div>
+      <div class="serving-item">
+        <h4>🥖 For adults</h4>
+        <p>Layer thin slices onto a fresh baguette with sliced tomatoes, pickles, crisp lettuce, and mayonnaise. The combination is classic and one of the best ways to eat tongue.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">How to Serve by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th><th>Amount</th></tr></thead>
+      <tbody>
+        <tr><td><strong>6–8 months</strong></td><td>Pureed or finely mashed with cooking broth</td><td>2–3 tbsp</td></tr>
+        <tr><td><strong>8–10 months</strong></td><td>Finely minced or shredded soft pieces</td><td>3–4 tbsp</td></tr>
+        <tr><td><strong>10–12 months</strong></td><td>Thin soft slices, cut small, with broth in a cup</td><td>4–5 tbsp</td></tr>
+        <tr><td><strong>12 months+</strong></td><td>Thin slices with warm broth alongside</td><td>As desired</td></tr>
+        <tr><td><strong>Adults</strong></td><td>Sandwich with baguette, tomatoes, pickles, lettuce, mayo</td><td>As desired</td></tr>
+      </tbody>
+    </table>
+
+    <div class="broth-box">
+      <strong>Do not discard the broth</strong>
+      Strain the cooking broth and use it as a base for soups, stews, or to cook rice and grains. It freezes beautifully in portioned containers and is packed with rich golden beef flavor and nutrients. The turmeric gives it a gorgeous color that makes everything it touches taste better.
+    </div>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 3 days for both tongue and broth, stored separately in sealed containers.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 2 months. Freeze sliced tongue and broth separately in portioned containers.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Peel the tongue while it is still warm — this is the most important practical step. The skin slips off easily when hot and becomes very difficult once the meat cools down.</li>
+      <li>The broth will be deeply golden from the turmeric. This is normal and beautiful.</li>
+      <li>The tongue is done when a knife slides in with no resistance and the meat feels very soft when pressed.</li>
+      <li>Searing the slices in butter or tallow after cooking adds a lightly golden crust and deepens the flavor significantly.</li>
+      <li>Whole peppercorns rather than ground pepper give a cleaner, clearer broth.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">☕ <strong>The broth cup</strong> — offer warm golden broth in a small cup before the meal. Kids who are hesitant about new foods often warm up to a dish when they start with the familiar comfort of something warm to sip.</div>
+      <div class="fun-item">🥖 <strong>The adult version</strong> — while the kids eat their slices with broth, make yourself a tongue sandwich on fresh baguette with tomatoes, pickles, lettuce, and mayo. Same meal, same table, completely different experience.</div>
+      <div class="fun-item">🌿 <strong>Start with the broth</strong> — for babies being introduced to beef tongue for the first time, start with a few teaspoons of the warm golden broth. It is flavorful, gentle, and a perfect first introduction to this cut.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">🩸</span><div class="nourish-title">Iron</div><div class="nourish-desc">Heme iron in the most absorbable form — critical for brain development and preventing iron deficiency in the first year</div></div>
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Zinc</div><div class="nourish-desc">Supports immune function, growth, and brain development — beef tongue is one of the richest dietary sources</div></div>
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">Vitamin B12</div><div class="nourish-desc">A 3-ounce serving provides 44% of the daily value — essential for nervous system development and red blood cell production</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🧠</span><div class="nourish-title">Choline</div><div class="nourish-desc">Supports brain development, memory, and nerve communication — abundant in beef tongue and rarely discussed</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Turmeric</div><div class="nourish-desc">A traditional anti-inflammatory spice that also gives the broth its beautiful golden color</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
