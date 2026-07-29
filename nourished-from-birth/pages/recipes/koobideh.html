@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koobideh — Persian Lamb & Beef Kebab for the Whole Family — Nourished From Birth</title>
+  <meta name="description" content="Juicy, tender Persian koobideh with simple ingredients and gentle flavors — from baby portions to family dinner in one batch." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); }
+    .method-label { font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin: 1.8rem 0 0.8rem; }
+    .method-divider { border: none; border-top: 1px dashed var(--border); margin: 1.5rem 0; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .yogurt-box { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin: 1.5rem 0 3rem; }
+    .yogurt-box h4 { font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .yogurt-box ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+    .yogurt-box ul li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 1rem; color: var(--text-secondary); }
+    .yogurt-box ul li:last-child { border: none; }
+    .yogurt-box p { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/koobideh.webp" alt="Persian koobideh kebabs on saffron rice with grilled tomatoes and fresh herbs" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites · Quick Meals</span>
+      <span class="age-badge">✓ 6 Months+</span>
+      <h1>Koobideh</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">20 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Rest</span><span class="meta-value">30–60 min (optional)</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">20–25 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">4–6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge / 3 months freezer</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 lb ground lamb or ground beef (or a combination of both)</li>
+          <li>1 medium onion, finely grated and squeezed dry</li>
+          <li>2 garlic cloves, finely grated (optional)</li>
+          <li>1 tsp ground turmeric</li>
+          <li>1½ tsp sea salt (omit for babies under 12 months)</li>
+          <li>¼ tsp black pepper (optional)</li>
+        </ul>
+        <span class="optional-label">Optional</span>
+        <ul class="ingredients-list">
+          <li>¼ tsp ground cinnamon</li>
+          <li>1 tbsp bloomed saffron (for special occasions)</li>
+          <li>¼ cup finely chopped parsley</li>
+          <li>2 tbsp finely chopped dill</li>
+        </ul>
+        <div class="source-note">Traditional Persian koobideh is minimal — meat, onion, turmeric, and salt. Everything else is a family variation. Use what feels right for yours.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>What is koobideh?</strong>
+      Koobideh is one of the most beloved dishes in Persian cuisine — a ground meat kebab shaped into long cylinders and cooked over high heat until juicy and lightly charred. The name comes from the Persian word "koobidan," meaning to pound or beat, referring to the traditional preparation of the meat. It is a staple at family gatherings, celebrations, and everyday dinners across Iran. Grated onion is the key — it keeps the meat incredibly moist and adds natural sweetness without overpowering the flavor of the meat itself.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text">Grate the onion finely and transfer to a clean kitchen towel. Squeeze out most of the liquid — leave just a little moisture to keep the kebabs juicy.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text">Combine meat, onion, garlic, turmeric, salt, pepper, cinnamon, saffron, and herbs in a large bowl if using. Mix with your hands for 2 to 3 minutes until the mixture becomes slightly sticky.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text">Cover and refrigerate for 30 to 60 minutes if time allows — this helps the koobideh hold its shape and allows the flavors to meld. If you are short on time, you can skip this step.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text">Divide into 8 to 10 portions. Shape each portion into a long cylinder about 4 to 5 inches long and 1 inch wide. Cook directly in the pan — no skewers needed.</span></li>
+    </ol>
+
+    <p class="method-label">Option A — Grill</p>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">5</span><span class="step-text">Cook over medium-high heat for 4 to 5 minutes per side until cooked through and lightly charred on the outside.</span></li>
+    </ol>
+
+    <hr class="method-divider" />
+
+    <p class="method-label">Option B — Skillet</p>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">5</span><span class="step-text">Heat a cast-iron or nonstick pan over medium heat. Place the koobideh in the pan and cover with a lid. Cook for 10 to 15 minutes until the inside is cooked through. Remove the lid, increase the heat to medium-high, and cook each side for 5 to 6 minutes until nicely browned.</span></li>
+    </ol>
+
+    <div class="yogurt-box">
+      <h4>Simple Persian Yogurt Sauce</h4>
+      <ul>
+        <li>1 cup full-fat Greek yogurt</li>
+        <li>1 tsp lemon juice</li>
+        <li>1 tsp extra virgin olive oil</li>
+        <li>1 tbsp finely chopped dill (optional)</li>
+      </ul>
+      <p>Mix all ingredients together and refrigerate until ready to serve.</p>
+    </div>
+
+    <h2 class="section-title">Traditional Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Buttered Persian saffron rice</li>
+      <li>Grilled tomatoes</li>
+      <li>Cucumber slices or mast-o-khiar</li>
+      <li>Lavash or sangak flatbread</li>
+      <li>Fresh herbs (sabzi khordan)</li>
+      <li>A sprinkle of sumac over the finished kebabs</li>
+      <li>Yogurt sauce alongside</li>
+    </ul>
+
+    <h2 class="section-title">Baby and Toddler Adaptations</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>6–8 months</strong></td><td>Omit salt. Cook thoroughly. Finely crumble or mash with soft rice or plain yogurt.</td></tr>
+        <tr><td><strong>9–12 months</strong></td><td>Omit salt. Finely minced pieces with soft rice and vegetables.</td></tr>
+        <tr><td><strong>12 months+</strong></td><td>Cut into bite-sized pieces. Serve with rice, grilled vegetables, and yogurt sauce.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Full koobideh with all traditional accompaniments.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Cooked koobideh up to 2 days. Raw mixture up to 24 hours before cooking.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 3 months. Freeze raw shaped cylinders between layers of parchment paper. Cook directly from frozen or thaw overnight in the fridge.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Squeezing the onion dry is the most important step — too much moisture and the koobideh will fall apart.</li>
+      <li>Fat content matters — meat that is too lean will dry out. Aim for around 20% fat content for the juiciest result.</li>
+      <li>Mix for 2 to 3 minutes until the mixture becomes slightly sticky — this is what helps it hold its shape.</li>
+      <li>If using 100% lamb, one garlic clove is usually enough. For beef or a beef-lamb blend, two cloves work well.</li>
+      <li>Bloomed saffron means soaking a few threads in 1 tbsp of warm water for 5 minutes before adding to the meat mixture.</li>
+      <li>A sprinkle of sumac over the finished koobideh is the traditional finishing touch — it adds a gentle tartness that brightens the whole dish.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍚 <strong>One meal, every age</strong> — the whole family eats koobideh together. Baby gets a finely crumbled portion with soft rice, toddlers get bite-sized pieces, and adults get the full kebab with all the accompaniments. No separate cooking.</div>
+      <div class="fun-item">🌿 <strong>The herb platter</strong> — serve sabzi khordan (a plate of fresh herbs, radishes, and walnuts) alongside. It is how koobideh is traditionally eaten in Iran and introduces babies and toddlers to a wide variety of fresh flavors from early on.</div>
+      <div class="fun-item">🍋 <strong>The sumac finish</strong> — sprinkle sumac over the koobideh just before serving. Its deep red color and tangy flavor are distinctly Persian and something children recognize and grow to love as part of the meal ritual.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">🩸</span><div class="nourish-title">Iron</div><div class="nourish-desc">Ground lamb and beef are among the richest sources of heme iron — the most absorbable form for growing babies</div></div>
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Zinc</div><div class="nourish-desc">Supports immune function, healthy growth, and brain development — abundant in both lamb and beef</div></div>
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">Vitamin B12</div><div class="nourish-desc">Essential for nervous system development and healthy red blood cells — critical in the first two years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Turmeric</div><div class="nourish-desc">A traditional anti-inflammatory spice used across Persian cooking for centuries</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🧠</span><div class="nourish-title">Healthy Fats</div><div class="nourish-desc">The natural fat in grass-fed lamb and beef provides fat-soluble vitamins and supports brain development</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
