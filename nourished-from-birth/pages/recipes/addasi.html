@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Addasi — Persian Nourishing Lentil Breakfast — Nourished From Birth</title>
+  <meta name="description" content="A comforting Persian lentil stew gently simmered with onions, garlic, turmeric, and a hint of cinnamon. Nourishing for babies, toddlers, and the whole family from 9 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/addasi.webp" alt="Persian addasi lentil stew in a bowl with a drizzle of olive oil and fresh herbs" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Breakfast · Persian Family Favorites</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Addasi</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Soak</span><span class="meta-value">8–12 hrs (optional)</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">10 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">45–60 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge / 3 months freezer</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <span class="optional-label">For soaking (recommended)</span>
+        <ul class="ingredients-list">
+          <li>2 cups brown or green lentils</li>
+          <li>Warm filtered water to cover by 2 inches</li>
+          <li>1 tbsp lemon juice or apple cider vinegar</li>
+        </ul>
+        <span class="optional-label">For the addasi</span>
+        <ul class="ingredients-list">
+          <li>2 tbsp extra virgin olive oil, grass-fed butter, or ghee</li>
+          <li>1 large yellow onion, finely diced</li>
+          <li>4 garlic cloves, minced</li>
+          <li>2 tsp ground turmeric</li>
+          <li>1½ tsp sea salt (omit for babies under 12 months)</li>
+          <li>¼ tsp black pepper (optional)</li>
+          <li>Soaked lentils, drained and rinsed</li>
+          <li>6 cups homemade chicken or beef broth or filtered water</li>
+          <li>2 bay leaves</li>
+          <li>Fresh lemon juice to taste</li>
+        </ul>
+        <span class="optional-label">Optional</span>
+        <ul class="ingredients-list">
+          <li>½ tsp ground cinnamon (a lovely family variation)</li>
+          <li>2 tbsp tomato paste (adds richness and color)</li>
+          <li>Pinch of saffron bloomed in 1 tbsp warm water (for special occasions)</li>
+        </ul>
+        <div class="source-note">The best addasi gets its flavor from slow-cooked onions, garlic, and good broth — not a long list of spices. Turmeric is essential. Everything else is a family variation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>What is addasi?</strong>
+      Addasi is one of the most beloved Persian breakfast dishes — a thick, comforting lentil stew that has been eaten across Iran for centuries. It is traditionally served on weekend mornings with warm bread, fresh herbs, and yogurt. The name comes from "adas," the Persian word for lentil. What makes addasi distinctive is not the spice list but the onions — deeply savory, slowly cooked until golden, they form the flavor foundation that no shortcut can replicate.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text"><strong>Soak the lentils (optional but recommended).</strong> Place the lentils in a large bowl and cover with warm filtered water by at least 2 inches. Stir in the lemon juice or apple cider vinegar and let soak for 8 to 12 hours. Drain and rinse well before cooking. Soaking improves digestibility and helps the lentils cook more evenly.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text"><strong>Saute the aromatics.</strong> Heat the olive oil, butter, or ghee in a heavy-bottomed pot over medium heat. Add the onion and cook for 8 to 10 minutes, stirring occasionally, until soft and lightly golden. Do not rush this step — the onions are the foundation of the flavor. Add the garlic and cook for another 30 seconds. Stir in the turmeric and black pepper, cooking just until fragrant. If using tomato paste, stir it in now and cook for 1 to 2 minutes to deepen its flavor.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text"><strong>Simmer.</strong> Add the lentils, broth or water, and bay leaves. Bring to a gentle boil, then reduce the heat to low. Cover partially and simmer for 35 to 45 minutes, or until the lentils are completely tender. Stir occasionally, adding a splash of broth if needed.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text"><strong>Finish.</strong> Remove the bay leaves. For a creamier texture, use an immersion blender to blend about one third of the soup, leaving plenty of whole lentils for texture. Stir in the salt if using and a squeeze of fresh lemon juice. Add cinnamon or bloomed saffron now if using. Taste and adjust seasoning.</span></li>
+    </ol>
+
+    <div class="tip-box">
+      <strong>Nourished tip:</strong> Use homemade chicken or beef broth instead of water for a richer, more nourishing addasi. The broth adds depth of flavor and extra minerals that make this a genuinely complete meal.
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Omit salt. Blend until mostly smooth or mash with a fork depending on your baby's stage. Stir in a teaspoon of butter, ghee, or olive oil before serving. Serve with soft avocado or plain whole-milk yogurt if dairy has been introduced.</td></tr>
+        <tr><td><strong>12–18 months</strong></td><td>Serve with a soft texture — partially blended is ideal. Offer with warm soft bread for dipping.</td></tr>
+        <tr><td><strong>18 months+</strong></td><td>Serve as a thick stew with bread, yogurt, and fresh herbs alongside.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Serve with warm sangak, barbari, or sourdough bread, plain full-fat yogurt, fresh herbs (sabzi khordan), sliced cucumbers and tomatoes, and a squeeze of fresh lemon.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days. Add a splash of broth or water when reheating as the lentils will continue to absorb liquid.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 3 months in portioned containers. Thaw overnight in the fridge and reheat gently with a splash of broth.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Do not rush the onions. Taking 8 to 10 minutes to cook them until lightly golden creates the deep, sweet flavor that makes addasi so comforting. This single step is what separates a good addasi from a great one.</li>
+      <li>Use homemade broth. It makes a noticeable difference in flavor and adds minerals and collagen that water cannot provide.</li>
+      <li>Blend only part of the soup. Blending one third gives you a creamy consistency while keeping the satisfying texture of whole lentils.</li>
+      <li>Tomato paste is optional. Many Iranian families make addasi without it. Try it both ways and see which your family prefers.</li>
+      <li>Cinnamon is a family variation, not a requirement. Start with turmeric and salt, taste, then add cinnamon only if you want that extra warmth.</li>
+      <li>Add saffron at the end — bloomed in a tablespoon of warm water for 5 minutes before stirring in. It adds a beautiful golden color and a subtle floral note for special occasions.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍞 <strong>The bread ritual</strong> — addasi is meant to be eaten with warm bread torn into pieces and dunked in. For toddlers, soft pieces of sangak or barbari are the perfect vehicle. It is one of those dishes where the ritual of eating is part of the meal.</div>
+      <div class="fun-item">🥄 <strong>The baby bowl</strong> — blend a small portion separately for baby, stir in a teaspoon of butter or ghee, and serve alongside the family meal. Everyone eats the same thing, just at different textures. That is the heart of traditional Persian family eating.</div>
+      <div class="fun-item">🌿 <strong>Weekend breakfast</strong> — addasi is traditionally a weekend breakfast dish in Iran. Making it part of a Saturday morning routine — with tea, fresh herbs, and warm bread — is one of the most authentic ways to bring Persian food culture into your family's life.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Plant Protein</div><div class="nourish-desc">Lentils are one of the richest plant sources of protein — essential for growth and muscle development in the first years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🩸</span><div class="nourish-title">Iron</div><div class="nourish-desc">Non-heme iron from lentils — best absorbed alongside vitamin C from the lemon juice served with this dish</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Folate</div><div class="nourish-desc">Lentils are exceptionally rich in folate — critical for cell development, DNA synthesis, and healthy growth</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🔥</span><div class="nourish-title">Turmeric</div><div class="nourish-desc">A traditional anti-inflammatory spice used across Persian cooking for centuries — absorbed best when eaten with fat</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🦴</span><div class="nourish-title">Broth</div><div class="nourish-desc">Homemade broth adds minerals, collagen, and gut-supportive gelatin — turning a simple lentil stew into a genuinely nourishing meal</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
