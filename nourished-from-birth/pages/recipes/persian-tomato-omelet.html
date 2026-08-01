@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian Tomato Omelet (Omelet Gojeh Farangi) — Nourished From Birth</title>
+  <meta name="description" content="A beloved Persian breakfast made with slow-cooked tomatoes, fragrant turmeric, and gently cooked eggs. Simple, nourishing, and ready in under 30 minutes. Baby-friendly from 9 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .variations-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .variation-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .variation-item h4 { font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; color: var(--burgundy); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .variation-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+      .variations-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/persian-tomato-omelet.webp" alt="Persian tomato omelet with softly set eggs in a rich golden tomato sauce in a skillet" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Breakfast · Persian Family Favorites</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Persian Tomato Omelet</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">10 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">25 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">4</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 tbsp grass-fed butter, ghee, or extra virgin olive oil</li>
+          <li>1 large yellow onion, finely diced</li>
+          <li>3 garlic cloves, minced (optional)</li>
+          <li>1 tsp ground turmeric</li>
+          <li>6 large ripe tomatoes, diced (about 2 lbs) or one 28-oz can whole peeled San Marzano tomatoes, crushed by hand</li>
+          <li>6 pasture-raised eggs</li>
+          <li>1 tsp sea salt (omit for babies under 12 months)</li>
+          <li>¼ tsp black pepper (optional)</li>
+        </ul>
+        <span class="optional-label">Optional</span>
+        <ul class="ingredients-list">
+          <li>1 tbsp tomato paste (for deeper flavor and color)</li>
+          <li>Fresh parsley or chives for garnish</li>
+          <li>Crumbled feta for older children and adults</li>
+          <li>Fresh lemon wedges for serving</li>
+        </ul>
+        <div class="source-note">Use the ripest tomatoes you can find. In winter, crushed San Marzano canned tomatoes are an excellent substitute — they often make a better omelet than out-of-season fresh tomatoes.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>Omelet Gojeh Farangi — the Persian tomato omelet</strong>
+      The name "Gojeh Farangi" means "foreign tomato" in Persian — a reminder that tomatoes were brought to Iran in the 18th century by the Qajar dynasty and quickly became central to Persian cooking. Today omelet gojeh farangi is one of the most beloved breakfast dishes in Iran. The secret is patience with the tomatoes. Let them cook slowly until they break down into a thick, jammy sauce, and the result is something far greater than the sum of its parts.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text"><strong>Cook the onions.</strong> Heat the butter, ghee, or olive oil in a large skillet over medium heat. Add the onion and cook for 10 to 12 minutes, stirring occasionally, until soft and lightly golden. Add the garlic and cook for another 30 seconds.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text"><strong>Build the tomato base.</strong> Stir in the turmeric. If using tomato paste, add it now and cook for 1 to 2 minutes to caramelize slightly. Add the tomatoes and stir well. Reduce the heat to medium-low and cook for 15 to 20 minutes, stirring occasionally, until the tomatoes have broken down into a thick, jammy sauce. The mixture should no longer be watery.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text"><strong>Add the eggs.</strong> Crack the eggs directly over the tomato mixture. Using a spatula, gently stir just enough to lightly combine the yolks with the tomatoes. Cook over low heat for 3 to 5 minutes, stirring occasionally, until the eggs are softly set and creamy. Do not overcook — the eggs should stay tender.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text"><strong>Finish and serve.</strong> Season with salt if using. Garnish with fresh parsley or chives and crumbled feta for older children and adults. Serve immediately with warm bread.</span></li>
+    </ol>
+
+    <div class="tip-box">
+      <strong>The most important step:</strong> Let the tomatoes cook down slowly — 15 to 20 minutes — until they are thick and jammy with no watery liquid remaining. This is the secret to an exceptional omelet gojeh farangi. Rushing this step is the only way to get it wrong.
+    </div>
+
+    <h2 class="section-title">Authentic Persian Variations</h2>
+    <div class="variations-grid">
+      <div class="variation-item">
+        <h4>Classic</h4>
+        <p>Tomatoes, eggs, turmeric, salt, and oil. The most minimal version — four ingredients and extraordinary flavor.</p>
+      </div>
+      <div class="variation-item">
+        <h4>With Onion</h4>
+        <p>Many families begin by slowly sauteing onions before adding the tomatoes. This adds natural sweetness and depth.</p>
+      </div>
+      <div class="variation-item">
+        <h4>With Garlic</h4>
+        <p>A couple of garlic cloves add another layer of flavor. Some households include it, others leave it out entirely.</p>
+      </div>
+      <div class="variation-item">
+        <h4>With Tomato Paste</h4>
+        <p>A small spoonful deepens the color and flavor — especially useful when tomatoes are not at their summer peak.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Traditional Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Warm sangak, barbari, or sourdough bread</li>
+      <li>Fresh cucumbers</li>
+      <li>Fresh herbs (sabzi khordan)</li>
+      <li>Crumbled feta cheese for older children and adults</li>
+      <li>Olives alongside</li>
+      <li>A wedge of fresh lemon</li>
+      <li>Persian tea</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Omit salt. Cook eggs until softly set and creamy — the thick tomato sauce keeps them moist. Chop or mash into small pieces. Serve with soft avocado, plain yogurt, or sourdough toast fingers.</td></tr>
+        <tr><td><strong>12 months+</strong></td><td>Serve with soft bread for dipping. Add a small sprinkle of feta if dairy has been introduced.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Full serving with all accompaniments — bread, fresh herbs, feta, cucumbers, and olives. The classic Persian breakfast spread.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days in an airtight container. Reheat gently over low heat with a splash of water to keep the eggs from drying out.</p>
+      </div>
+      <div class="storage-item">
+        <h4>🍅 Make ahead tip</h4>
+        <p>The tomato sauce can be made up to 2 days ahead and refrigerated. Add eggs fresh just before serving for the best result.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Use the ripest tomatoes you can find — the quality of the tomatoes determines the quality of the omelet. In winter, San Marzano canned tomatoes crushed by hand often produce a better result than out-of-season fresh ones.</li>
+      <li>Do not rush the tomato reduction — 15 to 20 minutes of slow cooking is what transforms raw tomatoes into a deep, concentrated sauce.</li>
+      <li>Butter or ghee gives a richer flavor than olive oil — though either works beautifully.</li>
+      <li>Stir the eggs gently — just enough to lightly combine them with the tomatoes. You want soft, creamy ribbons of egg running through the sauce, not fully scrambled eggs.</li>
+      <li>Remove the pan from the heat while the eggs still look slightly underdone — they will continue cooking from the residual heat of the sauce.</li>
+      <li>The tomato sauce can be made ahead and refrigerated for up to 2 days. Add the eggs fresh just before serving.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍞 <strong>The bread ritual</strong> — omelet gojeh farangi is always eaten with bread in Iran. Tearing warm sangak or barbari and scooping up the egg and tomato is part of the experience. For toddlers, soft bread torn into pieces for dipping makes this an interactive and enjoyable meal.</div>
+      <div class="fun-item">🥚 <strong>Same pot, every age</strong> — everyone eats from the same pan. Baby gets a small portion chopped fine, toddlers get theirs with bread, adults get the full spread with feta and herbs. One dish, one table, no separate cooking.</div>
+      <div class="fun-item">🌿 <strong>Weekend breakfast</strong> — this is the kind of dish that deserves a slow weekend morning. Make it with Persian tea, fresh herbs, feta, and warm bread. The whole family at the same table eating the same food — that is the spirit of Persian breakfast.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">🧠</span><div class="nourish-title">Choline</div><div class="nourish-desc">Eggs are one of the richest dietary sources of choline — essential for brain development, memory, and nerve communication in the first years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Complete Protein</div><div class="nourish-desc">Eggs provide all nine essential amino acids — the most bioavailable protein source available for growing babies and toddlers</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🍅</span><div class="nourish-title">Lycopene</div><div class="nourish-desc">Slow-cooking tomatoes increases the availability of lycopene — a powerful antioxidant absorbed best when cooked with fat</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Vitamin C</div><div class="nourish-desc">Tomatoes are rich in vitamin C — which enhances iron absorption when eaten alongside iron-rich foods and supports immune function</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🔥</span><div class="nourish-title">Turmeric</div><div class="nourish-desc">A traditional anti-inflammatory spice used across Persian cooking for centuries — absorbed best when eaten with fat</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
