@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creamy Sardine Pâté for Babies & Toddlers — Nourished From Birth</title>
+  <meta name="description" content="A smooth, buttery sardine spread brightened with fresh lemon and herbs. Ready in 10 minutes, packed with omega-3s, calcium, and vitamin D. Baby-friendly from 9 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .serving-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .serving-tab { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .serving-tab h4 { font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500; color: var(--burgundy); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .serving-tab ul { list-style: none; padding: 0; margin: 0; }
+    .serving-tab ul li { font-size: 0.9rem; color: var(--text-secondary); padding: 0.3rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+    .serving-tab ul li:last-child { border: none; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+      .serving-tabs { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/sardine-pate.webp" alt="Creamy sardine pate in a small bowl with sourdough toast and lemon wedges alongside" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Quick Meals</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Creamy Sardine Pâté</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">10 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Chill</span><span class="meta-value">30 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Makes</span><span class="meta-value">About 1¼ cups</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 cans (4 to 5 oz each) wild sardines in olive oil, lightly drained</li>
+          <li>3 tbsp softened grass-fed butter (see adult variation below)</li>
+          <li>1 small yellow onion, finely grated</li>
+          <li>1 to 2 small garlic cloves, finely grated</li>
+          <li>1½ tbsp fresh lemon juice</li>
+          <li>2 tbsp finely chopped fresh dill</li>
+          <li>1 tbsp finely chopped fresh parsley</li>
+          <li>Freshly ground black pepper to taste (optional)</li>
+        </ul>
+        <span class="optional-label">Optional add-ins</span>
+        <ul class="ingredients-list">
+          <li>2 tbsp finely diced pickles</li>
+          <li>2 tbsp finely diced celery</li>
+          <li>1 tsp Dijon mustard (older children and adults only)</li>
+          <li>1 tbsp finely chopped chives</li>
+          <li>1 hard-boiled egg (for extra creaminess and protein)</li>
+          <li>2 to 3 tbsp good quality mayonnaise instead of butter (adult version — richer and tangier)</li>
+        </ul>
+        <div class="source-note">No added salt needed — sardines already provide plenty of natural seasoning. Choose wild sardines in olive oil with the shortest ingredient list: sardines and olive oil.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>Why sardines?</strong>
+      Sardines are one of the most nutrient-dense and sustainable fish you can buy — and one of the most underrated baby foods. They are naturally low in mercury because of their small size and short lifespan, making them one of the safest fish for babies and young children. A single can contains meaningful amounts of omega-3 fatty acids, calcium, vitamin D, vitamin B12, iron, selenium, and choline. This pate transforms them into a creamy, spreadable format that babies and toddlers accept easily — the butter mellows any sharpness, and the lemon and herbs keep the flavor bright and fresh.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text"><strong>Check for bones.</strong> Open the sardines and transfer to a bowl. Run your fingers through the flesh to check for any remaining bones and remove them. The soft, small bones are edible and a good source of calcium — but for younger babies and a smoother pate, remove them all.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text"><strong>Mash and combine.</strong> Using a fork, mash the sardines thoroughly until broken down. Add the softened butter and mash again until well combined. Add the finely grated onion, finely grated garlic, lemon juice, dill, parsley, and black pepper if using. If using a hard-boiled egg, mash it in now. Mix well with a fork until everything is fully incorporated into a cohesive spread.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text"><strong>For a smoother texture,</strong> transfer to a food processor or use an immersion blender and blend until completely smooth. This is recommended for babies under 12 months.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text"><strong>Chill.</strong> Transfer to an airtight glass container and refrigerate for at least 30 minutes. Chilling allows the flavors to meld and the butter to firm up the texture into a proper spreadable pate.</span></li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>Bone safety note:</strong> Always check sardines carefully for bones before serving to babies and young toddlers. Even canned sardines labeled boneless can contain small bones. Run your fingers through the flesh before mashing and remove every bone you find.
+    </div>
+
+    <h2 class="section-title">How to Use It</h2>
+    <div class="serving-tabs">
+      <div class="serving-tab">
+        <h4>9–12 Months</h4>
+        <ul>
+          <li>Spread on soft sourdough toast fingers</li>
+          <li>Mix into warm mashed potato</li>
+          <li>Stir into soft scrambled eggs</li>
+          <li>Spread on soft rice cakes</li>
+          <li>Mix into mashed avocado</li>
+          <li>Stir into warm soft pasta</li>
+        </ul>
+      </div>
+      <div class="serving-tab">
+        <h4>Toddlers</h4>
+        <ul>
+          <li>Spread on sourdough toast or crackers</li>
+          <li>Fill a soft sandwich with cucumber slices</li>
+          <li>Mix into scrambled eggs</li>
+          <li>Serve as a dip with vegetable sticks</li>
+          <li>Stir into pasta with olive oil</li>
+          <li>Serve alongside sliced avocado</li>
+        </ul>
+      </div>
+      <div class="serving-tab">
+        <h4>Whole Family</h4>
+        <ul>
+          <li>Make the mayo version for a richer adult spread</li>
+          <li>Spread on sourdough with cornichons and capers</li>
+          <li>Serve on crackers with a squeeze of lemon</li>
+          <li>Use as a sandwich filling with fresh greens</li>
+          <li>Spread on rye bread with sliced radish</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Blend completely smooth. Use butter version. Omit pickles, celery, and mustard. Spread on soft toast fingers or mix into mashed potato or avocado. Portion about 1 to 2 tbsp per serving.</td></tr>
+        <tr><td><strong>12–18 months</strong></td><td>Can be served slightly chunkier. Spread on soft toast or stir into familiar foods. Pickles and celery can be added finely diced.</td></tr>
+        <tr><td><strong>18 months+</strong></td><td>Serve as a spread with a variety of vehicles — toast, crackers, rice cakes, vegetable sticks. Mustard can be added for older children.</td></tr>
+        <tr><td><strong>Adults</strong></td><td>Replace butter with 2 to 3 tbsp good quality mayonnaise for a richer, tangier spread. Add Dijon mustard, pickles, capers, or cornichons. Serve on sourdough or rye with fresh lemon.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days in an airtight glass container. Press a piece of parchment paper directly onto the surface to prevent oxidation and keep it fresh.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 1 month. Freeze in small portions using an ice cube tray, then transfer to a freezer-safe container. Thaw overnight in the fridge.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Always check for bones before mashing — run your fingers through the sardine flesh carefully and remove every bone you find, especially when cooking for babies.</li>
+      <li>Choose wild sardines in olive oil with no added salt — the ingredient list should be short: sardines and olive oil.</li>
+      <li>For the baby and toddler version, use softened grass-fed butter — it creates a mild, creamy texture that most children accept easily.</li>
+      <li>For the adult version, replace the butter with 2 to 3 tablespoons of good quality mayonnaise. This makes a richer, tangier spread that pairs beautifully with cornichons, capers, or Dijon mustard.</li>
+      <li>Adding a hard-boiled egg makes the pate creamier and higher in protein — mash it in with a fork along with the sardines. It blends in seamlessly.</li>
+      <li>Softened butter at room temperature blends much more smoothly than cold butter — take it out of the fridge 30 minutes before making the pate.</li>
+      <li>Chilling for at least 30 minutes is important — it firms up the texture and allows the flavors to meld. The pate is noticeably better after resting.</li>
+      <li>Pair with vitamin C-rich foods like lemon juice, bell pepper, or fresh tomatoes to enhance iron absorption from the sardines.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍞 <strong>Toast soldiers</strong> — spread the pate on soft sourdough toast cut into fingers. This is one of the best ways to introduce sardines to babies who are just starting finger foods. The butter and lemon make the flavor mild and appealing even for cautious eaters.</div>
+      <div class="fun-item">🥑 <strong>Sardine and avocado mash</strong> — mix a tablespoon of sardine pate into mashed avocado for younger babies. The avocado softens the flavor further and adds healthy fats alongside the omega-3s from the sardines. One of the most nutrient-dense combinations you can offer.</div>
+      <div class="fun-item">🐟 <strong>A pantry staple</strong> — keep a batch in the fridge and you have a complete, protein-rich meal ready in seconds. Spread on toast, stir into eggs, mix into pasta — sardine pate is one of the most versatile no-cook additions to any family kitchen.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">🧠</span><div class="nourish-title">Omega-3 DHA</div><div class="nourish-desc">Sardines are among the richest dietary sources of DHA and EPA — essential fatty acids for brain development, vision, and nervous system function</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🦴</span><div class="nourish-title">Calcium</div><div class="nourish-desc">Sardines with bones are one of the best non-dairy sources of calcium — critical for bone development in the first years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">☀️</span><div class="nourish-title">Vitamin D</div><div class="nourish-desc">Sardines contain more vitamin D per serving than almost any other food — essential for calcium absorption, immune function, and bone health</div></div>
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">Vitamin B12</div><div class="nourish-desc">Essential for nervous system development and red blood cell production — sardines are one of the richest dietary sources available</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Low Mercury</div><div class="nourish-desc">Because sardines are small and short-lived, they accumulate very little mercury — making them one of the safest fish choices for babies and young children</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
