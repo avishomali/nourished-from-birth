@@ -104,6 +104,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://nourishedfrombirth.com/pages/recipes/sardine-pate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Learn pages -->
   <url>
     <loc>https://nourishedfrombirth.com/pages/learn/cod-liver-oil-kids</loc>
