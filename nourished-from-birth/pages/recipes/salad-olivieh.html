@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salad Olivieh — Persian Chicken & Potato Salad — Nourished From Birth</title>
+  <meta name="description" content="A creamy Persian chicken and potato salad with eggs, peas, carrots, and Persian pickles. A beloved Iranian classic adapted for babies from 9 months, toddlers, and the whole family." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .shortcut-box { background: rgba(122,158,126,0.1); border: 1px solid rgba(122,158,126,0.4); border-radius: 1rem; padding: 1.5rem; margin: 1.5rem 0 3rem; }
+    .shortcut-box h4 { font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 0.8rem; }
+    .shortcut-box p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.8; }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/salad-olivieh.webp" alt="Persian salad olivieh chicken and potato salad on a platter garnished with herbs and pickles" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Salad Olivieh</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">20 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">25 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Chill</span><span class="meta-value">1 hour</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 medium Yukon Gold potatoes</li>
+          <li>2 boneless skinless chicken breasts or 450g boneless thighs</li>
+          <li>3 large eggs</li>
+          <li>1 medium carrot, peeled and diced</li>
+          <li>¾ cup peas, fresh or frozen</li>
+          <li>½ cup finely diced pickles (Persian pickles are traditional — dill pickles or cornichons work well too)</li>
+          <li>1 tbsp extra virgin olive oil</li>
+          <li>1 to 2 tbsp fresh lemon juice</li>
+          <li>1 to 2 tbsp reserved chicken cooking broth (optional but recommended)</li>
+          <li>Freshly ground black pepper to taste (omit for babies and young toddlers)</li>
+        </ul>
+        <span class="optional-label">Dressing — baby and toddler version (9+ months)</span>
+        <ul class="ingredients-list">
+          <li>½ cup full-fat Greek yogurt</li>
+          <li>1 tbsp extra virgin olive oil</li>
+          <li>1 tbsp fresh lemon juice</li>
+        </ul>
+        <span class="optional-label">Dressing — older children and adults</span>
+        <ul class="ingredients-list">
+          <li>½ cup good quality mayonnaise — the quality of the mayo matters here (or ¼ cup mayonnaise + ¼ cup Greek yogurt for a lighter option)</li>
+          <li>Salt to taste</li>
+        </ul>
+        <div class="source-note">Persian pickles give the most authentic flavor. If you cannot find them, a good quality dill pickle or cornichon works beautifully. Pat them dry before mixing to prevent the salad from becoming watery.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>What is Salad Olivieh?</strong>
+      Salad Olivieh is one of the most beloved dishes in Persian cuisine — a creamy, comforting chicken and potato salad that appears at family gatherings, kids birthday parties, and weekday lunches alike. Its name comes from Lucien Olivier, a Belgian chef working in Moscow in the 1860s whose original salad traveled along trade routes and was warmly adopted into Iranian food culture. The Persian version became its own thing entirely — finer in texture, creamier in consistency, and unmistakably flavored by Persian pickles. Today it is one of the most recognized Iranian dishes, made in every household according to family tradition.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text"><strong>Cook the chicken.</strong> Place the chicken in a saucepan and cover with water. Bring to a gentle simmer and cook for 18 to 20 minutes until cooked through. Remove the chicken and let cool. Reserve a few tablespoons of the cooking broth — this adds depth to the dressing without making the salad heavy.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text"><strong>Cook the potatoes and eggs together.</strong> Place the potatoes and eggs in another pot and cover with water. Bring to a boil. After 10 minutes, remove the eggs and set aside. Continue cooking the potatoes until fork tender, about 20 to 25 minutes total. Let everything cool completely, then peel the potatoes and eggs.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text"><strong>Steam the vegetables.</strong> Steam the diced carrot and peas together for 5 to 7 minutes, just until tender. Allow to cool completely. Steaming keeps the vegetables sweeter and prevents them from making the salad watery.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text"><strong>Prepare everything.</strong> Using the large holes of a box grater, grate the potatoes and grate the eggs. Finely shred the chicken with two forks. Finely dice the pickles and pat them dry with a paper towel.</span></li>
+      <li class="step-item"><span class="step-number">5</span><span class="step-text"><strong>Mix.</strong> In a large bowl combine the grated potatoes, grated eggs, shredded chicken, steamed carrots, steamed peas, and diced pickles. Add the dressing — either yogurt-based for babies and toddlers, or mayonnaise-based for older children and adults. Add the olive oil, lemon juice, and 1 to 2 tablespoons of reserved chicken broth. Mix gently until creamy. Taste and adjust — add another spoonful of mayo or yogurt if needed.</span></li>
+      <li class="step-item"><span class="step-number">6</span><span class="step-text"><strong>Chill.</strong> Cover and refrigerate for at least one hour before serving. The flavor and texture improve significantly as the salad chills and the ingredients meld together.</span></li>
+    </ol>
+
+    <div class="tip-box">
+      <strong>The grating method:</strong> Grating the potatoes and eggs — rather than chopping or dicing — creates the characteristic fluffy, cohesive texture of authentic Persian Salad Olivieh. It is what sets the Persian version apart from other potato salads. Do not skip this step.
+    </div>
+
+    <div class="shortcut-box">
+      <h4>Busy Mom Shortcut</h4>
+      <p>Have leftover roasted or poached chicken? Use about 2½ cups finely shredded cooked chicken instead of cooking from scratch. Salad Olivieh comes together in just 15 minutes when the chicken is already done.</p>
+    </div>
+
+    <h2 class="section-title">Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Stuffed into sandwiches with lavash or a soft baguette</li>
+      <li>Rolled in lavash with fresh herbs and sliced tomatoes</li>
+      <li>Spread on sourdough toast fingers for babies and toddlers</li>
+      <li>Served on a platter alongside sliced cucumbers and tomatoes</li>
+      <li>With fresh herbs (sabzi khordan) and Persian pickles alongside</li>
+      <li>Scooped with crackers or pita wedges</li>
+      <li>As part of a mezze spread with other Persian appetizers</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Use Greek yogurt dressing — omit mayo entirely. Finely shred or blend the chicken. Grate the potatoes and eggs. Mash the peas. Use very finely minced pickles or omit them if limiting sodium. Mix with olive oil and lemon juice. Blend or mash to your baby's skill level. Spread on soft toast strips or serve by the spoonful.</td></tr>
+        <tr><td><strong>12–18 months</strong></td><td>Keep slightly chunkier. Greek yogurt dressing or a small amount of good quality mayonnaise. Include the finely diced pickles. Serve as a sandwich filling on soft bread or with toast fingers.</td></tr>
+        <tr><td><strong>18 months+</strong></td><td>Serve as the family version with mayonnaise dressing. Serve with soft bread, crackers, or vegetable sticks.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Full good quality mayo dressing or a yogurt-mayo mix. Season with salt and black pepper. Serve on a platter with lavash, fresh herbs, pickles, cucumbers, and tomatoes.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days in an airtight container. Keep the baby portion (yogurt-based) and the adult portion (mayo-based) in separate containers if making both.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Not recommended. Mayo and yogurt-based salads change texture after freezing and do not thaw well.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Grate the potatoes and eggs using the large holes of a box grater — this creates the fluffy, cohesive texture that makes authentic Persian Salad Olivieh distinctive. Chopping or dicing gives a completely different result.</li>
+      <li>Cook the eggs and potatoes in the same pot — add the eggs to already-boiling water and remove them after 10 minutes while the potatoes continue cooking. One less pot to wash.</li>
+      <li>Steam the carrots and peas instead of boiling them — they stay sweeter and won't add excess water to the salad.</li>
+      <li>Use good quality mayonnaise — it makes a noticeable difference to the flavor of the finished salad.</li>
+      <li>Reserve a tablespoon or two of the chicken cooking broth and stir it into the dressing — it adds depth of flavor without making the salad heavy.</li>
+      <li>Pat the diced pickles dry before mixing — excess pickle brine will make the salad watery.</li>
+      <li>Chill for at least one hour before serving — the flavors meld beautifully and the texture firms up perfectly.</li>
+      <li>For the baby version, make the yogurt-based portion first before adding mayo to the rest of the batch.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🫓 <strong>The lavash sandwich</strong> — salad olivieh stuffed into warm lavash with fresh herbs, sliced tomatoes, and pickles is one of the great simple pleasures of Persian home cooking. For toddlers, spread a little onto soft bread cut into small pieces — it is one of the most universally accepted lunch formats.</div>
+      <div class="fun-item">🥣 <strong>Same salad, every age</strong> — make one big batch and divide before adding the dressing. Mix the baby portion with yogurt and olive oil, and the family portion with mayo. Everyone eats the same salad, prepared to their stage. No separate cooking.</div>
+      <div class="fun-item">🎉 <strong>A party staple</strong> — Salad Olivieh is the dish that always appears at Iranian kids birthday parties. Making a large batch and serving it on a platter with lavash and fresh herbs is one of the most authentic ways to bring this dish into your family's life.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Complete Protein</div><div class="nourish-desc">Chicken and eggs together provide all essential amino acids — exactly what growing babies and toddlers need for muscle development and growth</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🧠</span><div class="nourish-title">Choline</div><div class="nourish-desc">Eggs are one of the richest dietary sources of choline — essential for brain development, memory, and nerve function in the first years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">Sustained Energy</div><div class="nourish-desc">Potatoes provide complex carbohydrates for steady energy — paired with protein and fat for a balanced, satisfying meal at every age</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Vitamin C</div><div class="nourish-desc">Peas and lemon juice provide vitamin C — which enhances iron absorption from the chicken and supports immune function</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🦠</span><div class="nourish-title">Probiotics</div><div class="nourish-desc">Full-fat Greek yogurt in the baby version adds beneficial bacteria and protein — a gentler, gut-friendly alternative to mayonnaise for young children</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
