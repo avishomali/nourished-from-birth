@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morgh ba Aloo Bokhara — Persian Chicken with Dried Plums — Nourished From Birth</title>
+  <meta name="description" content="A comforting Persian one-pot meal of tender chicken, carrots, potatoes, tomatoes, and sweet-tart dried Persian plums. Baby-friendly from 9 months, naturally kid-friendly, and made with everyday ingredients." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/morgh-aloo-bokhara.webp" alt="Persian chicken stew with dried plums carrots and potatoes in a rich golden broth served over basmati rice" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Slow-Cooked Family Meals · Persian Family Favorites</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Morgh ba Aloo Bokhara</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">15 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">2 hours</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">4 to 6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 lb (900g) bone-in skinless chicken pieces — a mix of thighs and drumsticks</li>
+          <li>1 large yellow onion, sliced</li>
+          <li>2 tbsp grass-fed butter or ghee</li>
+          <li>1 tsp ground turmeric</li>
+          <li>½ tsp ground coriander</li>
+          <li>2 garlic cloves, lightly crushed (optional)</li>
+          <li>3 medium carrots, peeled and cut into large chunks</li>
+          <li>3 medium Yukon Gold potatoes, peeled and cut into large chunks</li>
+          <li>4 to 5 ripe tomatoes, sliced into rounds</li>
+          <li>10 to 12 dried Persian plums (aloo bokhara), rinsed — yellow or red both work</li>
+          <li>4 cups filtered water</li>
+          <li><a href="https://www.amazon.com/dp/B000EITYUU/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good quality sea salt</a> to taste — add during the last 30 minutes; omit for babies</li>
+          <li>Black pepper to taste (optional)</li>
+        </ul>
+        <span class="optional-label">Optional</span>
+        <ul class="ingredients-list">
+          <li>2 small zucchini, cut into large chunks</li>
+          <li>1 tbsp tomato paste (for a deeper color and flavor)</li>
+          <li>1 tbsp fresh lemon juice (for a brighter finish — add in the last 5 minutes)</li>
+        </ul>
+        <div class="source-note">Aloo bokhara are dried Persian sour plums with a distinctive sweet-tart flavor. Find them at Middle Eastern or Persian grocery stores. Both yellow and red varieties work well. If unavailable, dried prunes are a reasonable substitute though milder in flavor.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>What is Morgh ba Aloo Bokhara?</strong>
+      This comforting Persian chicken stew is proof that simple ingredients can create extraordinary flavor. Bone-in chicken slowly simmers until fall-off-the-bone tender while carrots, potatoes, ripe tomatoes, and dried Persian plums create a naturally rich, lightly sweet-tart broth without needing complicated spices or processed ingredients. The dried plums — aloo bokhara — are the heart of this dish. They soften and melt into the broth, lending a gentle sourness that balances the sweetness of the carrots and the richness of the chicken. This is a one-pot meal that is simple enough for busy weeknights and comforting enough for Sunday dinner.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text"><strong>Saute the onion.</strong> Heat the butter or ghee in a large heavy-bottomed pot over medium heat. Add the sliced onion and cook for 8 to 10 minutes, stirring occasionally, until soft and lightly golden. Stir in the turmeric and coriander and cook for another 30 seconds until fragrant. We use our <a href="https://www.amazon.com/dp/B0F3TM5T6K/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place pot</a> for this — PFAS-free ceramic we trust for everyday family cooking.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text"><strong>Brown the chicken.</strong> Add the chicken pieces. Cook for 8 to 10 minutes, turning occasionally, until lightly browned on all sides. Browning builds depth of flavor that carries through the entire stew.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text"><strong>Simmer.</strong> Pour in the filtered water and add the crushed garlic cloves if using. Bring to a gentle boil, then reduce to a low simmer. Cover and cook for 90 minutes, allowing the chicken to become very tender and the broth to develop a rich, flavorful base.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text"><strong>Add the vegetables and plums.</strong> Add the carrots, potatoes, sliced tomatoes, rinsed dried plums, zucchini if using, and tomato paste if using. Season with <a href="https://www.amazon.com/dp/B000EITYUU/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">good quality sea salt</a> — we use Celtic Sea Salt, unrefined with 70+ trace minerals. Omit salt entirely for the baby portion. Cover and simmer for another 30 minutes, or until the vegetables are fork-tender, the tomatoes have softened into the broth, and the plums are soft while still holding their shape. If using lemon juice for a brighter finish, stir it in during the last 5 minutes. Taste and adjust seasoning.</span></li>
+      <li class="step-item"><span class="step-number">5</span><span class="step-text"><strong>Rest and serve.</strong> Remove the pot from the heat and let the stew rest for 10 minutes before serving. Serve warm over Persian steamed rice with the broth spooned generously over the top, or with warm bread for scooping.</span></li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>Pit safety note:</strong> Dried Persian plums contain pits. Always remove all pits before serving to babies and young toddlers. Check every plum carefully — the pits are firm and pose a choking hazard. For older children and adults, simply remind them at the table.
+    </div>
+
+    <div class="tip-box">
+      <strong>Serving note:</strong> This stew is traditionally served over Persian steamed rice (chelow). We always soak our rice before cooking. <a href="../learn/soaking-rice.html" style="color: var(--burgundy);">Learn why in our article on soaking rice.</a>
+    </div>
+
+    <h2 class="section-title">Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Over Persian steamed rice (chelow) with the broth spooned generously on top</li>
+      <li>With warm sourdough bread for scooping</li>
+      <li>Plain full-fat yogurt on the side</li>
+      <li>Fresh herbs (sabzi khordan) alongside</li>
+      <li>Shirazi salad for adults and older children</li>
+      <li>Over brown rice for a heartier version</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Remove all bones, skin, and plum pits before serving. Shred the chicken into very small pieces. Mash the carrots, potatoes, tomatoes, and plums into the broth. Omit black pepper and salt entirely. Serve by the spoonful or mixed into soft rice.</td></tr>
+        <tr><td><strong>12–18 months</strong></td><td>Shredded or finely chopped chicken with soft vegetables. Cut plums into small pieces and remove pits. Serve over soft rice that easily absorbs the broth.</td></tr>
+        <tr><td><strong>18 months+</strong></td><td>Serve as the family version. Remind older children about the plum pits.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Full serving over rice or with bread, yogurt, fresh herbs, and Shirazi salad.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days in an airtight container. The stew thickens as it sits — add a splash of filtered water when reheating and warm gently over low heat. <a href="../learn/histamine-cooked-meat.html" style="color: var(--burgundy);">Why we keep cooked chicken for 2 days only.</a></p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 3 months without the rice. Freeze in portioned containers immediately after cooling. Thaw overnight in the fridge and reheat gently with a splash of filtered water.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Always remove plum pits before serving to babies and young toddlers. Check each plum carefully.</li>
+      <li>Bone-in chicken produces a richer, more flavorful broth than boneless. The bones release gelatin and minerals into the broth during the long simmer. For a quicker version, boneless thighs work but reduce the simmering time to 45 to 60 minutes.</li>
+      <li>Pull the baby portion before adding salt. Season the rest of the pot with good quality sea salt to taste.</li>
+      <li>The 90-minute initial simmer is what makes this dish special. The chicken becomes fall-off-the-bone tender and the broth develops a deep, layered flavor that a shorter cook cannot replicate.</li>
+      <li>Add the plums with the vegetables, not at the start. They need only 30 minutes and will dissolve completely if added too early.</li>
+      <li>A tablespoon of tomato paste stirred in with the vegetables deepens the color and adds richness — especially useful when tomatoes are not at their peak.</li>
+      <li>Let the stew rest for 10 minutes off the heat before serving. The flavors settle and the broth becomes even more cohesive.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍚 <strong>The rice ritual</strong> — this stew is always served over rice in Iranian homes. For babies, mix the shredded chicken and mashed vegetables directly into soft rice before serving. For older toddlers, ladle the stew over rice at the table and let the broth soak in. The ritual of spooning broth over rice is something children learn to love early.</div>
+      <div class="fun-item">🫐 <strong>The plums</strong> — dried Persian plums are one of the most distinctive ingredients in Persian cooking. Show your toddler what they look like before cooking and let them smell the sweet-sour aroma. It is a gentle introduction to the complex flavors that define Iranian cuisine.</div>
+      <div class="fun-item">🥘 <strong>One pot, all ages</strong> — cook one stew for the whole family. Pull the baby portion before adding salt, shred the chicken and mash the vegetables, and serve alongside the family meal. Everyone eats the same food at the same table. That is the spirit of Persian family eating.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Complete Protein</div><div class="nourish-desc">Bone-in chicken provides complete protein with all essential amino acids — essential for growth, muscle development, and immune function</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🦴</span><div class="nourish-title">Mineral-Rich Broth</div><div class="nourish-desc">The long simmer with bone-in chicken draws minerals and gelatin into the broth — making the liquid itself deeply nourishing for babies and toddlers</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Vitamin C</div><div class="nourish-desc">Fresh tomatoes and lemon juice provide vitamin C — which enhances iron absorption from the chicken when eaten in the same meal</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🫐</span><div class="nourish-title">Dried Plums</div><div class="nourish-desc">Aloo bokhara provide antioxidants, potassium, and natural prebiotics — supporting gut health and adding a gentle sweetness babies respond well to</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🔥</span><div class="nourish-title">Turmeric</div><div class="nourish-desc">A traditional anti-inflammatory spice used throughout Persian cooking — absorbed best when eaten alongside fat, as in this dish</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
