@@ -4,38 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Start Here — Nourished From Birth</title>
-  <meta name="description" content="New to ancestral baby nutrition? Start here. Learn the philosophy, explore the recipes, and find out what makes this approach different." />
+  <meta name="description" content="New to ancestral baby nutrition? Start here. Find the right recipes and articles based on where you and your baby are right now." />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .start-here-page { padding-top: 70px; }
+    .start-section { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .welcome-block { background: var(--cream); border-radius: 1.2rem; padding: 2.5rem; margin-bottom: 4rem; text-align: center; }
+    .welcome-block p { font-size: 1.15rem; color: var(--text-secondary); line-height: 1.85; max-width: 680px; margin: 0 auto; }
+    .path-section { margin-bottom: 4rem; }
+    .path-section h2 { font-size: 1.5rem; color: var(--dark-brown); margin-bottom: 0.5rem; }
+    .path-section .section-intro { font-size: 1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; }
+    .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+    .path-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1.2rem; padding: 1.8rem; display: flex; flex-direction: column; }
+    .path-card .path-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
+    .path-card h3 { font-size: 1rem; color: var(--dark-brown); margin-bottom: 0.5rem; line-height: 1.3; }
+    .path-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.2rem; flex-grow: 1; }
+    .path-card a.path-btn { display: inline-block; background: var(--burgundy); color: white; padding: 0.55rem 1.1rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; text-align: center; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .recipe-picks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-bottom: 4rem; }
+    .recipe-pick { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; overflow: hidden; text-decoration: none; color: inherit; display: flex; transition: transform 0.2s, box-shadow 0.2s; }
+    .recipe-pick:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .recipe-pick img { width: 110px; height: 110px; object-fit: cover; flex-shrink: 0; }
+    .recipe-pick-info { padding: 1rem; display: flex; flex-direction: column; justify-content: center; }
+    .recipe-pick-info .pick-tag { font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.3rem; display: block; }
+    .recipe-pick-info h4 { font-size: 0.92rem; color: var(--dark-brown); margin-bottom: 0.3rem; line-height: 1.3; }
+    .recipe-pick-info p { font-size: 0.8rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+    .article-picks { list-style: none; padding: 0; margin-bottom: 4rem; }
+    .article-picks li { padding: 1rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 1rem; align-items: flex-start; }
+    .article-picks li:last-child { border: none; }
+    .article-picks a { color: var(--dark-brown); text-decoration: none; font-size: 1rem; font-weight: 500; line-height: 1.4; display: block; margin-bottom: 0.3rem; }
+    .article-picks a:hover { color: var(--burgundy); }
+    .article-picks .article-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; margin: 0; }
+    .article-picks .article-num { background: var(--burgundy); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .personal-note { background: linear-gradient(135deg, rgba(128,0,32,0.06), rgba(128,0,32,0.02)); border: 1px solid rgba(128,0,32,0.15); border-radius: 1.2rem; padding: 2rem 2.5rem; margin-bottom: 4rem; }
+    .personal-note p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.8rem; }
+    .personal-note p:last-child { margin: 0; }
+    .personal-note .signature { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--burgundy); font-style: italic; }
+    @media (max-width: 700px) {
+      .path-grid { grid-template-columns: 1fr; }
+      .recipe-picks { grid-template-columns: 1fr; }
+      .start-section { padding: 2rem 1.2rem; }
+    }
+  </style>
   <script>
   (function (s, e, n, d, er) {
-    s['Sender'] = er;
-    s[er] = s[er] || function () {
-      (s[er].q = s[er].q || []).push(arguments)
-    }, s[er].l = 1 * new Date();
-    s[er].on = function (event, callback) {
-      s[er].listeners = s[er].listeners || {};
-      (s[er].listeners[event] = s[er].listeners[event] || []).push(callback);
-    };
-    var a = e.createElement(n),
-        m = e.getElementsByTagName(n)[0];
-    a.async = 1;
-    a.src = d;
-    m.parentNode.insertBefore(a, m)
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
   sender('c55b498fbe1031')
   </script>
 </head>
-<body>
+<body class="start-here-page">
 
   <nav>
-    <a href="../index.html" class="nav-logo">
-      Nourished From Birth
-      <span>Ancestral Wisdom · Real Food</span>
-    </a>
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="start-here.html">Start Here</a></li>
       <li><a href="recipes.html">Recipes</a></li>
@@ -47,112 +72,188 @@
 
   <div class="page-hero">
     <span class="label">Start Here</span>
-    <h1>A different way to feed your baby</h1>
-    <p>Rooted in ancestral wisdom, backed by research, and shaped by Iranian culinary tradition. Here is what we believe — and why.</p>
+    <h1>Not sure where to begin? Start here.</h1>
+    <p>Find the right recipes and articles based on where you and your baby are right now.</p>
   </div>
 
-  <section class="start-section">
+  <div class="start-section">
 
-    <div class="philosophy-grid">
+    <div class="welcome-block">
+      <p>This site is built around one idea: babies thrive on the same real, traditionally prepared food that healthy cultures around the world have eaten for thousands of years. You do not need special products, complicated techniques, or hours in the kitchen. You just need to know where to start.</p>
+    </div>
 
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🦴</div>
-        <h3>Nourishing Broths & Stocks</h3>
-        <p>The foundation of ancestral infant nutrition. Meat stock and bone broth heal the gut lining, support mineral absorption, and form the base of countless traditional baby foods around the world.</p>
+    <!-- WHERE TO BEGIN -->
+    <h2 class="section-title">Where are you right now?</h2>
+    <div class="path-grid">
+
+      <div class="path-card">
+        <span class="path-icon">🍼</span>
+        <h3>My baby is just starting solids — around 6 months</h3>
+        <p>Start with the simplest, most nourishing first foods: egg yolk, meat stock, liver pate, and soft fats. These are what traditional cultures offered first — and what modern research supports most strongly.</p>
+        <a href="recipes.html#first-foods" class="path-btn">See First Foods</a>
       </div>
 
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🧠</div>
-        <h3>Real Fats for Brain Development</h3>
-        <p>The low-fat era did real damage. A baby's brain is 60% fat and needs a steady supply of animal fats, egg yolks, and quality oils to develop properly in the first two years of life.</p>
+      <div class="path-card">
+        <span class="path-icon">🥣</span>
+        <h3>My baby is 9 to 12 months and I want more variety</h3>
+        <p>Your baby is ready for more texture, more flavor, and more of what the family eats. Persian stews, lentil dishes, and soft family meals are perfect at this stage — and most of our recipes are built for exactly this.</p>
+        <a href="recipes.html" class="path-btn">Browse All Recipes</a>
       </div>
 
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🫙</div>
-        <h3>Fermented & Living Foods</h3>
-        <p>Traditional cultures fermented grains, dairy, and vegetables not as a wellness trend but as necessity. These foods seed the microbiome and build the immune foundation babies need from the start.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🌾</div>
-        <h3>Legumes & Grains Done Right</h3>
-        <p>Soaked, sprouted, or fermented — the way grains and legumes have always been prepared in traditional cultures. This reduces phytic acid, improves digestibility, and makes nutrients available.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🥩</div>
-        <h3>Traditional Whole Foods</h3>
-        <p>Nose-to-tail eating is ancestral, not trendy. Organ meats, marrow, and slow-cooked cuts provide nutrients that muscle meat alone cannot deliver — and babies thrive on them.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🔥</div>
-        <h3>Traditional Preparation Methods</h3>
-        <p>How food is prepared matters as much as what you eat. Slow cooking, soaking, fermenting, and using the whole animal are practices that have nourished healthy populations for thousands of years.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">💚</div>
-        <h3>Gut Health from Day One</h3>
-        <p>The gut microbiome is established in the first years of life and shapes immunity, mental health, and metabolic function for decades. What babies eat in this window matters enormously.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">🌍</div>
-        <h3>Iranian Heritage</h3>
-        <p>A rich food culture that naturally combines animal foods, legumes, herbs, and grains — ancestral wisdom from birth.</p>
-      </div>
-
-      <div class="philosophy-card">
-        <div class="philosophy-icon">⚖️</div>
-        <h3>Realistic Moderation</h3>
-        <p>Real life exists. Travel, busy weeks, imperfect days. The goal is the foundation — not perfection.</p>
+      <div class="path-card">
+        <span class="path-icon">🍲</span>
+        <h3>I have a toddler and want meals the whole family shares</h3>
+        <p>The best toddler food is family food — made with real ingredients, slow-cooked when possible, and served together. Browse Persian family meals, quick weeknight dinners, and one-pot stews that work for every age at the table.</p>
+        <a href="recipes.html#persian" class="path-btn">See Family Meals</a>
       </div>
 
     </div>
 
-    <div class="quote-block">
-      <blockquote>
-        "Where I grew up in Iran, baby food didn't exist. Babies just ate food — slow-cooked, mineral-rich, passed from the family pot without a second thought."
-      </blockquote>
-      — From our Start Here page
+    <!-- TOP RECIPES -->
+    <h2 class="section-title">Five recipes to start with</h2>
+    <div class="recipe-picks">
+
+      <a href="recipes/egg-yolk-puree.html" class="recipe-pick">
+        <img src="../images/egg-yolk-puree.webp" alt="Egg yolk puree" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">First Food · 6 Months+</span>
+          <h4>Egg Yolk Purée</h4>
+          <p>One of the most nutrient-dense first foods you can offer — rich in choline, DHA, and cholesterol for brain development.</p>
+        </div>
+      </a>
+
+      <a href="recipes/chicken-liver-pate.html" class="recipe-pick">
+        <img src="../images/chicken-liver-pate.webp" alt="Chicken liver pate" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">First Food · 6 Months+</span>
+          <h4>Chicken Liver Pâté</h4>
+          <p>The most nutrient-dense first food you can make — iron, B12, choline, and fat-soluble vitamins in every small serving.</p>
+        </div>
+      </a>
+
+      <a href="recipes/babys-first-meat-stock.html" class="recipe-pick">
+        <img src="../images/babys-first-meat-stock.webp" alt="Baby's first meat stock" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Foundation · 6 Months+</span>
+          <h4>Baby's First Meat Stock</h4>
+          <p>Gentler than bone broth and easier to digest — the most nourishing first liquid for a baby starting solids.</p>
+        </div>
+      </a>
+
+      <a href="recipes/kotlet.html" class="recipe-pick">
+        <img src="../images/kotlet.webp" alt="Persian kotlet" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Persian · 9 Months+</span>
+          <h4>Kotlet</h4>
+          <p>The Iranian comfort food every grandmother makes — crispy outside, tender inside, and on the table in under 30 minutes.</p>
+        </div>
+      </a>
+
+      <a href="recipes/whipped-bone-marrow.html" class="recipe-pick">
+        <img src="../images/whipped-bone-marrow.webp" alt="Whipped bone marrow" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">First Food · 6 Months+</span>
+          <h4>Whipped Bone Marrow</h4>
+          <p>A silky, nutrient-dense spread from roasted grass-fed marrow — stir into any meal for babies, toddlers, and the whole family.</p>
+        </div>
+      </a>
+
+      <a href="recipes/sardine-pate.html" class="recipe-pick">
+        <img src="../images/sardine-pate.webp" alt="Creamy sardine pate" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Quick · 9 Months+</span>
+          <h4>Creamy Sardine Pâté</h4>
+          <p>Packed with omega-3s, calcium, and vitamin D — one of the most nutrient-dense no-cook meals you can offer a baby or toddler.</p>
+        </div>
+      </a>
+
+      <a href="recipes/ground-meat-patties.html" class="recipe-pick">
+        <img src="../images/ground-meat-patties.webp" alt="Ground meat patties" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Quick · 9 Months+</span>
+          <h4>Ground Meat Patties</h4>
+          <p>Simple, iron-rich patties made with ground beef, lamb, or bison — a family meal ready in under 30 minutes from 9 months.</p>
+        </div>
+      </a>
+
+      <a href="recipes/lamb-vegetable-stew.html" class="recipe-pick">
+        <img src="../images/lamb-vegetable-stew.webp" alt="Lamb and vegetable stew" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Slow-Cooked · 7 Months+</span>
+          <h4>Lamb & Vegetable Stew</h4>
+          <p>Slow-cooked until fall-apart tender — a nourishing family meal that doubles as perfect baby food from 7 months.</p>
+        </div>
+      </a>
+
+      <a href="recipes/morgh-aloo-bokhara.html" class="recipe-pick">
+        <img src="../images/morgh-aloo-bokhara.webp" alt="Persian chicken with dried plums" />
+        <div class="recipe-pick-info">
+          <span class="pick-tag">Persian · 9 Months+</span>
+          <h4>Morgh ba Aloo Bokhara</h4>
+          <p>A comforting one-pot Persian chicken stew with dried plums — naturally sweet-tart, deeply nourishing, baby-friendly.</p>
+        </div>
+      </a>
+
     </div>
 
-    <div class="content-cards-grid">
+    <!-- TOP ARTICLES -->
+    <h2 class="section-title">Three articles to read first</h2>
+    <ul class="article-picks">
 
-      <div class="content-card">
-        <div class="content-card-icon">🥣</div>
-        <div class="content-card-body">
-          <span class="label">Recipes</span>
-          <h3>First Foods the Traditional Way</h3>
-          <p>From meat stock for 6-month-olds to kotlet for toddlers — organized by category from first foods and broths to Persian family favorites.</p>
-          <a href="recipes.html" class="text-link">Browse Recipes</a>
+      <li>
+        <span class="article-num">1</span>
+        <div>
+          <a href="learn/fat-baby-brain.html">Fat Is Not the Enemy — Why Your Baby's Brain Needs Animal Fats</a>
+          <p class="article-desc">The most important thing to understand before starting solids. A baby's brain is 60% fat and the low-fat era did real damage to how we feed our children.</p>
         </div>
-      </div>
+      </li>
 
-      <div class="content-card">
-        <div class="content-card-icon">📚</div>
-        <div class="content-card-body">
-          <span class="label">Learn</span>
-          <h3>Learn the Why Behind What We Feed</h3>
-          <p>The research behind ancestral baby nutrition — from cod liver oil to traditional grain preparation.</p>
-          <a href="learn.html" class="text-link">Start Learning</a>
+      <li>
+        <span class="article-num">2</span>
+        <div>
+          <a href="learn/weston-a-price.html">What Weston A. Price Discovered About How Traditional Cultures Fed Their Babies</a>
+          <p class="article-desc">The research that underpins everything on this site — a dentist who traveled the world and found that the healthiest children were eating real, traditional food.</p>
         </div>
-      </div>
+      </li>
 
-      <div class="content-card">
-        <div class="content-card-icon">📋</div>
-        <div class="content-card-body">
-          <span class="label">Free Guide</span>
-          <h3>7 First Foods Your Ancestors Fed Their Babies</h3>
-          <p>A practical starting point for parents who want to choose real food more often.</p>
-          <a href="../index.html#newsletter" class="text-link">Get the Free Guide</a>
+      <li>
+        <span class="article-num">3</span>
+        <div>
+          <a href="learn/cod-liver-oil-kids.html">Cod Liver Oil for Kids: Why It Matters and How to Give It</a>
+          <p class="article-desc">The one supplement worth giving babies and young children — what it contains, why those nutrients matter, and the only brand worth recommending.</p>
         </div>
-      </div>
+      </li>
 
+    </ul>
+
+    <!-- PERSONAL NOTE -->
+    <div class="personal-note">
+      <p>I am Iranian-born, a materials engineer, and a mom of two. I cooked real food for my first daughter from the day she started solids — not because I had extra time, but because once you know a few simple things, it genuinely does not take that long.</p>
+      <p>The Persian recipes on this site are not restaurant-level authentic. They are grandmother-level practical — fewer ingredients, simpler technique, the same nourishment. Someone should be able to look at the ingredient list and think "I already have almost everything I need." That is the goal.</p>
+      <p>If you are just starting out, pick one recipe and make it this week. That is enough.</p>
+      <p class="signature">— Avishan</p>
     </div>
 
-  </section>
+    <!-- CTA ROW -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-bottom: 2rem;">
+      <a href="recipes.html" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; text-decoration: none; text-align: center; display: block;">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🍲</div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.3rem;">Recipes</div>
+        <div style="font-size: 0.88rem; color: var(--text-secondary);">Browse all recipes by category</div>
+      </a>
+      <a href="learn.html" style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; text-decoration: none; text-align: center; display: block;">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📚</div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.3rem;">Learn</div>
+        <div style="font-size: 0.88rem; color: var(--text-secondary);">The why behind what we feed our babies</div>
+      </a>
+      <a href="../index.html#newsletter" style="background: var(--burgundy); border-radius: 1rem; padding: 1.5rem; text-decoration: none; text-align: center; display: block;">
+        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📋</div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 0.3rem;">Free Guide</div>
+        <div style="font-size: 0.88rem; color: white;">7 First Foods Your Ancestors Fed Their Babies</div>
+      </a>
+    </div>
+
+  </div>
 
   <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
     <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
@@ -163,36 +264,12 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="nav-logo">
-          Nourished From Birth
-          <span>Ancestral Wisdom · Real Food</span>
-        </a>
-        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood.</p>
+        <a href="../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
       </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="start-here.html">Start Here</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="learn.html">Learn</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Topics</h4>
-        <ul>
-          <li><a href="#">Gut Health</a></li>
-          <li><a href="#">Weston A. Price</a></li>
-          <li><a href="#">Meat Stock & Broths</a></li>
-          <li><a href="#">First Foods</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="../index.html#newsletter">Newsletter</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="start-here.html">Start Here</a></li><li><a href="recipes.html">Recipes</a></li><li><a href="learn.html">Learn</a></li><li><a href="shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Weston A. Price</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../index.html#newsletter">Newsletter</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Nourished From Birth. All rights reserved.</p>
