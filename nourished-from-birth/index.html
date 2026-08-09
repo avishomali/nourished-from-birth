@@ -27,6 +27,35 @@
   sender('c55b498fbe1031')
   </script>
   <meta name='impact-site-verification' value='918fb9f3-eecb-4de2-b33f-04d0f1b8d26b'>
+  <style>
+    .philosophy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 3rem 6rem; background: var(--warm-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .philosophy-card { background: white; border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .philosophy-card .p-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .philosophy-card p { font-family: 'Jost', sans-serif; font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.4; font-weight: 500; }
+    .featured-recipes { padding: 4rem 6rem; }
+    .featured-recipes .section-header { margin-bottom: 2rem; }
+    .featured-recipes .section-header h2 { font-size: 1.8rem; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .featured-recipes .section-header p { font-size: 1rem; color: var(--text-secondary); }
+    .recipes-preview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+    .recipe-preview-card { background: white; border-radius: 1.2rem; overflow: hidden; border: 1px solid var(--border); text-decoration: none; color: inherit; transition: transform 0.25s, box-shadow 0.25s; display: block; }
+    .recipe-preview-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow); }
+    .recipe-preview-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .recipe-preview-info { padding: 1rem; }
+    .recipe-preview-info .r-tag { font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 0.3rem; display: block; }
+    .recipe-preview-info h4 { font-size: 0.95rem; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .recipe-preview-info p { font-size: 0.8rem; color: var(--text-light); margin: 0; line-height: 1.5; }
+    .view-all-link { text-align: center; }
+    .view-all-link a { font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid var(--burgundy); padding-bottom: 0.2rem; }
+    @media (max-width: 900px) {
+      .philosophy-grid { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
+      .recipes-preview-grid { grid-template-columns: 1fr 1fr; }
+      .featured-recipes { padding: 2rem 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .philosophy-grid { grid-template-columns: 1fr 1fr; padding: 1.5rem 1rem; }
+      .recipes-preview-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -57,7 +86,7 @@
       <h1>Feed your baby the way <em>humans have for thousands of years</em></h1>
       <p class="hero-desc">
         Wholesome recipes inspired by ancestral nutrition — nourishing your baby, toddler,
-        and whole family, with a special collection of Persian family favorites.
+        and whole family, with a special collection of Persian family favorites — simplified for busy families.
       </p>
       <div class="hero-actions">
         <a href="pages/start-here.html" class="btn-primary">Start Here</a>
@@ -67,7 +96,6 @@
     <div class="hero-right">
       <div class="hero-image-container">
         <img src="images/hero-stew.webp" alt="Slow-cooked lamb stew with potato wedges and carrots" style="width:100%;height:100%;object-fit:cover;display:block;" />
-
       </div>
     </div>
     <div class="hero-scroll">
@@ -76,41 +104,39 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY STRIP -->
-  <div class="philosophy-strip">
-    <div class="philosophy-item">
-      <span class="icon">🦴</span>
+  <!-- PHILOSOPHY GRID -->
+  <div class="philosophy-grid">
+    <div class="philosophy-card">
+      <span class="p-icon">🦴</span>
       <p>Nourishing Broths & Stocks</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">🥩</span>
+    <div class="philosophy-card">
+      <span class="p-icon">🥩</span>
       <p>Real Fats for Brain Development</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">🫙</span>
+    <div class="philosophy-card">
+      <span class="p-icon">🫙</span>
       <p>Fermented & Living Foods</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">🫘</span>
+    <div class="philosophy-card">
+      <span class="p-icon">🫘</span>
       <p>Legumes & Grains Done Right</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">🌿</span>
+    <div class="philosophy-card">
+      <span class="p-icon">🌿</span>
       <p>Traditional Whole Foods</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">🔥</span>
+    <div class="philosophy-card">
+      <span class="p-icon">🔥</span>
       <p>Traditional Preparation Methods</p>
     </div>
-    <div class="philosophy-divider"></div>
-    <div class="philosophy-item">
-      <span class="icon">💚</span>
+    <div class="philosophy-card">
+      <span class="p-icon">💚</span>
       <p>Gut Health from Day One</p>
+    </div>
+    <div class="philosophy-card">
+      <span class="p-icon">🌍</span>
+      <p>Iranian Heritage</p>
     </div>
   </div>
 
@@ -150,6 +176,68 @@
     </div>
   </section>
 
+  <!-- FEATURED RECIPES -->
+  <section class="featured-recipes">
+    <div class="section-header">
+      <span class="label">Featured Recipes</span>
+      <h2>Start cooking this week</h2>
+      <p>A few of our most loved recipes — from simple first foods to Persian family favorites.</p>
+    </div>
+    <div class="recipes-preview-grid">
+      <a href="pages/recipes/egg-yolk-puree.html" class="recipe-preview-card">
+        <img src="images/egg-yolk-puree.webp" alt="Egg yolk puree for babies" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">First Food · 6 Months+</span>
+          <h4>Egg Yolk Purée</h4>
+          <p>One of the most nutrient-dense first foods — rich in choline, DHA, and cholesterol for brain development.</p>
+        </div>
+      </a>
+      <a href="pages/recipes/kotlet.html" class="recipe-preview-card">
+        <img src="images/kotlet.webp" alt="Persian kotlet patties" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">Persian · 9 Months+</span>
+          <h4>Kotlet</h4>
+          <p>The Iranian comfort food every grandmother makes — crispy outside, tender inside, ready in 30 minutes.</p>
+        </div>
+      </a>
+      <a href="pages/recipes/babys-first-meat-stock.html" class="recipe-preview-card">
+        <img src="images/babys-first-meat-stock.webp" alt="Baby's first meat stock" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">Foundation · 6 Months+</span>
+          <h4>Baby's First Meat Stock</h4>
+          <p>Gentler than bone broth and easier to digest — the most nourishing first liquid for a baby starting solids.</p>
+        </div>
+      </a>
+      <a href="pages/recipes/chicken-liver-pate.html" class="recipe-preview-card">
+        <img src="images/chicken-liver-pate.webp" alt="Chicken liver pate" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">First Food · 6 Months+</span>
+          <h4>Chicken Liver Pâté</h4>
+          <p>The most nutrient-dense first food you can make — iron, B12, choline, and fat-soluble vitamins in every serving.</p>
+        </div>
+      </a>
+      <a href="pages/recipes/morgh-aloo-bokhara.html" class="recipe-preview-card">
+        <img src="images/morgh-aloo-bokhara.webp" alt="Persian chicken with dried plums" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">Persian · 9 Months+</span>
+          <h4>Morgh ba Aloo Bokhara</h4>
+          <p>A comforting one-pot Persian chicken stew with dried plums — naturally sweet-tart and baby-friendly.</p>
+        </div>
+      </a>
+      <a href="pages/recipes/sardine-pate.html" class="recipe-preview-card">
+        <img src="images/sardine-pate.webp" alt="Creamy sardine pate" />
+        <div class="recipe-preview-info">
+          <span class="r-tag">Quick · 9 Months+</span>
+          <h4>Creamy Sardine Pâté</h4>
+          <p>Packed with omega-3s, calcium, and vitamin D — one of the most nutrient-dense no-cook meals you can offer.</p>
+        </div>
+      </a>
+    </div>
+    <div class="view-all-link">
+      <a href="pages/recipes.html">View all recipes</a>
+    </div>
+  </section>
+
   <!-- FEATURED CONTENT -->
   <section class="featured-section">
     <div class="section-header">
@@ -162,9 +250,7 @@
         <div class="card-body">
           <span class="label">Recipes</span>
           <h3>First Foods the Traditional Way</h3>
-          <p>From meat stock for 6-month-olds to kotlet for toddlers — organized by category
-          from first foods and broths to Persian family favorites.
-          </p>
+          <p>From meat stock for 6-month-olds to kotlet for toddlers — organized by category from first foods and broths to Persian family favorites.</p>
           <span class="card-arrow">Browse Recipes</span>
         </div>
       </a>
@@ -175,6 +261,15 @@
           <h3>Why the First 1,000 Days Matter Most</h3>
           <p>The microbiome window, Weston A. Price's discoveries, and what ancestral cultures got right about baby nutrition.</p>
           <span class="card-arrow">Start Learning</span>
+        </div>
+      </a>
+      <a href="pages/shop.html" class="content-card">
+        <div class="card-image gold">🛒</div>
+        <div class="card-body">
+          <span class="label">Shop</span>
+          <h3>What We Actually Use in Our Kitchen</h3>
+          <p>Honest recommendations for cookware, wild-caught fish, supplements, and pantry staples — with full transparency about trade-offs.</p>
+          <span class="card-arrow">Visit the Shop</span>
         </div>
       </a>
       <a href="#newsletter" class="content-card">
@@ -210,17 +305,16 @@
     <p class="email-note">No spam. Unsubscribe anytime.</p>
   </section>
 
-  <!-- FOOTER -->
-
   <!-- DISCLAIMER -->
   <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
     <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
-      The content on this site is based on personal experience and research and is intended for informational purposes only. 
-      It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or 
+      The content on this site is based on personal experience and research and is intended for informational purposes only.
+      It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or
       a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
     </p>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
@@ -236,6 +330,7 @@
           <li><a href="pages/start-here.html">Start Here</a></li>
           <li><a href="pages/recipes.html">Recipes</a></li>
           <li><a href="pages/learn.html">Learn</a></li>
+          <li><a href="pages/shop.html">Shop</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -252,7 +347,7 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="#">Instagram</a></li>
-                    <li><a href="#newsletter">Newsletter</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
           <li><a href="#">About</a></li>
         </ul>
       </div>
