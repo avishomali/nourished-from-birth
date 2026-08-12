@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khameh Asal — Persian Honey and Cream Breakfast — Nourished From Birth</title>
+  <meta name="description" content="A traditional Iranian breakfast of thick whipped cream and honey served with sourdough bread, walnuts, and a boiled egg. Simple, nourishing, and deeply satisfying from 12 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/khameh-asal.webp" alt="Persian khameh asal — thick whipped cream with honey drizzle served with sourdough bread walnuts and boiled egg" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Breakfast · Persian Family Favorites</span>
+      <span class="age-badge">✓ Cream from 6 Months · Honey from 12 Months</span>
+      <h1>Khameh Asal<br><span style="font-size: 0.6em; font-weight: 400; color: var(--text-secondary);">خامه عسل</span></h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A traditional Iranian breakfast of thick whipped cream and honey served with good bread, walnuts, and a boiled egg. Five minutes, no cooking, deeply satisfying.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">5 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">None</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">2 to 3</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">6 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>1 cup heavy whipping cream, cold</li>
+          <li>Good quality honey, for drizzling or swirling — to taste</li>
+          <li>Good quality bread — sourdough or a clean-ingredient flatbread with no additives or preservatives. This is essential, not optional.</li>
+        </ul>
+        <span class="optional-label">How we serve it</span>
+        <ul class="ingredients-list">
+          <li>Walnuts alongside — we soak ours overnight in filtered water. Soaking reduces phytic acid and enzyme inhibitors for better digestion and nutrient absorption, and removes tannins from the skin that cause bitterness. Drain and rinse before serving.</li>
+          <li>Hard-boiled eggs on the side — adds protein and keeps kids full longer</li>
+        </ul>
+        <span class="optional-label">Notes</span>
+        <ul class="ingredients-list">
+          <li>The traditional Iranian version uses sarshir or khameh — a thick clotted cream not widely available in the US. Whipped heavy cream is the closest American substitute and works beautifully.</li>
+          <li>Honey must be omitted entirely for babies under 12 months — no exceptions. The whipped cream on its own is delicious and perfectly appropriate without it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>What is Khameh Asal?</strong>
+      Khameh asal — cream and honey — is one of the simplest and most beloved Iranian breakfasts. In Iran it is made with sarshir or khameh, a thick clotted cream with a richness that is hard to describe until you have tasted it. In the US, sarshir is difficult to find outside of Persian specialty stores. Whipping cold heavy cream until thick and spreadable gives you something very close in texture and spirit. This is not a dessert disguised as breakfast. Served with good sourdough bread, a handful of walnuts, and a boiled egg, it is a complete and genuinely nourishing morning meal — healthy fat, complete protein, and slow-burning carbohydrates all in one spread. This is how an Iranian family actually eats breakfast.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text"><strong>Whip the cream.</strong> Pour the cold heavy cream into the KitchenAid bowl and attach the whisk. Start on speed 2 to avoid splashing, then gradually increase to speed 6 or 8. Watch the cream as it goes through these stages: at about 2 minutes it will look frothy and bubbly. At 3 minutes you will see trails in the cream that do not dissolve immediately. At 3 to 4 minutes soft peaks will form. For khameh asal, stop here or go just slightly further until the cream is thick, spreadable, and holds its shape firmly when you lift the whisk. Do not go all the way to stiff peaks. Total time is typically 3 to 5 minutes. If you have time, chilling the bowl and whisk attachment in the fridge for 10 minutes beforehand helps the cream whip faster — but it works fine without this step too.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text"><strong>Add honey — or serve it alongside.</strong> Either gently fold in 1 tablespoon of honey for a lightly sweetened cream, or keep the honey in a small dish on the table so each person can drizzle as much or as little as they like. The second option is more traditional and gives everyone control over sweetness. For babies and children under 12 months, serve the plain whipped cream without any honey.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text"><strong>Set the table.</strong> Bring the whipped cream to the table alongside toasted or fresh sourdough bread, a small bowl of walnuts, and hard-boiled eggs. Let everyone build their own plate — a generous spread of cream on bread, a drizzle of honey, a few walnuts, and an egg on the side.</span>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>Honey and babies under 12 months:</strong> Honey must not be given to babies under 12 months under any circumstances. It can contain Clostridium botulinum spores which a young baby's digestive system cannot safely handle. The whipped cream on its own is perfectly delicious and appropriate for babies from 6 months. Add honey only once your child is past their first birthday.
+    </div>
+
+    <div class="tip-box">
+      <strong>Whipping tip:</strong> The cream must be cold to whip properly. If your kitchen is warm, chill the bowl in the freezer for 10 minutes before whipping. Stop whipping as soon as the cream holds its shape and looks thick and spreadable. A few seconds too long and it begins turning into butter — still edible, but not what you are going for here.
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>6 to 12 months</strong></td>
+          <td>Plain whipped cream only — no honey. Spread a small amount on a soft piece of bread or serve by the spoonful. The fat content is excellent for this age and the flavor is mild and appealing. Skip the walnuts — choking hazard for this age.</td>
+        </tr>
+        <tr>
+          <td><strong>12 to 18 months</strong></td>
+          <td>Whipped cream with a small drizzle of honey on soft bread. Finely chop the walnuts before serving. Boiled egg on the side, cut into small pieces.</td>
+        </tr>
+        <tr>
+          <td><strong>18 months+</strong></td>
+          <td>Serve as the full family version. Toddlers can have walnuts in small pieces and drizzle their own honey.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve everything at the table and let everyone build their own plate. This is a breakfast meant to be enjoyed together.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Whipped cream keeps in the fridge for up to 2 days in a covered container. It may soften slightly — give it a quick stir or brief re-whip before serving. Best made fresh when possible since it only takes 5 minutes.</p>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Use the best quality honey you can find. Raw, unfiltered honey has the most complex flavor and retains more of its natural enzymes and nutrients. For children over 12 months, raw honey is safe and preferable to processed honey.</li>
+      <li>Sourdough bread is the traditional pairing and also the most digestible option — the long fermentation process breaks down gluten and phytic acid. Use a good quality loaf with a proper crumb.</li>
+      <li>Walnuts are the traditional nut served alongside khameh asal in Iranian breakfasts. They add a gentle bitterness that balances the sweetness of the honey and the richness of the cream. For young toddlers, chop them finely.</li>
+      <li>If you can find sarshir or Iranian clotted cream at a Persian grocery store, use it. The flavor is richer and more complex than whipped cream and closer to what this dish tastes like in Iran.</li>
+      <li>This breakfast is more nourishing than it looks. The cream provides fat-soluble vitamins and energy. The egg provides complete protein and choline. The walnuts provide omega-3s. The sourdough provides slow-burning carbohydrates. Honey is the finishing touch, not the main event.</li>
+    </ul>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🥛</span>
+        <div class="nourish-title">Healthy Fat</div>
+        <div class="nourish-desc">Heavy cream provides fat-soluble vitamins A, D, E, and K2 alongside saturated fat that supports brain development and hormone production in young children</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Complete Protein</div>
+        <div class="nourish-desc">The boiled egg alongside provides all essential amino acids plus choline — making this a complete and genuinely balanced breakfast, not just a sweet treat</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌰</span>
+        <div class="nourish-title">Omega-3s</div>
+        <div class="nourish-desc">Walnuts are one of the best plant sources of ALA omega-3 fatty acids and provide additional protein and fiber to support a sustained morning energy level</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍯</span>
+        <div class="nourish-title">Raw Honey</div>
+        <div class="nourish-desc">For children over 12 months, raw honey provides natural antimicrobial compounds, trace minerals, and a more complex sweetness than refined sugar — used in moderation</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
