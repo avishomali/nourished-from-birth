@@ -685,6 +685,12 @@ footer {
 .sidebar-links li a:hover { color: var(--burgundy); }
 
 /* START HERE PAGE OVERRIDES */
+/* START HERE PAGE OVERRIDES */
+.start-here-page .page-hero { padding: 6rem 6rem 3rem; }
+.start-here-page .welcome-block p { font-size: 1.4rem; line-height: 1.9; }
+.start-here-page .welcome-block { padding: 2rem; margin-bottom: 2rem; }
+.start-here-page .start-section { padding: 2rem 4rem; }
+.start-here-page .path-grid { margin-bottom: 2rem; }
 .start-here-page .recipe-pick-info h4 { font-size: 1.1rem; font-family: 'Jost', sans-serif; }
 .start-here-page .recipe-pick-info p { font-size: 1rem; line-height: 1.6; }
 .start-here-page .recipe-pick-info .pick-tag { font-size: 0.72rem; }
@@ -693,10 +699,6 @@ footer {
 .start-here-page .article-picks a { font-size: 1.1rem; font-family: 'Jost', sans-serif; }
 .start-here-page .article-picks .article-desc { font-size: 1rem; }
 .start-here-page .personal-note p { font-size: 1.1rem; }
-.start-here-page .welcome-block p { font-size: 1.2rem; line-height: 1.9; }
-.start-here-page .start-section { padding: 2rem 4rem; }
-.start-here-page .welcome-block { padding: 2rem; margin-bottom: 2.5rem; }
-.start-here-page .path-grid { margin-bottom: 2.5rem; }
 
 
 /* COMING SOON BADGE */
