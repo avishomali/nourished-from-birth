@@ -684,6 +684,17 @@ footer {
 .sidebar-links li a { font-family: 'Jost', sans-serif; font-size: 0.85rem; color: var(--warm-brown); text-decoration: none; transition: color 0.2s; }
 .sidebar-links li a:hover { color: var(--burgundy); }
 
+/* START HERE PAGE OVERRIDES */
+.start-here-page .recipe-pick-info h4 { font-size: 1rem; font-family: 'Jost', sans-serif; }
+.start-here-page .recipe-pick-info p { font-size: 0.88rem; line-height: 1.5; }
+.start-here-page .recipe-pick-info .pick-tag { font-size: 0.72rem; }
+.start-here-page .path-card h3 { font-size: 1.05rem; font-family: 'Jost', sans-serif; }
+.start-here-page .path-card p { font-size: 0.95rem; }
+.start-here-page .article-picks a { font-size: 1.05rem; font-family: 'Jost', sans-serif; }
+.start-here-page .article-picks .article-desc { font-size: 0.92rem; }
+.start-here-page .personal-note p { font-size: 1.05rem; }
+
+
 /* COMING SOON BADGE */
 .coming-soon {
   display: inline-flex;
@@ -699,15 +710,6 @@ footer {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-/* START HERE PAGE OVERRIDES */
-.start-here-page .recipe-pick-info h4 { font-size: 1rem; font-family: 'Jost', sans-serif; }
-.start-here-page .recipe-pick-info p { font-size: 0.88rem; line-height: 1.5; }
-.start-here-page .recipe-pick-info .pick-tag { font-size: 0.72rem; }
-.start-here-page .path-card h3 { font-size: 1.05rem; font-family: 'Jost', sans-serif; }
-.start-here-page .path-card p { font-size: 0.95rem; }
-.start-here-page .article-picks a { font-size: 1.05rem; font-family: 'Jost', sans-serif; }
-.start-here-page .article-picks .article-desc { font-size: 0.92rem; }
-.start-here-page .personal-note p { font-size: 1.05rem; }
 
 /* MOBILE */
 @media (max-width: 900px) {
