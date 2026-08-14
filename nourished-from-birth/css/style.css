@@ -687,7 +687,7 @@ footer {
 /* START HERE PAGE OVERRIDES */
 .start-here-page .page-hero { padding: 6rem 6rem 3rem; }
 .start-here-page .page-hero p { margin-bottom: 0; padding-bottom: 0; }
-.start-here-page .page-hero { padding-bottom: 2rem; }
+.start-here-page .page-hero { padding: 6rem 6rem 2rem !important; }
 .start-here-page .welcome-block p { font-size: 2.5rem; line-height: 1.6; }
 .start-here-page .welcome-block { padding: 1.5rem; margin-bottom: 1.5rem; }
 .start-here-page .start-section { padding: 2rem 4rem; }
