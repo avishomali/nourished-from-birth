@@ -693,6 +693,10 @@ footer {
 .start-here-page .article-picks a { font-size: 1.1rem; font-family: 'Jost', sans-serif; }
 .start-here-page .article-picks .article-desc { font-size: 1rem; }
 .start-here-page .personal-note p { font-size: 1.1rem; }
+.start-here-page .welcome-block p { font-size: 1.2rem; line-height: 1.9; }
+.start-here-page .start-section { padding: 2rem 4rem; }
+.start-here-page .welcome-block { padding: 2rem; margin-bottom: 2.5rem; }
+.start-here-page .path-grid { margin-bottom: 2.5rem; }
 
 
 /* COMING SOON BADGE */
