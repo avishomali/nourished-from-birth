@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian Green Bean & Rice with Beef (Persian Loobia Polo) — Nourished From Birth</title>
+  <meta name="description" content="A comforting Persian family favorite of basmati rice, tender green beans, savory beef, tomato, and a touch of cinnamon. Simple, layered, and perfect for busy family dinners." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .step-group-title { font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin: 2rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .step-group-title:first-child { margin-top: 0; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/loobia-polo.webp" alt="Persian loobia polo green bean rice with beef and golden tahdig" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites · Slow-Cooked</span>
+      <span class="age-badge">✓ 12 Months+</span>
+      <h1>Persian Green Bean & Rice with Beef<br><span style="font-size: 0.6em; font-weight: 400; color: var(--text-secondary);">Persian Loobia Polo</span></h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A comforting Persian family favorite of fragrant basmati rice, tender green beans, savory beef, tomato, and a touch of cinnamon. Simple, layered, and perfect for busy family dinners.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">20 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">1 hour</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">5 to 6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">12 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <span class="optional-label">For the green bean and beef mixture</span>
+        <ul class="ingredients-list">
+          <li>1 lb ground beef or lamb, grass-fed and grass-finished if possible</li>
+          <li>1 lb green beans, fresh or frozen</li>
+          <li>1 large yellow onion, finely diced</li>
+          <li>2 tbsp butter, ghee, or olive oil</li>
+          <li>1 tsp turmeric</li>
+          <li>2 tbsp tomato paste</li>
+          <li>½ tsp ground cinnamon</li>
+          <li>½ tsp black pepper, or to taste</li>
+          <li><a href="https://www.amazon.com/dp/B000EITYUU/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good quality sea salt</a>, to taste</li>
+          <li>½ to 1 cup filtered water</li>
+        </ul>
+        <span class="optional-label">For the rice</span>
+        <ul class="ingredients-list">
+          <li>3 cups basmati rice</li>
+          <li>Filtered water for boiling</li>
+          <li>Salt for the rice water</li>
+          <li>2 to 3 tbsp butter, ghee, or oil</li>
+          <li>2 tbsp brewed saffron water, optional</li>
+        </ul>
+        <span class="optional-label">Optional tahdig</span>
+        <ul class="ingredients-list">
+          <li>Thinly sliced potato, or lavash bread</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>What is Loobia Polo?</strong>
+      Loobia polo is a Persian layered rice dish. Green beans and beef simmer together with tomato, turmeric, and a touch of cinnamon, then layer with parboiled basmati rice and steam together until the rice is fluffy and a golden tahdig forms at the bottom. This version keeps the traditional flavors simple and offers an easy shortcut with frozen green beans, which makes it genuinely doable on a busy weeknight rather than something reserved for special occasions.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+
+    <div class="step-group-title">Soak the rice</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text">Rinse the basmati rice several times until the water runs mostly clear. Place the rice in a large bowl and cover generously with filtered water. Add a good pinch of salt and soak for 30 minutes to 1 hour while you prepare the rest of the dish.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Prepare the green beans</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text">If using fresh green beans, trim the ends and cut into bite-sized pieces. Steam for 5 to 7 minutes until just tender but still slightly chewy. They will continue cooking later, so do not overcook them. If using frozen green beans, there is no need to steam them first. Thaw if convenient or use directly from frozen.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Cook the onion and beef</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text">Heat the butter or ghee in a large skillet or pot over medium heat. Add the onion and cook for 8 to 10 minutes, stirring occasionally, until softened and lightly golden. Add the turmeric and stir for about 30 seconds.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text">Add the ground beef or lamb and cook, breaking it apart with a wooden spoon, until browned and fully cooked through. Season with salt and black pepper.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Add the tomato and green beans</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text">Add the tomato paste and stir it into the meat. Cook for 2 to 3 minutes, stirring frequently. This cooks the raw taste out of the tomato paste and deepens the flavor. Add ½ cup filtered water and stir.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text">Add the steamed fresh green beans or the frozen green beans to the meat mixture. Stir gently and cover. Reduce heat to low and cook for 10 to 15 minutes, allowing the flavors to come together. The mixture should be moist but not watery. If there is too much liquid, remove the lid and let it cook a few more minutes. Stir in the cinnamon during the last few minutes of cooking, then taste and adjust the salt if needed.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Parboil the rice</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">7</span>
+        <span class="step-text">Bring a large pot of filtered water to a rolling boil and salt the water generously. Drain the soaking water from the rice and add the rice to the boiling water. Cook for about 6 to 8 minutes, depending on your rice, until it is soft on the outside but still slightly firm in the center. Drain the rice well.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Layer and steam the loobia polo</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">8</span>
+        <span class="step-text">Return the empty pot to the stove and add 2 to 3 tablespoons of butter, ghee, or oil to the bottom. We use our <a href="https://www.amazon.com/dp/B0F3TM5T6K/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place pot</a> for this layering step. If making tahdig, arrange thin potato slices or pieces of lavash on the bottom.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">9</span>
+        <span class="step-text">Add a layer of rice, followed by a layer of the green bean and beef mixture. Continue alternating layers, finishing with rice on top. Do not stir the layers together yet, they will come together as the rice steams.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">10</span>
+        <span class="step-text">Use the handle of a wooden spoon to make several holes through the rice, allowing steam to circulate. If using saffron, drizzle the brewed saffron water over the top. Cover the pot and cook over medium-high heat for about 5 minutes to build up steam, then reduce the heat to low and cook for another 30 to 40 minutes, until the rice is fluffy and the tahdig is golden.</span>
+      </li>
+    </ol>
+
+    <div class="tip-box">
+      <strong>Optional Persian method:</strong> For extra fluffy rice, wrap the lid in a clean kitchen towel before covering the pot. The towel absorbs excess steam and helps prevent water from dripping back onto the rice. This step is completely optional. If you are not familiar with this technique, simply cover the pot with its regular lid and steam the rice as usual. If using a kitchen towel, make sure it is secured well away from the burner or any flame.
+    </div>
+
+    <h2 class="section-title">Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Plain full-fat yogurt</li>
+      <li>Cucumber yogurt dip (Mast-o Khiar)</li>
+      <li>Shirazi salad, a simple cucumber and tomato salad</li>
+      <li>Fresh herbs</li>
+      <li>Persian pickled vegetables (Torshi)</li>
+      <li>And of course, the tahdig</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>12 to 18 months</strong></td>
+          <td>Make sure the green beans are very soft and cut into small pieces. Break the meat into very small pieces. Mix the rice, meat, and beans together to make it easier to eat. Serve with plain full-fat yogurt. Avoid adding extra salt to the child's portion.</td>
+        </tr>
+        <tr>
+          <td><strong>18 months+</strong></td>
+          <td>Serve as is, making sure the green beans are soft enough for your child's chewing ability. The slight sweetness from the tomato and cinnamon tends to make this particularly appealing to kids.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve everyone the same meal straight from the pot, with yogurt, herbs, and torshi alongside.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Up to 2 days in an airtight container. Reheat gently with a splash of water to keep the rice from drying out. <a href="../learn/histamine-cooked-meat.html" style="color: var(--burgundy);">Why we keep cooked meat for 2 days only.</a></p>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Frozen green beans are absolutely fine. You do not need to feel like you have to buy and trim fresh green beans every time you make loobia polo. Fresh is wonderful when you have it, but frozen is the shortcut, not a compromise.</li>
+      <li>Do not overcook fresh green beans before adding them to the stew. You want them tender but still slightly chewy. If using frozen, avoid cooking them until mushy.</li>
+      <li>Fry the tomato paste for a couple of minutes before adding water. It makes a noticeable difference in flavor.</li>
+      <li>Do not make the beef mixture too watery. Excess liquid will make the finished rice heavy.</li>
+      <li>Keep the cinnamon subtle. You want it to add warmth without making the dish taste sweet.</li>
+      <li>Saffron is wonderful but completely optional, as is the kitchen-towel technique.</li>
+      <li>If you can find it, choose grass-fed and grass-finished beef or lamb. It makes a genuine difference in flavor and nutrition, though conventional ground meat works perfectly well too.</li>
+    </ul>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🥩</span>
+        <div class="nourish-title">Grass-Fed Beef or Lamb</div>
+        <div class="nourish-desc">Provides iron, zinc, and B12 in highly bioavailable forms alongside a better omega-3 to omega-6 ratio than conventional grain-finished meat</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🫘</span>
+        <div class="nourish-title">Green Beans</div>
+        <div class="nourish-desc">A good source of fiber, vitamin C, and vitamin K, adding both nutrition and texture to the dish</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌿</span>
+        <div class="nourish-title">Turmeric and Cinnamon</div>
+        <div class="nourish-desc">Traditional Persian spices with gentle anti-inflammatory properties, best absorbed alongside the fat in this dish</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍚</span>
+        <div class="nourish-title">Soaked Basmati Rice</div>
+        <div class="nourish-desc">Soaking before cooking improves digestibility. <a href="../learn/soaking-rice.html" style="color: var(--burgundy);">Learn more about why we soak rice.</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
