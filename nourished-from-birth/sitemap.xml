@@ -154,6 +154,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://nourishedfrombirth.com/pages/recipes/cottage-cheese-fruit-bowl</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Learn pages -->
   <url>
