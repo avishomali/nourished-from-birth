@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy French Toast — Nourished From Birth</title>
+  <meta name="description" content="Soft in the middle with lightly golden edges, this simple French toast takes just a few minutes to prepare. No added sugar, no syrup needed, and easy to adapt for babies, toddlers, and the whole family." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .combo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .combo-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .combo-item h4 { font-size: 1rem; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .combo-item p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .combo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/easy-french-toast.webp" alt="Golden French toast strips topped with butter and banana" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Easy Breakfasts · Kid-Friendly</span>
+      <span class="age-badge">✓ 6 Months+</span>
+      <h1>Easy French Toast</h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">Soft in the middle with lightly golden edges. Made with everyday ingredients, no added sugar, and easy to adapt for babies, toddlers, and the whole family.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">3 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">5 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">2</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">6 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 slices soft sourdough bread, or another sturdy bread with a short, high quality ingredient list</li>
+          <li>1 large egg</li>
+          <li>2 tbsp whole milk</li>
+          <li>½ tsp vanilla extract, optional</li>
+          <li>¼ tsp ground cinnamon, optional</li>
+          <li>1 tbsp grass-fed butter, for cooking</li>
+        </ul>
+        <span class="optional-label">For serving</span>
+        <ul class="ingredients-list">
+          <li>A generous amount of butter, or Persian style cream, to keep it fat rich for growing kids</li>
+          <li>Soft banana, berries, or other fruit</li>
+          <li>Plain full-fat yogurt</li>
+          <li>Nut or seed butter, thinly spread</li>
+          <li>A small drizzle of honey for children 12 months and up, or maple syrup</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>Why this works so well</strong>
+      This French toast is deliberately kept simple. No blender, no complicated custard, no added sugar in the batter. The sweetness comes from whatever fruit you serve alongside, or a small drizzle of honey for children over 12 months. My favorite way to serve it is with a generous spoonful of thick whipped cream, the same style we use for <a href="khameh-asal.html" style="color: var(--burgundy);">khameh asal</a>, topped with fresh strawberries and just a dash of maple syrup. It is simple, satisfying, and genuinely fat rich, which keeps it in line with a real food, whole ingredient approach that still works on a busy morning.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text"><strong>Make the egg mixture.</strong> In a shallow bowl, whisk together the egg, milk, and vanilla. Add cinnamon if using.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text"><strong>Dip the bread.</strong> Dip each slice of bread into the egg mixture, turning once so both sides are coated. Do not let the bread sit in the mixture too long, it should be coated but not falling apart.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text"><strong>Cook.</strong> Melt the butter in a skillet over medium-low heat. We use our <a href="https://www.amazon.com/dp/B0F3TM5T6K/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place pan</a> for this. Place the bread in the skillet and cook for about 2 to 3 minutes per side, until golden brown and the egg is completely cooked through. If your bread is thick, reduce the heat and give it another minute or two so the center cooks without burning the outside.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text"><strong>Serve.</strong> Cut into strips for younger children or small pieces for toddlers. Serve warm with a generous amount of butter or Persian style cream, plus fruit, yogurt, or a thin layer of nut or seed butter.</span>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>A note on milk in this recipe:</strong> The 2 tablespoons of whole milk here is well within the amount considered fine for babies from 6 months. Cow's milk as a drink is generally held off until 12 months, but a small amount used as an ingredient in cooking, like in this egg mixture or in oatmeal, is a different matter and is widely considered safe well before then.
+    </div>
+
+    <div class="warning-box">
+      <strong>Honey and babies under 12 months:</strong> Honey must not be given to babies under 12 months under any circumstances, due to the risk of infant botulism. Skip the honey and use fruit or a plain drizzle of butter instead for younger babies.
+    </div>
+
+    <h2 class="section-title">Easy Variations</h2>
+    <div class="combo-grid">
+      <div class="combo-item">
+        <h4>🍓 Cream & Strawberry</h4>
+        <p>My favorite. Top with a generous spoonful of thick whipped cream, the same style used for <a href="khameh-asal.html" style="color: var(--burgundy);">khameh asal</a>, fresh strawberries, and just a dash of maple syrup.</p>
+      </div>
+      <div class="combo-item">
+        <h4>🍌 Banana French Toast</h4>
+        <p>Top with mashed or sliced banana. No syrup needed.</p>
+      </div>
+      <div class="combo-item">
+        <h4>🫐 Berry & Yogurt</h4>
+        <p>Serve with plain full-fat yogurt and soft berries.</p>
+      </div>
+      <div class="combo-item">
+        <h4>🥜 Nut Butter & Banana</h4>
+        <p>Spread a thin layer of smooth peanut, almond, or other nut butter over the cooked French toast and top with banana.</p>
+      </div>
+      <div class="combo-item">
+        <h4>🍎 Apple Cinnamon</h4>
+        <p>Serve with very soft cooked apple and a little extra cinnamon.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>6 months+</strong></td>
+          <td>Use soft bread with a texture your baby can manage. Cut into strips for baby-led feeding or small, soft pieces if using a pincer grasp. Skip honey. Use smooth nut or seed butter rather than chunks.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Cut into little squares or strips and serve with fruit and yogurt. Toddlers also enjoy dipping pieces into plain yogurt themselves.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve as is, topped generously with butter or Persian style cream and whatever fruit or yogurt you have on hand.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>Best fresh</h4>
+      <p>This is meant to be made fresh, it takes only a few minutes from start to finish. Leftover cooked French toast can be kept in the fridge for a day and reheated gently in a skillet, though the texture is best right off the stove.</p>
+    </div>
+
+    <h2 class="section-title">A Few Tips</h2>
+    <ul class="tips-list">
+      <li>Sourdough works beautifully because it is sturdy enough to dip without falling apart.</li>
+      <li>Do not soak thin bread for too long or it can become soggy.</li>
+      <li>Medium-low heat is better than high heat, the outside can brown quickly while the egg inside is still undercooked.</li>
+      <li>Butter gives the French toast a lovely flavor and keeps it genuinely fat rich, which matters for growing kids who need more fat in their diet than adults do.</li>
+      <li>You do not need sugar in the egg mixture. Fruit provides plenty of sweetness for young children.</li>
+    </ul>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Egg</div>
+        <div class="nourish-desc">Provides choline, complete protein, and fat-soluble vitamins, all important for a growing brain and body</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🧈</span>
+        <div class="nourish-title">Butter</div>
+        <div class="nourish-desc">A generous serving of butter or Persian style cream helps meet a young child's high fat needs for energy and brain development</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍞</span>
+        <div class="nourish-title">Sourdough</div>
+        <div class="nourish-desc">The long fermentation process makes sourdough more digestible than regular bread and reduces phytic acid</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥛</span>
+        <div class="nourish-title">Whole Milk</div>
+        <div class="nourish-desc">Adds calcium and additional fat, rounding out the egg mixture into a more satisfying meal</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
