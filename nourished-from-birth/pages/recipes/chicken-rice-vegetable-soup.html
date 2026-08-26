@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Chicken & Rice Soup for Kids — Nourished From Birth</title>
+  <meta name="description" content="A cozy, small-batch chicken soup with rice, carrot, potato, and tomato, gently simmered for a rich, comforting broth. Easy to adapt for babies, toddlers, and the whole family." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/chicken-rice-vegetable-soup.webp" alt="Simple chicken rice and vegetable soup for kids" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">First Foods · Slow-Cooked</span>
+      <span class="age-badge">✓ 6 Months+</span>
+      <h1>Simple Chicken & Rice Soup for Kids</h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A cozy, nourishing soup made with chicken thighs and drumsticks, carrots, potatoes, rice, and tomato. This small batch makes just enough for a few children's meals and can easily be doubled for the whole family.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">15 min + soaking</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">2 to 3 hours</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Makes</span><span class="meta-value">4 to 5 small servings</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">6 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>1 chicken thigh, bone-in and skin removed</li>
+          <li>1 chicken drumstick</li>
+          <li>1 large carrot, diced</li>
+          <li>1 medium potato, diced</li>
+          <li>1 small onion, finely diced</li>
+          <li>2 tbsp white rice, rinsed a couple of times, then soaked in filtered water for 2 hours and drained</li>
+          <li>1 medium tomato, grated</li>
+          <li>1 tsp turmeric</li>
+          <li>1 tsp <a href="https://www.amazon.com/dp/B000EITYUU/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">good quality sea salt</a>, plus more to taste</li>
+          <li>½ tsp black pepper, adjust to taste</li>
+          <li>Filtered water, enough to cover the chicken</li>
+          <li>Lemon, for serving</li>
+          <li>Sourdough bread, for serving</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>What makes this soup so simple</strong>
+      This is intentionally a small-batch soup, meant to be an easy kid-sized amount rather than a big weekend pot. It comes together with pantry basics and a few hours of gentle, mostly hands-off simmering. The long, slow cooking gives you a rich, comforting chicken broth without any complicated technique. Adding soft pieces of sourdough directly into the bowl is a small touch that makes it especially appealing to kids, the bread soaks up the broth and becomes soft and easy to eat.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text"><strong>Soak the rice.</strong> Rinse the rice a couple of times until the water runs mostly clear. Place it in a small bowl and cover with filtered water. Soak for about 2 hours, then drain and rinse.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text"><strong>Cook the onion.</strong> Heat a little high quality butter, ghee, or oil in a pot over medium heat. Add the diced onion and cook until soft and translucent. Add the turmeric and stir for about 30 seconds.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text"><strong>Add the chicken and carrot.</strong> Add the diced carrot along with the chicken thigh and drumstick. Cook for several minutes, turning the chicken occasionally, until it develops a little golden color on the outside.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text"><strong>Add the water and rice.</strong> Pour in enough filtered water to just cover the chicken. Add the drained rice, then the salt and black pepper, adjusting the amounts to your family's taste. Bring the soup to a boil, then reduce the heat to low.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text"><strong>Slow cook.</strong> Cover and let the soup gently simmer for about 1 hour. Check partway through, if it looks like it is thickening up more than you like, add a little more filtered water to loosen it back to a soup consistency.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text"><strong>Add the potato and tomato.</strong> After the first hour, add the diced potato and grated tomato. Cover again and continue cooking over low heat for another 1 to 2 hours, until the chicken is very tender, the potato is soft, and the rice has cooked into the broth.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">7</span>
+        <span class="step-text"><strong>Serve.</strong> Remove the chicken bones and shred the meat into small pieces. Serve the soup warm with a squeeze of fresh lemon. For kids, tear soft sourdough bread into small pieces and let them add it directly to their bowl of soup.</span>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>A note on salt:</strong> This recipe calls for 1 teaspoon of salt as a starting point, but it should always be adjusted to taste and to your family's preference. For babies under 12 months, prepare their portion with little or no added salt before seasoning the rest of the pot for older children and adults.
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>6 to 12 months</strong></td>
+          <td>Make sure the chicken is completely cooked and remove all bones before serving. Shred the chicken very finely and mash some of the vegetables and rice into the broth for a softer texture. Prepare with little or no added salt.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Leave the vegetables and chicken in small, soft pieces. Offer sourdough bread to tear and add directly to the bowl.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve as is with a squeeze of lemon and sourdough bread on the side.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Easy Family-Size Version</h2>
+    <div class="tip-box">
+      This recipe is intentionally small, meant to be an easy kid-sized batch. Need more? Simply double everything. That gives you enough for the kids plus leftovers, or a larger pot for the whole family.
+    </div>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Up to 2 days in an airtight container. <a href="../learn/histamine-cooked-meat.html" style="color: var(--burgundy);">Why we keep cooked meat for 2 days only.</a></p>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Rinse the rice a couple of times before soaking to remove excess starch, this helps keep the broth from becoming too cloudy or thick.</li>
+      <li>Let the soup simmer low and slow. The long, gentle cooking is what builds a rich, comforting broth without any complicated technique.</li>
+      <li>If the soup looks like it is getting too thick at any point, especially after adding the rice and potato, just add a splash more filtered water to bring it back to a good soup consistency.</li>
+      <li>Always taste and adjust the salt. The 1 teaspoon here is a starting point, not a fixed amount.</li>
+      <li>A squeeze of fresh lemon right before serving brightens the whole bowl.</li>
+      <li>Soft sourdough torn into the bowl is a simple, effective way to make this feel like a complete and comforting meal for kids.</li>
+    </ul>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🍗</span>
+        <div class="nourish-title">Bone-In Chicken</div>
+        <div class="nourish-desc">Slow simmering with bone-in chicken draws out minerals and gelatin, building a rich, gut-supporting broth</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥕</span>
+        <div class="nourish-title">Carrot & Potato</div>
+        <div class="nourish-desc">Provide beta-carotene, potassium, and gentle fiber, softening beautifully during the long simmer</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍚</span>
+        <div class="nourish-title">Soaked Rice</div>
+        <div class="nourish-desc">Rinsing and soaking improves digestibility. <a href="../learn/soaking-rice.html" style="color: var(--burgundy);">Learn more about why we soak rice.</a></div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍋</span>
+        <div class="nourish-title">Fresh Lemon</div>
+        <div class="nourish-desc">A finishing squeeze of lemon adds vitamin C and brightens the flavor of the rich, slow-cooked broth</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
