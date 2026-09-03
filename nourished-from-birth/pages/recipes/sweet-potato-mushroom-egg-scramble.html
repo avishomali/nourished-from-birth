@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Potato, Mushroom & Egg Scramble — Nourished From Birth</title>
+  <meta name="description" content="A simple, savory breakfast made with tender sweet potato, mushrooms, eggs, and butter. Easy to make in one pan and share with your little one." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/sweet-potato-mushroom-egg-scramble.webp" alt="Sweet potato mushroom and egg scramble in a skillet" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Breakfast · Quick Meals</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Sweet Potato, Mushroom & Egg Scramble</h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A simple, savory breakfast made with tender sweet potato, mushrooms, eggs, and butter. Easy to make in one pan and share with your little one.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Total time</span><span class="meta-value">About 20 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">2 (baby + parent)</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>½ cup finely shredded raw sweet potato</li>
+          <li>¼ cup finely chopped mushrooms</li>
+          <li>2 large eggs</li>
+          <li>1½ tbsp grass-fed butter or ghee, divided</li>
+          <li><a href="https://www.amazon.com/dp/B0CB4X5TDP/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good quality sea salt</a> and black pepper, to taste</li>
+          <li>Small pinch of marjoram, optional</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>Why this works so well</strong>
+      This is the kind of breakfast I love for busy mornings. Simple ingredients, one pan, and something both you and your little one can eat. Sweet potato adds a little natural sweetness, mushrooms make it savory, and the eggs and butter bring everything together.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text">Melt ½ tablespoon of butter or ghee in a skillet over medium heat. We use our <a href="https://www.amazon.com/dp/B0CLTF7XCR/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place Always Pan</a> for this. Add the mushrooms and cook for about 4 to 5 minutes, stirring occasionally, until tender and lightly browned. Transfer the mushrooms to a plate.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text">Reduce the heat to medium-low and add the remaining 1 tablespoon of butter or ghee to the skillet. Add the shredded sweet potato and cook for 8 to 10 minutes, stirring occasionally, until very tender. If the sweet potato begins to brown before it is tender, lower the heat and cover the skillet for a few minutes to help it soften.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text">Return the cooked mushrooms to the skillet. Add the marjoram, if using, and stir everything together.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text">Beat the eggs in a small bowl, then pour them over the sweet potato and mushrooms.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text">Cook gently, stirring occasionally, until the eggs are set.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text">Season with salt and black pepper to taste and serve warm.</span>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>For baby:</strong> Make sure the sweet potato and mushrooms are very soft. Chop or mash the finished scramble as needed for your baby's eating skills. Remove your baby's portion before adding additional salt and pepper.
+    </div>
+
+    <h2 class="section-title">Recipe Notes</h2>
+    <ul class="tips-list">
+      <li><strong>Sweet potato:</strong> Shred the raw sweet potato finely so it cooks quickly and evenly. There is no need to cook it beforehand.</li>
+      <li><strong>Mushrooms:</strong> Any mild mushroom works. Finely chopping them gives the scramble a more baby-friendly texture.</li>
+      <li><strong>Fat:</strong> Butter or ghee both work well. If the sweet potato absorbs the butter or begins sticking, add a little more.</li>
+      <li><strong>Seasoning:</strong> Marjoram is optional. You can substitute a little oregano or simply leave the herbs out.</li>
+      <li><strong>Leftover sweet potato:</strong> If you already have cooked sweet potato in the refrigerator, you can use it instead. Add it after cooking the mushrooms and simply warm it through before adding the eggs.</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>9 to 12 months</strong></td>
+          <td>Make sure the sweet potato and mushrooms are cooked very soft. Chop or mash the scramble to a texture your baby can manage. Serve their portion before adding extra salt and pepper.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Can be served with a bit more texture, cut into small bite-sized pieces for self-feeding.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve as is, seasoned to taste.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Up to 2 days in an airtight container. Reheat gently in a skillet over low heat. Best made fresh since it comes together in about 20 minutes.</p>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🍠</span>
+        <div class="nourish-title">Sweet Potato</div>
+        <div class="nourish-desc">Provides beta-carotene, which converts to vitamin A for immune and vision support, along with gentle fiber</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍄</span>
+        <div class="nourish-title">Mushrooms</div>
+        <div class="nourish-desc">Add B vitamins and minerals like selenium, along with a savory depth of flavor even young babies enjoy</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Eggs</div>
+        <div class="nourish-desc">A complete protein source rich in choline, DHA, and fat-soluble vitamins, important for a growing brain</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🧈</span>
+        <div class="nourish-title">Butter</div>
+        <div class="nourish-desc">Adds fat-soluble vitamins A, D, E, and K2, helping a young child meet their high daily fat needs</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
