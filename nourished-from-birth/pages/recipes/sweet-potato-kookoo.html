@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Potato Kookoo (Persian Sweet Potato Fritters) — Nourished From Birth</title>
+  <meta name="description" content="A sweet potato twist on Persian kookoo sibzamini. Golden fritters made with raw grated sweet potato, eggs, onion, and turmeric, simple enough for babies and toddlers, delicious for the whole family." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+  <meta property="og:title" content="Sweet Potato Kookoo (Persian Sweet Potato Fritters)" />
+  <meta property="og:description" content="A sweet potato twist on Persian kookoo sibzamini. Soft little fritters simple enough for babies and toddlers, delicious for the whole family." />
+  <meta property="og:image" content="https://nourishedfrombirth.com/images/sweet-potato-kookoo.webp" />
+  <meta property="og:url" content="https://nourishedfrombirth.com/pages/recipes/sweet-potato-kookoo" />
+  <meta property="og:type" content="article" />
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/sweet-potato-kookoo.webp" alt="Sweet potato kookoo Persian sweet potato fritters" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites · Quick Meals</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Sweet Potato Kookoo<br><span style="font-size: 0.6em; font-weight: 400; color: var(--text-secondary);">Persian Sweet Potato Fritters</span></h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A sweet potato twist on Persian kookoo sibzamini. Made with raw grated sweet potato, eggs, onion, turmeric, and a little flour, these fritters are golden on the outside and soft inside. They're simple enough for little ones and tasty enough to share with the whole family.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Total time</span><span class="meta-value">About 30 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Makes</span><span class="meta-value">6 to 8 small fritters</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>1 medium sweet potato, peeled and finely grated, about 2 packed cups</li>
+          <li>2 large eggs</li>
+          <li>2 tbsp finely grated onion</li>
+          <li>2 tbsp flour, we use <a href="https://www.amazon.com/dp/B00UVSDCY2/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Molino Grassi Italian 00 flour</a></li>
+          <li>½ tsp turmeric</li>
+          <li>¼ tsp black pepper</li>
+          <li><a href="https://www.amazon.com/dp/B0CB4X5TDP/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good quality sea salt</a>, to taste</li>
+          <li>Grass-fed butter or ghee, generously, for frying</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <p style="font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-bottom: 2rem;">This page contains affiliate links. I only recommend products I use and trust.</p>
+
+    <div class="intro-block">
+      <strong>What is kookoo?</strong>
+      Kookoo is a Persian family of egg-based fritters, traditionally made with potato in kookoo sibzamini. This version swaps in raw grated sweet potato for a naturally sweeter fritter, golden outside and soft inside. It is not just another sweet potato baby purée, it is a familiar whole food turned into a simple family meal through a Persian dish you may already know, made with ordinary ingredients a busy parent can realistically pull together.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text"><strong>Prepare the sweet potato.</strong> Peel the sweet potato and finely grate it using a box grater. If it seems particularly wet, gently press out some of the excess moisture, but do not worry about getting it completely dry.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text"><strong>Prepare the onion.</strong> Finely grate the onion and gently squeeze out the excess liquid.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text"><strong>Make the mixture.</strong> Place the grated sweet potato and onion in a bowl. Add the eggs, flour, turmeric, black pepper, and salt. Mix well until the sweet potato is evenly coated and the mixture holds together when scooped.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text"><strong>Heat the skillet.</strong> Melt a generous amount of butter or ghee in a skillet over medium to medium-low heat. We use our <a href="https://www.amazon.com/dp/B0F3TM5T6K/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place pan</a> for this.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text"><strong>Form the kookoo.</strong> Scoop about 2 tablespoons of the mixture into the skillet for each fritter. Gently flatten each one into a small patty. Do not make them too thick, the sweet potato needs time to cook through.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text"><strong>Cook the first side.</strong> Cook for about 4 to 5 minutes, until the bottom is deeply golden and the fritter has firmed enough to flip.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">7</span>
+        <span class="step-text"><strong>Flip and finish.</strong> Carefully flip each fritter and cook for another 4 to 5 minutes, lowering the heat if they are browning too quickly. The sweet potato should be completely tender in the center.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">8</span>
+        <span class="step-text">Transfer to a plate and repeat with the remaining mixture, adding more butter or ghee to the skillet as needed.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">9</span>
+        <span class="step-text">Let cool slightly before serving.</span>
+      </li>
+    </ol>
+
+    <div class="warning-box">
+      <strong>For baby:</strong> Make the kookoo small and relatively thin so the sweet potato becomes very tender. Depending on your baby's eating skills, break the fritter into appropriately sized pieces or mash it slightly before serving. You can also remove baby's portion before adding additional salt to the rest of the family's food.
+    </div>
+
+    <h2 class="section-title">Recipe Notes</h2>
+    <ul class="tips-list">
+      <li><strong>Use raw sweet potato:</strong> There is no need to boil or steam it first. Finely grating it allows it to cook directly in the skillet.</li>
+      <li><strong>Grate it finely:</strong> This is important. Thick shreds will take longer to soften and will not hold together as easily.</li>
+      <li><strong>Watch the heat:</strong> Do not cook these over very high heat. The outside can brown before the raw sweet potato inside has had enough time to soften.</li>
+      <li><strong>Check the first fritter:</strong> Break open the first one after cooking. The sweet potato should be completely soft. If it still has some bite, lower the heat slightly and give the remaining fritters another minute or two per side.</li>
+      <li><strong>Flour:</strong> Two tablespoons should help bind the mixture without making the fritters floury. If your sweet potato is unusually wet and the mixture will not hold together, add another tablespoon.</li>
+      <li><strong>Cooking fat:</strong> Butter or ghee both work well. Add more between batches whenever the skillet begins to look dry.</li>
+      <li><strong>For the family:</strong> Serve warm with full-fat yogurt, avocado, sliced tomatoes, or alongside eggs for an easy breakfast or lunch.</li>
+      <li><strong>The traditional version:</strong> Classic Persian kookoo sibzamini is made with regular potatoes instead of sweet potato. Feel free to make it either way depending on what you have.</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>9 to 12 months</strong></td>
+          <td>Make small, relatively thin fritters so the sweet potato becomes very tender. Break into appropriately sized pieces or mash slightly. Remove baby's portion before adding more salt to the rest of the family's food.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Perfect as a finger food, small fritters are easy to pick up and hold. A stainless steel <a href="https://www.amazon.com/dp/B0BSRM6RW8/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">divided plate</a> or a <a href="https://www.amazon.com/dp/B0FH9TZJWF/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">toddler mealtime set</a> makes self-feeding easier.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve warm with full-fat yogurt, avocado, sliced tomatoes, or alongside eggs for an easy breakfast or lunch.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>Best fresh</h4>
+      <p>These are best eaten warm, right after cooking. The whole recipe comes together in about 30 minutes, so there is rarely a need to make it ahead.</p>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🍠</span>
+        <div class="nourish-title">Sweet Potato</div>
+        <div class="nourish-desc">Provides beta-carotene, which converts to vitamin A for immune and vision support, along with gentle fiber</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Eggs</div>
+        <div class="nourish-desc">A complete protein source rich in choline, DHA, and fat-soluble vitamins, important for a growing brain</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🧈</span>
+        <div class="nourish-title">Butter</div>
+        <div class="nourish-desc">A generous amount adds fat-soluble vitamins and helps a young child meet their high daily fat needs</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌿</span>
+        <div class="nourish-title">Turmeric</div>
+        <div class="nourish-desc">A traditional Persian spice used throughout everyday cooking, gently anti-inflammatory and best absorbed alongside fat</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
