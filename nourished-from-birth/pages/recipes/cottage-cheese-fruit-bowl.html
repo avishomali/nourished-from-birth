@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cottage Cheese & Fruit Bowl — Nourished From Birth</title>
-  <meta name="description" content="An easy, protein-rich snack for babies, toddlers, and the whole family. Creamy full-fat cottage cheese with soft fruit, ready in 5 minutes with no cooking." />
+  <title>Creamy Cottage Cheese Scrambled Eggs — Nourished From Birth</title>
+  <meta name="description" content="A quick, soft breakfast made with eggs, full-fat cottage cheese, and butter. Simple enough for baby, but good enough to share, ready in 5 minutes." />
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
   <style>
@@ -25,7 +25,6 @@
     .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
     .ingredients-list li:last-child { border: none; }
     .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
-    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
     .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
     .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
     .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
@@ -36,10 +35,8 @@
     .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
     .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
     .warning-box strong { color: var(--terracotta); }
-    .combo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 3rem; }
-    .combo-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
-    .combo-item h4 { font-size: 1rem; color: var(--dark-brown); margin-bottom: 0.4rem; }
-    .combo-item p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
     .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
     .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
     .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
@@ -48,10 +45,7 @@
     .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
     .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
     .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
-    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
-    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
-    .tips-list li:last-child { border: none; }
-    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
     .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
     .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
     .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
@@ -61,8 +55,7 @@
       .recipe-hero-image { height: 320px; }
       .recipe-hero-info { padding: 2rem 1.5rem; }
       .recipe-main { padding: 2rem 1.5rem; }
-      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
-      .combo-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: 1fr; }
     }
   </style>
   <script>
@@ -73,6 +66,11 @@
   })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
   sender('c55b498fbe1031')
   </script>
+  <meta property="og:title" content="Creamy Cottage Cheese Scrambled Eggs" />
+  <meta property="og:description" content="A quick, soft breakfast made with eggs, full-fat cottage cheese, and butter. Simple enough for baby, but good enough to share." />
+  <meta property="og:image" content="https://nourishedfrombirth.com/images/cottage-cheese-scrambled-eggs.webp" />
+  <meta property="og:url" content="https://nourishedfrombirth.com/pages/recipes/cottage-cheese-scrambled-eggs" />
+  <meta property="og:type" content="article" />
 </head>
 <body class="recipe-page">
 
@@ -90,32 +88,26 @@
 
   <div class="recipe-hero-split">
     <div class="recipe-hero-image">
-      <img src="../../images/cottage-cheese-fruit-bowl.webp" alt="Full-fat cottage cheese topped with fresh berries banana and ground walnuts" />
+      <img src="../../images/cottage-cheese-scrambled-eggs.webp" alt="Creamy cottage cheese scrambled eggs in a skillet" />
     </div>
     <div class="recipe-hero-info">
-      <span class="label">Easy Snacks</span>
+      <span class="label">First Foods · Breakfast</span>
       <span class="age-badge">✓ 6 Months+</span>
-      <h1>Cottage Cheese & Fruit Bowl</h1>
-      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">Creamy full-fat cottage cheese paired with soft, naturally sweet fruit. An incredibly easy protein-rich snack that takes just a few minutes to prepare for babies, toddlers, and the whole family.</p>
+      <h1>Creamy Cottage Cheese Scrambled Eggs</h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A quick, soft breakfast made with eggs, full-fat cottage cheese, and butter. Simple enough for baby, but good enough to share.</p>
       <div class="recipe-meta-strip">
-        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">5 min</span></div>
-        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">None</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Total time</span><span class="meta-value">5 min</span></div>
         <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">1 to 2</span></div>
         <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">6 months+</span></div>
       </div>
       <div class="hero-ingredients">
         <h2>Ingredients</h2>
         <ul class="ingredients-list">
-          <li>½ cup full-fat cottage cheese — we use <a href="https://www.amazon.com/dp/B072F4XNT6/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good Culture</a> or Nancy's</li>
-          <li>½ cup soft fruit, chopped or mashed: banana, strawberries, blueberries, ripe peach, or ripe pear</li>
-          <li>Small pinch of ground cinnamon, optional</li>
-        </ul>
-        <span class="optional-label">Optional add-ins</span>
-        <ul class="ingredients-list">
-          <li>1 tbsp finely ground <a href="https://www.amazon.com/dp/B07W69NPWG/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">walnuts</a> (we use Diamond brand from Target) — finely ground rather than pieces for babies and younger children</li>
-          <li>1 tbsp finely ground pumpkin seeds — we get ours from Costco</li>
-          <li>1 tbsp smooth nut or seed butter</li>
-          <li>Raw honey, to taste — 12 months+ only. We use <a href="https://www.amazon.com/dp/B0DWV45TRV/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Lineage Provisions</a> or <a href="https://www.amazon.com/dp/B07D5FCL2W/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Honey Pacifica</a></li>
+          <li>2 large eggs</li>
+          <li>¼ cup full-fat cottage cheese</li>
+          <li>1 tbsp grass-fed butter or ghee</li>
+          <li><a href="https://www.amazon.com/dp/B0CB4X5TDP/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Good quality sea salt</a> and black pepper, to taste</li>
+          <li>Finely chopped dill or chives, optional</li>
         </ul>
       </div>
     </div>
@@ -127,51 +119,43 @@
 
     <div class="intro-block">
       <strong>Why this works so well</strong>
-      This is the kind of snack that solves a real problem: something quick, genuinely nourishing, and requiring zero cooking. Full-fat cottage cheese brings a meaningful amount of protein and fat, which is exactly what keeps babies and toddlers satisfied between meals. Pair it with any soft, ripe fruit you have on hand and you have a complete snack in under five minutes.
+      This is about as simple as breakfast gets, five minutes, three main ingredients, and a texture soft enough for a baby just starting solids. The cottage cheese folds into the eggs as they cook, making them extra creamy without any milk or cream needed.
     </div>
 
     <h2 class="section-title">Instructions</h2>
     <ol class="steps-list">
       <li class="step-item">
         <span class="step-number">1</span>
-        <span class="step-text"><strong>Add the cottage cheese.</strong> Place the cottage cheese in a small bowl. For babies or younger toddlers who are not yet comfortable with larger curds, mash it gently with a fork to make it smoother.</span>
+        <span class="step-text">Crack the eggs into a bowl and whisk with the cottage cheese.</span>
       </li>
       <li class="step-item">
         <span class="step-number">2</span>
-        <span class="step-text"><strong>Prepare the fruit.</strong> Use ripe, soft fruit and prepare it according to your child's eating ability. Mash banana with a fork. Finely chop or mash strawberries. Gently crush or mash blueberries, especially for younger children. Finely chop or mash a very ripe peach. Use a ripe, soft pear, or lightly steam a firm one until soft. Add the prepared fruit to the cottage cheese.</span>
+        <span class="step-text">Melt the butter or ghee in a small skillet over low to medium-low heat. We use our <a href="https://www.amazon.com/dp/B0F3TM5T6K/?tag=nourishedfrom-20" target="_blank" rel="noopener" style="color: var(--burgundy);">Our Place pan</a> for this.</span>
       </li>
       <li class="step-item">
         <span class="step-number">3</span>
-        <span class="step-text"><strong>Add your extras.</strong> Stir in a small pinch of cinnamon if you would like. For older children and adults, try finely ground walnuts or pumpkin seeds, or a little nut or seed butter. For babies, always make sure nuts and seeds are finely ground or incorporated into a smooth butter to reduce choking risk.</span>
+        <span class="step-text">Pour in the egg mixture.</span>
       </li>
       <li class="step-item">
         <span class="step-number">4</span>
-        <span class="step-text"><strong>Serve.</strong> Mix everything together, or leave the fruit on top for a little texture. Serve immediately.</span>
+        <span class="step-text">Cook gently, stirring slowly, until the eggs are softly set and creamy.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text">Season to taste. If serving to baby, keep their portion lightly seasoned and add more salt and pepper to the adult portion.</span>
       </li>
     </ol>
 
     <div class="warning-box">
-      <strong>Honey and babies under 12 months:</strong> Honey must not be given to babies under 12 months under any circumstances, due to the risk of infant botulism. Skip the honey entirely for younger babies. Nuts and seeds must always be finely ground for babies and young toddlers, never offered as whole pieces.
+      <strong>For baby:</strong> Serve as soft curds or mash slightly with a fork depending on your baby's eating skills. Remove their portion before adding additional salt and pepper for the rest of the family.
     </div>
 
-    <h2 class="section-title">Favorite Combinations</h2>
-    <div class="combo-grid">
-      <div class="combo-item">
-        <h4>🍌 Banana + Walnut</h4>
-        <p>Mashed banana, cottage cheese, and finely ground walnuts make a naturally sweet and creamy combination.</p>
-      </div>
-      <div class="combo-item">
-        <h4>🍐 Pear + Cinnamon</h4>
-        <p>Ripe pear with a tiny pinch of cinnamon is mild, sweet, and especially nice with cottage cheese.</p>
-      </div>
-      <div class="combo-item">
-        <h4>🍑 Peach + Pumpkin Seed</h4>
-        <p>Ripe peach with finely ground pumpkin seeds adds a lovely nutty flavor.</p>
-      </div>
-      <div class="combo-item">
-        <h4>🍓 Just Strawberry</h4>
-        <p>Fresh, ripe strawberries provide enough sweetness on their own, no extras needed. A good one for introducing the bowl for the first time.</p>
-      </div>
+    <div class="tip-box">
+      <strong>Optional variation:</strong> Add a little finely chopped dill for a more Persian-inspired flavor.
+    </div>
+
+    <div class="tip-box">
+      <strong>Do not overcook:</strong> Pull the eggs off the heat while they still look slightly underdone, they should be soft and creamy, never dry or rubbery. They will continue to set a little from the residual heat of the pan after you remove them.
     </div>
 
     <h2 class="section-title">Adaptations by Age</h2>
@@ -179,16 +163,16 @@
       <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
       <tbody>
         <tr>
-          <td><strong>6 months+</strong></td>
-          <td>Choose pasteurized, full-fat cottage cheese. Mash if needed. Use very soft, ripe fruit and mash thoroughly. Walnuts and pumpkin seeds must be finely ground and mixed in rather than offered as pieces. Smooth nut or seed butter also works well mixed in. Do not add honey before 12 months.</td>
+          <td><strong>6 to 9 months</strong></td>
+          <td>Mash slightly with a fork if needed. Serve lightly seasoned, before adding extra salt and pepper for the rest of the family.</td>
         </tr>
         <tr>
-          <td><strong>Toddlers</strong></td>
-          <td>Can enjoy the bowl with more texture. Try cottage cheese with chopped strawberries and ground pumpkin seeds, or cottage cheese with banana, ground walnuts, and a tiny pinch of cinnamon. Toddlers can help add the fruit and sprinkle the ground nuts or seeds on top themselves.</td>
+          <td><strong>9 to 12 months</strong></td>
+          <td>Soft curds work well for self-feeding as your baby's pincer grasp develops.</td>
         </tr>
         <tr>
-          <td><strong>Adults</strong></td>
-          <td>Make the same bowl with fresh berries, banana, ground walnuts, pumpkin seeds, cinnamon, and a drizzle of raw honey. Add a spoonful of nut butter for a more substantial snack.</td>
+          <td><strong>Family</strong></td>
+          <td>Serve as is, seasoned to taste, with a little chopped dill or chives if you like.</td>
         </tr>
       </tbody>
     </table>
@@ -196,35 +180,25 @@
     <h2 class="section-title">Storage</h2>
     <div class="storage-item">
       <h4>Best fresh</h4>
-      <p>This snack is meant to be assembled fresh each time. It takes only 5 minutes, so keep full-fat cottage cheese and frozen berries on hand and you can put together a fresh bowl anytime.</p>
-    </div>
-
-    <h2 class="section-title">Easy Mom Shortcut</h2>
-    <div class="intro-block">
-      Keep full-fat cottage cheese and frozen berries in the fridge and freezer. When your child needs a quick snack, scoop some cottage cheese into a bowl, add thawed berries or a banana, and you are done. No cooking, no blender, no complicated ingredients. That is the whole point of this recipe.
+      <p>This dish is best eaten fresh right after cooking. It comes together in about 5 minutes, so there is rarely a need to make it ahead.</p>
     </div>
 
     <h2 class="section-title">Why This Nourishes</h2>
     <div class="nourish-grid">
       <div class="nourish-item">
+        <span class="nourish-icon">🥚</span>
+        <div class="nourish-title">Eggs</div>
+        <div class="nourish-desc">A complete protein source rich in choline, DHA, and fat-soluble vitamins, important for a growing brain</div>
+      </div>
+      <div class="nourish-item">
         <span class="nourish-icon">🥛</span>
         <div class="nourish-title">Cottage Cheese</div>
-        <div class="nourish-desc">Provides protein, calcium, and fat when you choose a full-fat variety, supporting steady energy and growth</div>
+        <div class="nourish-desc">Adds additional protein, calcium, and fat when you choose a full-fat variety, making the eggs extra creamy</div>
       </div>
       <div class="nourish-item">
-        <span class="nourish-icon">🍓</span>
-        <div class="nourish-title">Fruit</div>
-        <div class="nourish-desc">Adds naturally occurring carbohydrates, fiber, and a variety of vitamins and antioxidants</div>
-      </div>
-      <div class="nourish-item">
-        <span class="nourish-icon">🌰</span>
-        <div class="nourish-title">Walnuts</div>
-        <div class="nourish-desc">Provide healthy fats, including plant-based omega-3 ALA, important for early brain development</div>
-      </div>
-      <div class="nourish-item">
-        <span class="nourish-icon">🎃</span>
-        <div class="nourish-title">Pumpkin Seeds</div>
-        <div class="nourish-desc">Add healthy fats, protein, magnesium, zinc, and iron in a small, easy-to-include serving</div>
+        <span class="nourish-icon">🧈</span>
+        <div class="nourish-title">Butter</div>
+        <div class="nourish-desc">Adds fat-soluble vitamins A, D, E, and K2, helping a young child meet their high daily fat needs</div>
       </div>
     </div>
 
