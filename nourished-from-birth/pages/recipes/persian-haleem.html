@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian Haleem (Slow-Cooked Lamb & Bulgur Porridge) — Nourished From Birth</title>
+  <meta name="description" content="A thick, slow-cooked Persian porridge made with lamb and bulgur wheat, simmered for hours until creamy and deeply comforting. A traditional dish everyone seasons their own way." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .step-group-title { font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta); margin: 2rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); }
+    .step-group-title:first-child { margin-top: 0; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .tip-box { background: rgba(128,0,32,0.05); border-left: 4px solid var(--burgundy); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 1rem 0 3rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .tip-box strong { color: var(--dark-brown); }
+    .combo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .combo-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .combo-item h4 { font-size: 1rem; color: var(--dark-brown); margin-bottom: 0.6rem; }
+    .combo-item ul { margin: 0; padding-left: 1.2rem; }
+    .combo-item li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .combo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+  <meta property="og:title" content="Persian Haleem (Slow-Cooked Lamb & Bulgur Porridge)" />
+  <meta property="og:description" content="A thick, slow-cooked Persian porridge made with lamb and bulgur wheat, simmered for hours until creamy and deeply comforting." />
+  <meta property="og:image" content="https://nourishedfrombirth.com/images/persian-haleem.webp" />
+  <meta property="og:url" content="https://nourishedfrombirth.com/pages/recipes/persian-haleem" />
+  <meta property="og:type" content="article" />
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/persian-haleem.webp" alt="Persian haleem slow-cooked lamb and bulgur porridge in a bowl" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Persian Family Favorites · Slow-Cooked</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Persian Haleem<br><span style="font-size: 0.6em; font-weight: 400; color: var(--text-secondary);">Slow-Cooked Lamb & Bulgur Porridge</span></h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A thick, slow-cooked Persian porridge traditionally made with lamb and peeled wheat. This version uses coarse bulgur as a more accessible alternative while keeping the same basic method and flavor.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Soak</span><span class="meta-value">Overnight or 4+ hrs</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">About 4 hours</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">About 6</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>300 g (10 to 11 oz) lamb shoulder, preferably boneless, or about 2 small bone-in lamb shoulder chops</li>
+          <li>2 cups coarse bulgur wheat</li>
+          <li>1 medium onion, halved</li>
+          <li>¼ tsp ground cinnamon, for cooking the lamb</li>
+          <li>About 4 cups filtered water, or enough to cover the lamb</li>
+          <li>8 cups filtered water to start the bulgur, plus 4 to 5 cups additional hot water added gradually during cooking</li>
+          <li>4 tbsp grass-fed butter or ghee</li>
+          <li>Salt, to taste</li>
+        </ul>
+        <span class="optional-label">Optional toppings</span>
+        <ul class="ingredients-list">
+          <li>Ground cinnamon</li>
+          <li>Sugar</li>
+          <li>Sesame seeds</li>
+          <li>Extra melted butter or ghee</li>
+          <li>Additional salt, for a savory bowl</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>What is haleem?</strong>
+      Persian haleem is a thick, slow-cooked porridge traditionally made with lamb and peeled wheat. Peeled wheat can be difficult to find in many grocery stores, so this version uses coarse bulgur wheat as a more accessible alternative while keeping the same basic method and flavor. It takes hours of slow cooking, but very little of that time is hands-on, most of it is gentle, low simmering while the wheat and lamb break down into a smooth, comforting porridge.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+
+    <div class="step-group-title">Soak the bulgur</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text">Rinse the coarse bulgur well. Cover with plenty of filtered water and soak overnight if possible, or for at least 4 hours. Drain before cooking.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Start the lamb and bulgur at the same time</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text">The lamb and bulgur are cooked in separate pots, but they can cook at the same time. For the lamb, place the lamb shoulder, onion, ¼ teaspoon cinnamon, and enough filtered water to cover the meat well in a pot. Bring to a gentle boil, skim away any foam if needed, then reduce the heat to low. Simmer gently for 3 to 4 hours, until the lamb is extremely tender and easily pulls apart.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Cook the bulgur</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text">At the same time, place the drained bulgur in a large, heavy-bottomed pot with 8 cups filtered water to start. Bring to a gentle boil, then reduce the heat to low. Cook for 3 to 4 hours, stirring occasionally at first and more frequently as the mixture thickens. This is not normal bulgur cooking, we are deliberately cooking it for hours until it loses its grain structure and becomes thick and porridge-like, so it needs much more water than a quick pilaf would. Add another 1 to 2 cups of hot water roughly every hour as the pot needs it, the bulgur should remain loose enough to stir and should not be allowed to dry out or stick to the bottom. By the end you may have added 4 to 5 cups beyond the starting amount. By the end, the bulgur should be very soft and mostly broken down into a thick porridge.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Prepare the lamb and broth</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text">Remove the cooked lamb from its pot. Pour the cooking liquid through a fine-mesh strainer. Discard the onion and any other solids, we only want the clear lamb broth in the haleem. Remove any bones from the lamb and shred the meat very finely.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Smooth the bulgur</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text">Mash the cooked bulgur vigorously with a wooden spoon or potato masher until creamy. For an easier, smoother texture, you can use an immersion blender briefly.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Combine</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text">Gradually add the strained lamb broth to the cooked bulgur until you reach a thick but easily stirrable consistency. Add the finely shredded lamb and mix very well. Cook together over low to medium-low heat for another 20 to 30 minutes, stirring frequently. The haleem should become thick, smooth, and cohesive, with the lamb blending into the wheat rather than remaining in obvious chunks.</span>
+      </li>
+    </ol>
+
+    <div class="step-group-title">Finish with butter or ghee</div>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">7</span>
+        <span class="step-text">Stir in the butter or ghee. Taste and add a little salt if desired.</span>
+      </li>
+    </ol>
+
+    <h2 class="section-title">How to Serve Persian Haleem</h2>
+    <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">One of the nice things about haleem is that everyone can season their own bowl. Keep the main pot fairly neutral so everyone can choose how they want to eat it.</p>
+    <div class="combo-grid">
+      <div class="combo-item">
+        <h4>Sweet</h4>
+        <ul>
+          <li>Ground cinnamon</li>
+          <li>Sugar</li>
+          <li>Optional sesame seeds</li>
+          <li>Optional melted butter or ghee</li>
+        </ul>
+      </div>
+      <div class="combo-item">
+        <h4>Savory</h4>
+        <ul>
+          <li>Salt, to taste</li>
+          <li>Optional extra butter or ghee</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <strong>For babies and toddlers:</strong> Serve the haleem plain or lightly seasoned before adding the adult toppings, including before adding sugar. If it becomes very thick, loosen your child's portion with a little warm lamb broth or water.
+    </div>
+
+    <div class="tip-box">
+      <strong>Ingredient note:</strong> Traditional Persian haleem is made with peeled wheat. Coarse bulgur is used here because it is easier to find and cooks into a similar soft porridge texture after a long, slow cook.
+    </div>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>9 to 12 months</strong></td>
+          <td>Serve plain, before any toppings are added. Loosen with a little warm lamb broth or water if it is too thick for your baby to manage.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Can start to enjoy the sweet version with a light dusting of cinnamon, or the savory version with a small pinch of salt, depending on family preference.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Serve everyone from the same neutral pot and let each person top their own bowl sweet or savory.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Up to 2 days in an airtight container. <a href="../learn/histamine-cooked-meat.html" style="color: var(--burgundy);">Why we keep cooked meat for 2 days only.</a> Reheat gently on the stove, adding a splash of water or broth to loosen the porridge as it warms.</p>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🍖</span>
+        <div class="nourish-title">Slow-Cooked Lamb</div>
+        <div class="nourish-desc">Hours of gentle simmering draws out minerals and gelatin from the lamb, building a rich, gut-supporting broth alongside tender, easy-to-digest meat</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌾</span>
+        <div class="nourish-title">Bulgur Wheat</div>
+        <div class="nourish-desc">A long soak and slow cook breaks the wheat down into an easily digestible porridge, providing fiber and steady, slow-burning energy</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🧈</span>
+        <div class="nourish-title">Butter or Ghee</div>
+        <div class="nourish-desc">Stirred in at the end, adds fat-soluble vitamins A, D, E, and K2, important for a young child's rapid growth and development</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌿</span>
+        <div class="nourish-title">Cinnamon</div>
+        <div class="nourish-desc">A traditional Persian spice used both in cooking and as a topping, gently warming and best absorbed alongside the fat in this dish</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
