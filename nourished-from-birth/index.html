@@ -28,10 +28,6 @@
   </script>
   <meta name='impact-site-verification' value='918fb9f3-eecb-4de2-b33f-04d0f1b8d26b'>
   <style>
-    .philosophy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 3rem 6rem; background: var(--warm-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .philosophy-card { background: white; border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
-    .philosophy-card .p-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
-    .philosophy-card p { font-family: 'Jost', sans-serif; font-size: 1.0rem; color: var(--text-secondary); margin: 0; line-height: 1.4; font-weight: 500; }
     .featured-recipes { padding: 4rem 6rem; }
     .featured-recipes .section-header { margin-bottom: 2rem; }
     .featured-recipes .section-header h2 { font-size: 1.8rem; color: var(--dark-brown); margin-bottom: 0.4rem; }
@@ -46,27 +42,31 @@
     .recipe-preview-info p { font-size: 0.8rem; color: var(--text-light); margin: 0; line-height: 1.5; }
     .view-all-link { text-align: center; }
     .view-all-link a { font-family: 'Jost', sans-serif; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid var(--burgundy); padding-bottom: 0.2rem; }
-    .story-pullquote-wrap { background: var(--warm-white); padding: 4rem 2rem; }
-    .story-pullquote { max-width: 780px; margin: 0 auto; }
-    .story-pullquote-box { background: white; border: 1px solid var(--border); border-radius: 2rem; padding: 3rem 3.5rem; text-align: center; position: relative; box-shadow: 0 20px 60px var(--shadow); }
-    .story-pullquote-box::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 7rem; color: var(--burgundy); opacity: 0.12; position: absolute; top: -0.5rem; left: 2rem; line-height: 1; }
-    .story-pullquote-box blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-style: italic; color: var(--dark-brown); line-height: 1.6; margin: 0; position: relative; z-index: 1; }
-    .story-full { max-width: 760px; margin: 0 auto; padding: 4rem 2rem; }
-    .story-full .label { display: block; margin-bottom: 1rem; font-size: 0.85rem; }
-    .story-full h2 { margin-bottom: 2rem; font-size: clamp(1.7rem, 3vw, 2.3rem); }
-    .story-full p { margin-bottom: 1.4rem; line-height: 1.9; font-size: 1.15rem; }
-    .story-full .about-pillars { margin-top: 1rem; margin-bottom: 2rem; }
-    .story-full .pillar-tag { font-size: 1.05rem; padding: 0.6rem 1.3rem; }
+    .short-about-wrap { background: var(--cream); padding: 4rem 2rem; }
+    .short-about { max-width: 700px; margin: 0 auto; text-align: center; }
+    .short-about p { font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0; }
+    .realism-quote-wrap { padding: 4rem 2rem; }
+    .realism-quote { max-width: 720px; margin: 0 auto; }
+    .realism-quote-box { background: white; border: 1px solid var(--border); border-radius: 2rem; padding: 2.8rem 3.2rem; text-align: center; box-shadow: 0 15px 45px var(--shadow); }
+    .realism-quote-box h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2.4vw, 1.8rem); color: var(--burgundy); margin-bottom: 1rem; }
+    .realism-quote-box p { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin: 0; }
+    .full-story-wrap { background: var(--warm-white); border-top: 1px solid var(--border); }
+    .full-story { max-width: 760px; margin: 0 auto; padding: 4rem 2rem; }
+    .full-story .label { display: block; margin-bottom: 1rem; font-size: 0.85rem; }
+    .full-story h2 { margin-bottom: 2rem; font-size: clamp(1.6rem, 2.8vw, 2.1rem); }
+    .full-story p { margin-bottom: 1.3rem; line-height: 1.85; font-size: 1.1rem; }
+    .full-story .about-pillars { margin-top: 1rem; margin-bottom: 2rem; }
+    .full-story .pillar-tag { font-size: 1rem; padding: 0.55rem 1.2rem; }
     @media (max-width: 900px) {
-      .philosophy-grid { grid-template-columns: repeat(2, 1fr); padding: 2rem 1.5rem; }
       .recipes-preview-grid { grid-template-columns: 1fr 1fr; }
       .featured-recipes { padding: 2rem 1.5rem; }
     }
     @media (max-width: 600px) {
-      .philosophy-grid { grid-template-columns: 1fr 1fr; padding: 1.5rem 1rem; }
       .recipes-preview-grid { grid-template-columns: 1fr; }
-      .story-pullquote { padding: 3rem 1.2rem 1.5rem; }
-      .story-full { padding: 1.5rem 1.2rem 3rem; }
+      .short-about-wrap { padding: 3rem 1.2rem; }
+      .realism-quote-wrap { padding: 3rem 1.2rem; }
+      .realism-quote-box { padding: 2rem 1.5rem; }
+      .full-story { padding: 3rem 1.2rem; }
     }
   </style>
   <meta name="p:domain_verify" content="e5459a4f3464eaf09979e5b5553cdbb2"/>
@@ -117,79 +117,6 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY GRID -->
-  <div class="philosophy-grid">
-    <div class="philosophy-card">
-      <span class="p-icon">🦴</span>
-      <p>Nourishing Broths & Stocks</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🥩</span>
-      <p>Real Fats for Brain Development</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🫙</span>
-      <p>Fermented & Living Foods</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🫘</span>
-      <p>Legumes & Grains Done Right</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🌿</span>
-      <p>Traditional Whole Foods</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🔥</span>
-      <p>Traditional Preparation Methods</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">💚</span>
-      <p>Gut Health from Day One</p>
-    </div>
-    <div class="philosophy-card">
-      <span class="p-icon">🌍</span>
-      <p>Iranian Heritage</p>
-    </div>
-  </div>
-
-  <!-- STORY PULL-QUOTE -->
-  <div class="story-pullquote-wrap">
-    <div class="story-pullquote">
-      <div class="story-pullquote-box">
-        <blockquote>If you serve one nourishing meal today, that matters. The goal is not perfection, it's simply to make real, nourishing food the default as often as you can.</blockquote>
-      </div>
-    </div>
-  </div>
-
-  <!-- OUR STORY (FULL WIDTH) -->
-  <div class="story-full">
-    <span class="label">Our Story</span>
-    <h2>A full-time engineer, a mom of two, and a shelf full of baby food jars that didn't feel right</h2>
-    <p>My name is Avishan. I'm Iranian-born and now raising my family in the US.</p>
-    <p>Growing up in Iran, food was simple. We ate homemade meals made from real ingredients, and babies simply ate the same kind of nourishing foods their families ate. There wasn't much thought given to "baby food" as a separate category.</p>
-    <p>When I moved to the US, my relationship with food changed. I gained quite a bit of weight and eventually realized how much added sugar and highly processed food had crept into my everyday diet. I started paying closer attention to what I was eating and got into the habit of reading ingredient labels. The more I read, the more I realized that the food environment here was very different from what I had grown up with.</p>
-    <p>That habit stayed with me when I became a mother.</p>
-    <p>When I started feeding my children, I found myself reading their labels just as carefully. I was surprised by how much junk actually makes it into commercial baby food, hidden sugars under names most parents wouldn't recognize, thickeners, fillers, and additives that offer no real nutrition. When I looked at the baby food aisle, I often found myself thinking, I can make something better than this, and it doesn't have to be complicated.</p>
-    <p>The truth is, I'm not someone who wants to spend hours in the kitchen. I love homemade food. I love food that is hearty, nourishing, and made with good ingredients. But I also have a job, two young children, and a life outside the kitchen.</p>
-    <p>So I started figuring out how to make the foods I value as simple and practical as possible.</p>
-    <p>That's what Nourished From Birth is about.</p>
-    <p>This is not about feeding your child perfectly every day. Real life is busy, kids are unpredictable, and some days meals are easier than others. If you serve one nourishing meal today, that matters. If your child eats nourishing food a few times this week, that matters too.</p>
-    <p>The goal is not to make every bite perfect. It is simply to make nourishing, real food the default as often as you reasonably can, and to replace more processed foods when it feels doable. My own children do not happily eat everything I put in front of them either. Some meals go well and some do not. I keep offering good food because what we do consistently over time matters more than any one meal.</p>
-    <p>Here you'll find traditional and ancestral-inspired recipes made for modern family life, simple enough for busy parents, nourishing enough to feel good about, and often adaptable for the whole family. You'll also find the Persian family foods I grew up with, made a little more practical for everyday life.</p>
-    <p>Because eating well shouldn't require spending all day in the kitchen. Persian food is deeply nourishing by nature. You don't need to make it complicated to keep that nourishment alive. That's what this site is, real food, made practical, for busy moms who already know it matters.</p>
-    <div class="about-pillars">
-      <span class="pillar-tag">🍖 Real Animal Foods</span>
-      <span class="pillar-tag">🫘 Legumes & Grains</span>
-      <span class="pillar-tag">🦠 Gut Health</span>
-      <span class="pillar-tag">🌍 Ancestral Wisdom</span>
-      <span class="pillar-tag">🌍 Iranian Tradition</span>
-      <span class="pillar-tag">⚖️ Realistic Moderation</span>
-    </div>
-    <br />
-    <a href="pages/recipes.html" class="btn-primary">Explore Recipes</a>
-  </div>
-
   <!-- FEATURED RECIPES -->
   <section class="featured-recipes">
     <div class="section-header">
@@ -203,7 +130,7 @@
         <div class="recipe-preview-info">
           <span class="r-tag">First Food · 6 Months+</span>
           <h4>Egg Yolk Purée</h4>
-          <p>One of the most nutrient-dense first foods, rich in choline, DHA, and cholesterol for brain development.</p>
+          <p>A simple first food, rich in choline, DHA, and cholesterol for brain development.</p>
         </div>
       </a>
       <a href="pages/recipes/kotlet.html" class="recipe-preview-card">
@@ -219,7 +146,7 @@
         <div class="recipe-preview-info">
           <span class="r-tag">Foundation · 6 Months+</span>
           <h4>Baby's First Meat Stock</h4>
-          <p>Gentler than bone broth and easier to digest, the most nourishing first liquid for a baby starting solids.</p>
+          <p>Gentler than bone broth and easier to digest, a nourishing first liquid for a baby starting solids.</p>
         </div>
       </a>
       <a href="pages/recipes/chicken-liver-pate.html" class="recipe-preview-card">
@@ -227,7 +154,7 @@
         <div class="recipe-preview-info">
           <span class="r-tag">First Food · 6 Months+</span>
           <h4>Chicken Liver Pâté</h4>
-          <p>The most nutrient-dense first food you can make, iron, B12, choline, and fat-soluble vitamins in every serving.</p>
+          <p>A nutrient-dense first food with iron, B12, choline, and fat-soluble vitamins in every serving.</p>
         </div>
       </a>
       <a href="pages/recipes/morgh-aloo-bokhara.html" class="recipe-preview-card">
@@ -243,7 +170,7 @@
         <div class="recipe-preview-info">
           <span class="r-tag">Quick · 9 Months+</span>
           <h4>Creamy Sardine Pâté</h4>
-          <p>Packed with omega-3s, calcium, and vitamin D, one of the most nutrient-dense no-cook meals you can offer.</p>
+          <p>Packed with omega-3s, calcium, and vitamin D, a nutrient-dense no-cook meal for babies and toddlers.</p>
         </div>
       </a>
     </div>
@@ -252,7 +179,25 @@
     </div>
   </section>
 
-  <!-- FEATURED CONTENT -->
+  <!-- SHORT ABOUT -->
+  <div class="short-about-wrap">
+    <div class="short-about">
+      <span class="label" style="display:block; margin-bottom: 1rem;">What Nourished From Birth Is About</span>
+      <p>Real, traditional recipes for babies, toddlers, and the whole family, including the Persian family foods I grew up with, made simple enough for busy, working parents. I'm Avishan, Iranian-born, a mom of two, and a full-time engineer figuring this out one meal at a time.</p>
+    </div>
+  </div>
+
+  <!-- REALISM QUOTE -->
+  <div class="realism-quote-wrap">
+    <div class="realism-quote">
+      <div class="realism-quote-box">
+        <h3>Real food doesn't have to be perfect.</h3>
+        <p>If you serve one nourishing meal today, that matters. The goal is simply to make real, nourishing food the default as often as you reasonably can.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHERE TO BEGIN -->
   <section class="featured-section">
     <div class="section-header">
       <span class="label">Where to Begin</span>
@@ -318,6 +263,33 @@
     </style>
     <p class="email-note">No spam. Unsubscribe anytime.</p>
   </section>
+
+  <!-- FULL STORY (LOWER ON PAGE) -->
+  <div class="full-story-wrap">
+    <div class="full-story">
+      <span class="label">Our Story</span>
+      <h2>A full-time engineer, a mom of two, and a shelf full of baby food jars that didn't feel right</h2>
+      <p>My name is Avishan. I'm Iranian-born and now raising my family in the US.</p>
+      <p>Growing up in Iran, food was simple. We ate homemade meals made from real ingredients, and babies simply ate the same kind of nourishing foods their families ate. There wasn't much thought given to "baby food" as a separate category.</p>
+      <p>When I moved to the US, my relationship with food changed. I gained quite a bit of weight and eventually realized how much added sugar and highly processed food had crept into my everyday diet. I started paying closer attention to what I was eating and got into the habit of reading ingredient labels. The more I read, the more I realized that the food environment here was very different from what I had grown up with.</p>
+      <p>That habit stayed with me when I became a mother.</p>
+      <p>When I started feeding my children, I found myself reading their labels just as carefully. I was surprised by how much junk actually makes it into commercial baby food, hidden sugars under names most parents wouldn't recognize, thickeners, fillers, and additives that offer no real nutrition. When I looked at the baby food aisle, I often found myself thinking, I can make something better than this, and it doesn't have to be complicated.</p>
+      <p>The truth is, I'm not someone who wants to spend hours in the kitchen. I love homemade food. I love food that is hearty, nourishing, and made with good ingredients. But I also have a job, two young children, and a life outside the kitchen.</p>
+      <p>So I started figuring out how to make the foods I value as simple and practical as possible.</p>
+      <p>That's what Nourished From Birth is about. Here you'll find traditional and ancestral-inspired recipes made for modern family life, simple enough for busy parents, nourishing enough to feel good about, and often adaptable for the whole family. You'll also find the Persian family foods I grew up with, made a little more practical for everyday life.</p>
+      <p>Because eating well shouldn't require spending all day in the kitchen. Persian food is deeply nourishing by nature. You don't need to make it complicated to keep that nourishment alive. That's what this site is, real food, made practical, for busy moms who already know it matters.</p>
+      <div class="about-pillars">
+        <span class="pillar-tag">🍖 Real Animal Foods</span>
+        <span class="pillar-tag">🫘 Legumes & Grains</span>
+        <span class="pillar-tag">🦠 Gut Health</span>
+        <span class="pillar-tag">🌍 Ancestral Wisdom</span>
+        <span class="pillar-tag">🌍 Iranian Tradition</span>
+        <span class="pillar-tag">⚖️ Realistic Moderation</span>
+      </div>
+      <br />
+      <a href="pages/recipes.html" class="btn-primary">Explore Recipes</a>
+    </div>
+  </div>
 
   <!-- DISCLAIMER -->
   <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
