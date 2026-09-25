@@ -12,6 +12,9 @@
     .start-section { max-width: 1100px; margin: 0 auto; padding: 3rem 4rem; }
     .welcome-block { background: var(--cream); border-radius: 1.2rem; padding: 2.5rem; margin-bottom: 4rem; text-align: center; }
     .welcome-block p { font-size: 1.5rem !important; color: var(--text-secondary); line-height: 1.85; max-width: 780px; margin: 0 auto; }
+    .philosophy-block { margin-bottom: 4rem; }
+    .philosophy-block p { font-size: 1.15rem !important; line-height: 1.85; color: var(--text-secondary); margin-bottom: 1.5rem; }
+    .philosophy-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
     .path-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1.2rem; padding: 1.8rem; display: flex; flex-direction: column; }
     .path-card .path-icon { font-size: 2rem; margin-bottom: 0.8rem; display: block; }
@@ -34,10 +37,10 @@
     .article-picks a:hover { color: var(--burgundy); }
     .article-picks .article-desc { font-size: 0.92rem !important; color: var(--text-light); line-height: 1.6; margin: 0; }
     .article-picks .article-num { background: var(--burgundy); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
-    .personal-note { background: linear-gradient(135deg, rgba(128,0,32,0.06), rgba(128,0,32,0.02)); border: 1px solid rgba(128,0,32,0.15); border-radius: 1.2rem; padding: 2rem 2.5rem; margin-bottom: 4rem; }
-    .personal-note p { font-size: 1.05rem !important; color: var(--text-secondary); line-height: 1.85; margin-bottom: 0.8rem; }
-    .personal-note p:last-child { margin: 0; }
-    .personal-note .signature { font-family: 'Playfair Display', serif; font-size: 1.1rem !important; color: var(--burgundy); font-style: italic; }
+    .personal-note { background: linear-gradient(135deg, rgba(128,0,32,0.06), rgba(128,0,32,0.02)); border: 1px solid rgba(128,0,32,0.15); border-radius: 1.2rem; padding: 2.5rem 3rem; margin-bottom: 4rem; }
+    .personal-note p { font-size: 1.1rem !important; color: var(--text-secondary); line-height: 1.9; margin-bottom: 1.1rem; }
+    .personal-note p:last-of-type { margin-bottom: 0.8rem; }
+    .personal-note .signature { font-family: 'Playfair Display', serif; font-size: 1.2rem !important; color: var(--burgundy); font-style: italic; }
     @media (max-width: 900px) {
       .path-grid { grid-template-columns: 1fr 1fr; }
       .recipe-picks { grid-template-columns: 1fr 1fr; }
@@ -47,6 +50,7 @@
       .path-grid { grid-template-columns: 1fr; }
       .recipe-picks { grid-template-columns: 1fr; }
       .start-section { padding: 2rem 1.2rem; }
+      .personal-note { padding: 1.8rem 1.5rem; }
     }
   </style>
   <script>
@@ -82,6 +86,20 @@
 
     <div class="welcome-block">
       <p>Nourished From Birth is about making real, nourishing food practical for modern family life. You don't need special products or complicated recipes, just simple food made with good ingredients.</p>
+    </div>
+
+    <!-- OUR PHILOSOPHY -->
+    <h2 class="section-title">Our Philosophy</h2>
+    <div class="philosophy-block">
+      <p>This site sits at the intersection of a few ideas: real, whole-food ingredients over processed ones; ancestral and traditional preparation methods that generations relied on long before "baby food" existed as a separate category; and the Persian family cooking I grew up with, made practical enough for a busy household today. None of this requires perfection, special products, or hours in the kitchen, just a preference for real ingredients most of the time.</p>
+      <div class="philosophy-tags">
+        <span class="pillar-tag">🍖 Real Animal Foods</span>
+        <span class="pillar-tag">🫘 Legumes & Grains</span>
+        <span class="pillar-tag">🦠 Gut Health</span>
+        <span class="pillar-tag">🌍 Ancestral Wisdom</span>
+        <span class="pillar-tag">🌍 Iranian Tradition</span>
+        <span class="pillar-tag">⚖️ Realistic Moderation</span>
+      </div>
     </div>
 
     <!-- WHERE TO BEGIN -->
@@ -255,9 +273,18 @@
 
     </ul>
 
-    <!-- PERSONAL NOTE -->
+    <!-- FULL PERSONAL STORY -->
+    <h2 class="section-title">Our Full Story</h2>
     <div class="personal-note">
-      <p>I am Iranian-born, a materials engineer, and a mom of two. I cooked real food for my first daughter from the day she started solids, not because I had extra time, but because once you know a few simple things, it genuinely doesn't have to take that long.</p>
+      <p>My name is Avishan. I'm Iranian-born and now raising my family in the US.</p>
+      <p>Growing up in Iran, food was simple. We ate homemade meals made from real ingredients, and babies simply ate the same kind of nourishing foods their families ate. There wasn't much thought given to "baby food" as a separate category.</p>
+      <p>When I moved to the US, my relationship with food changed. I gained quite a bit of weight and eventually realized how much added sugar and highly processed food had crept into my everyday diet. I started paying closer attention to what I was eating and got into the habit of reading ingredient labels. The more I read, the more I realized that the food environment here was very different from what I had grown up with.</p>
+      <p>That habit stayed with me when I became a mother.</p>
+      <p>When I started feeding my children, I found myself reading their labels just as carefully. I was surprised by how much junk actually makes it into commercial baby food, hidden sugars under names most parents wouldn't recognize, thickeners, fillers, and additives that offer no real nutrition. When I looked at the baby food aisle, I often found myself thinking, I can make something better than this, and it doesn't have to be complicated.</p>
+      <p>The truth is, I'm not someone who wants to spend hours in the kitchen. I love homemade food. I love food that is hearty, nourishing, and made with good ingredients. But I also have a job, two young children, and a life outside the kitchen.</p>
+      <p>So I started figuring out how to make the foods I value as simple and practical as possible. That's what Nourished From Birth is about.</p>
+      <p>This is not about feeding your child perfectly every day. Real life is busy, kids are unpredictable, and some days meals are easier than others. If you serve one nourishing meal today, that matters. If your child eats nourishing food a few times this week, that matters too.</p>
+      <p>The goal is not to make every bite perfect. It is simply to make nourishing, real food the default as often as you reasonably can, and to replace more processed foods when it feels doable. My own children do not happily eat everything I put in front of them either. Some meals go well and some do not. I keep offering good food because what we do consistently over time matters more than any one meal.</p>
       <p>The Persian recipes on this site are not restaurant-level authentic. They're grandmother-level practical: fewer ingredients, simpler techniques, and the same comforting foods I grew up with. Someone should be able to look at the ingredient list and think "I already have almost everything I need." That's the goal.</p>
       <p>If you are just starting out, pick one recipe and make it this week. That is enough.</p>
       <p class="signature">Avishan</p>
