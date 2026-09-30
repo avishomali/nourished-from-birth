@@ -46,7 +46,8 @@
     .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
     .age-table tr:last-child td { border: none; }
     .age-table tr:nth-child(even) td { background: var(--warm-white); }
-    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
     .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
     .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
     .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
@@ -63,6 +64,7 @@
       .recipe-hero-info { padding: 2rem 1.5rem; }
       .recipe-main { padding: 2rem 1.5rem; }
       .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
     }
   </style>
   <script>
@@ -206,9 +208,15 @@
     </table>
 
     <h2 class="section-title">Storage</h2>
-    <div class="storage-item">
-      <h4>Make-Ahead Friendly</h4>
-      <p>These can be made ahead and reheated gently in a skillet or toaster oven.</p>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 3 days in an airtight container, stacked with a piece of parchment between each crepe. Reheat gently in a skillet or toaster oven.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 2 months. Freeze with parchment between each crepe so they don't stick together, then thaw in the fridge overnight and reheat gently in a skillet or toaster oven.</p>
+      </div>
     </div>
 
     <h2 class="section-title">Recipe Notes</h2>
