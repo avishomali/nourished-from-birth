@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warm-Spiced Beef & Bean Chili (Instant Pot) — Nourished From Birth</title>
+  <meta name="description" content="A hearty, mild Instant Pot beef chili made with soaked beans, tomato sauce, and warm spices like turmeric, cinnamon, coriander, and cardamom. Easy to adapt for babies, toddlers, and the whole family." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 2rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .warning-box { background: rgba(199,109,53,0.08); border-left: 4px solid var(--terracotta); padding: 1rem 1.2rem; border-radius: 0 1rem 1rem 0; margin: 0 0 2rem; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+    .warning-box strong { color: var(--terracotta); }
+    .combo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .combo-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .combo-item h4 { font-size: 1rem; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .combo-item p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; margin-bottom: 3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 320px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .combo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+  <meta property="og:title" content="Warm-Spiced Beef & Bean Chili (Instant Pot)" />
+  <meta property="og:description" content="A hearty, mild Instant Pot beef chili with soaked beans and warm spices, easy to adapt for babies, toddlers, and the whole family." />
+  <meta property="og:image" content="https://nourishedfrombirth.com/images/beef-bean-chili.webp" />
+  <meta property="og:url" content="https://nourishedfrombirth.com/pages/recipes/beef-bean-chili" />
+  <meta property="og:type" content="article" />
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/beef-bean-chili.webp" alt="Bowl of warm-spiced beef and bean chili with avocado and yogurt" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Slow-Cooked Family Meals</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Warm-Spiced Beef & Bean Chili</h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">A hearty beef chili made with soaked beans, tomato sauce, and warm spices like turmeric, coriander, cardamom, cinnamon, paprika, and fennel. It is mild enough for the whole family, with cayenne optional.</p>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Method</span><span class="meta-value">Instant Pot</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Time</span><span class="meta-value">35 to 40 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Plus</span><span class="meta-value">Overnight soak</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>1 lb ground beef</li>
+          <li>1 medium onion, chopped</li>
+          <li>1 cup dried beans, preferably a mix of kidney and pinto, soaked overnight</li>
+          <li>2 cans tomato sauce, 8 oz each</li>
+          <li>1 cup filtered water</li>
+          <li>2 bay leaves</li>
+          <li>1 tsp turmeric, divided</li>
+          <li>1 tsp ground cinnamon</li>
+          <li>½ tsp ground coriander</li>
+          <li>½ tsp paprika</li>
+          <li>⅛ tsp ground cardamom</li>
+          <li>¼ tsp fennel seeds, lightly crushed</li>
+          <li>⅛ tsp cayenne, optional</li>
+          <li>½ tsp black pepper</li>
+          <li>¾ to 1 tsp salt, or to taste</li>
+          <li>Butter, ghee, or another cooking fat, for browning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item">
+        <span class="step-number">1</span>
+        <span class="step-text">Cover the dried beans generously with filtered water and soak overnight (<a href="../learn/soaking-legumes.html" style="color: var(--burgundy);">why we soak legumes</a>). The next day, drain and rinse well.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">2</span>
+        <span class="step-text">Set the Instant Pot to Sauté and add a little butter, ghee, or cooking fat.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">3</span>
+        <span class="step-text">Add the onion and cook over medium heat until soft and translucent.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">4</span>
+        <span class="step-text">Add ½ teaspoon of the turmeric to the onion and stir for about 30 seconds.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">5</span>
+        <span class="step-text">Increase the heat to medium-high and add the ground beef.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">6</span>
+        <span class="step-text">Brown the beef well, breaking it apart as it cooks. Avoid stirring constantly. We want the meat to actually brown and develop flavor rather than steam or boil in its own juices.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">7</span>
+        <span class="step-text">Once the beef is browned, add the remaining ½ teaspoon turmeric, cinnamon, coriander, paprika, cardamom, fennel seeds, cayenne if using, black pepper, and salt. Stir for about 30 seconds.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">8</span>
+        <span class="step-text">Add the soaked and drained beans, tomato sauce, filtered water, and bay leaves.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">9</span>
+        <span class="step-text">Stir well, scraping the bottom of the pot so nothing is stuck.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">10</span>
+        <span class="step-text">Close the lid and cook on High Pressure for 15 minutes.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">11</span>
+        <span class="step-text">Let the pressure release naturally for 15 minutes, then carefully release any remaining pressure.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">12</span>
+        <span class="step-text">Remove the bay leaves.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">13</span>
+        <span class="step-text">Taste and adjust the salt or spices if needed.</span>
+      </li>
+      <li class="step-item">
+        <span class="step-number">14</span>
+        <span class="step-text">If you want a thicker chili, turn the Instant Pot back to Sauté and simmer uncovered for a few minutes.</span>
+      </li>
+    </ol>
+
+    <h2 class="section-title">Bean Notes</h2>
+    <div class="intro-block">
+      <strong>My favorite combination</strong>
+      Kidney and pinto beans. Kidney beans stay firmer, while pinto beans become a little softer and help thicken the chili. You can also use kidney and Great Northern, kidney and black, or pinto and black. I originally made this with kidney and Great Northern beans because that is what we had, and it worked well.
+    </div>
+
+    <h2 class="section-title">Using Canned Beans</h2>
+    <div class="intro-block">
+      <strong>Swap in about 2 cans (15 oz each), drained and rinsed</strong>
+      Reduce the water to about ½ cup, pressure cook for about 8 to 10 minutes, and use the same 10 to 15 minute natural release.
+    </div>
+
+    <div class="warning-box">
+      <strong>For little ones:</strong> Keep the cayenne very light or leave it out entirely. You can mash some of the beans into the chili and break the beef into smaller pieces depending on your child's eating skills.
+    </div>
+
+    <h2 class="section-title">Serving Ideas</h2>
+    <ul class="tips-list">
+      <li>Avocado</li>
+      <li>Full-fat yogurt or sour cream</li>
+      <li>Shredded cheese</li>
+      <li>Rice</li>
+      <li>Sourdough bread</li>
+      <li>Extra butter or ghee, if you like</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>9 to 12 months</strong></td>
+          <td>Leave out the cayenne, mash the beans well, and break the beef into very small pieces. Serve a spoonful with yogurt or avocado, and set aside their portion before adding extra salt.</td>
+        </tr>
+        <tr>
+          <td><strong>Toddlers</strong></td>
+          <td>Mash some of the beans for a thicker texture and serve with rice or sourdough bread for dipping.</td>
+        </tr>
+        <tr>
+          <td><strong>Family</strong></td>
+          <td>Add the cayenne if you like heat, and top with avocado, sour cream, or shredded cheese.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-item">
+      <h4>🧊 Fridge</h4>
+      <p>Up to 2 days in an airtight container. <a href="../learn/histamine-cooked-meat.html" style="color: var(--burgundy);">Why we keep cooked meat for 2 days only.</a> Reheat gently, adding a splash of filtered water if the chili has thickened.</p>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item">
+        <span class="nourish-icon">🥩</span>
+        <div class="nourish-title">Ground Beef</div>
+        <div class="nourish-desc">A good source of iron, zinc, and B12, and an easy way to serve beef to little ones</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🫘</span>
+        <div class="nourish-title">Soaked Beans</div>
+        <div class="nourish-desc">Plant protein and fiber, soaked overnight in the traditional way before cooking</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🍅</span>
+        <div class="nourish-title">Tomato</div>
+        <div class="nourish-desc">Adds gentle sweetness and body to the chili, and pairs well with the warm spices</div>
+      </div>
+      <div class="nourish-item">
+        <span class="nourish-icon">🌿</span>
+        <div class="nourish-title">Warm Spices</div>
+        <div class="nourish-desc">Turmeric, cinnamon, coriander, and cardamom add flavor and depth without making it spicy</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Ancestral nutrition made practical for busy families.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li><li><a href="../shop.html">Shop</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="../learn/soaking-legumes.html">Gut Health</a></li><li><a href="../learn/weston-a-price.html">Weston A. Price</a></li><li><a href="babys-first-meat-stock.html">Meat Stock & Broths</a></li><li><a href="../recipes.html#first-foods">First Foods</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
