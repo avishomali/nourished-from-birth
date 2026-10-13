@@ -220,8 +220,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://nourishedfrombirth.com/pages/recipes/beef-bean-chili</loc>
-</url>
+    <loc>https://nourishedfrombirth.com/pages/recipes/beef-bean-chili</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Learn pages -->
   <url>
