@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian-Style Braised Lamb Heart — Nourished From Birth</title>
+  <meta name="description" content="A tender, slow-braised lamb heart simmered with onions, garlic, and warming Persian spices until melt-in-your-mouth soft. Family-friendly from 9 months." />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥣</text></svg>" />
+  <style>
+    .recipe-page { padding-top: 70px; }
+    .recipe-hero-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+    .recipe-hero-image { position: relative; overflow: hidden; }
+    .recipe-hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .recipe-hero-info { background: var(--cream); padding: 3.5rem 3.5rem; display: flex; flex-direction: column; justify-content: center; border-bottom: 1px solid var(--border); }
+    .recipe-hero-info .label { margin-bottom: 0.8rem; display: block; }
+    .age-badge { display: inline-flex; align-self: flex-start; background: var(--sage); color: white; padding: 0.3rem 0.9rem; border-radius: 2rem; font-family: 'Jost', sans-serif; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .recipe-hero-info h1 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1.5rem; color: var(--dark-brown); line-height: 1.15; }
+    .recipe-meta-strip { display: flex; gap: 1.5rem; flex-wrap: wrap; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 1.8rem; }
+    .recipe-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
+    .meta-value { font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 500; color: var(--dark-brown); }
+    .hero-ingredients h2 { font-size: 0.75rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--burgundy); }
+    .ingredients-list { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .ingredients-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.1rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .ingredients-list li:last-child { border: none; }
+    .ingredients-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .optional-label { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin: 0.8rem 0 0.5rem; display: block; }
+    .source-note { background: rgba(128,0,32,0.05); border-left: 3px solid var(--burgundy); padding: 0.7rem 1rem; border-radius: 0 0.5rem 0.5rem 0; font-size: 1rem; font-style: italic; color: var(--text-secondary); margin-top: 1rem; }
+    .recipe-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section-title { font-size: 0.8rem; font-family: 'Jost', sans-serif; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--burgundy); margin-bottom: 1.5rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--burgundy); }
+    .intro-block { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem; margin-bottom: 3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; }
+    .intro-block strong { color: var(--dark-brown); display: block; margin-bottom: 0.5rem; }
+    .steps-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .step-item { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .step-number { background: var(--burgundy); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 500; flex-shrink: 0; margin-top: 0.15rem; }
+    .step-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); padding-top: 0.2rem; }
+    .serving-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .serving-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); display: flex; gap: 0.6rem; align-items: flex-start; }
+    .serving-list li:last-child { border: none; }
+    .serving-list li::before { content: '·'; color: var(--terracotta); font-weight: bold; flex-shrink: 0; font-size: 1.2rem; line-height: 1.2; }
+    .age-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; }
+    .age-table th { background: var(--burgundy); color: white; padding: 0.7rem 1.2rem; text-align: left; font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .age-table td { padding: 0.9rem 1.2rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); vertical-align: top; font-size: 1.05rem; line-height: 1.6; }
+    .age-table tr:last-child td { border: none; }
+    .age-table tr:nth-child(even) td { background: var(--warm-white); }
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 3rem; }
+    .storage-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; }
+    .storage-item h4 { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.4rem; }
+    .storage-item p { font-size: 1rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+    .tips-list { list-style: none; padding: 0; margin-bottom: 3rem; }
+    .tips-list li { padding: 0.7rem 0; border-bottom: 1px solid var(--border); font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
+    .tips-list li:last-child { border: none; }
+    .fun-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+    .fun-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; }
+    .nourish-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+    .nourish-item { background: var(--warm-white); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem; text-align: center; }
+    .nourish-icon { font-size: 1.8rem; margin-bottom: 0.5rem; display: block; }
+    .nourish-title { font-family: 'Jost', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .nourish-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .recipe-hero-split { grid-template-columns: 1fr; }
+      .recipe-hero-image { height: 380px; }
+      .recipe-hero-info { padding: 2rem 1.5rem; }
+      .recipe-main { padding: 2rem 1.5rem; }
+      .fun-grid { grid-template-columns: 1fr; }
+      .nourish-grid { grid-template-columns: repeat(2, 1fr); }
+      .storage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er; s[er] = s[er] || function () { (s[er].q = s[er].q || []).push(arguments) }, s[er].l = 1 * new Date();
+    s[er].on = function (event, callback) { s[er].listeners = s[er].listeners || {}; (s[er].listeners[event] = s[er].listeners[event] || []).push(callback); };
+    var a = e.createElement(n), m = e.getElementsByTagName(n)[0]; a.async = 1; a.src = d; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('c55b498fbe1031')
+  </script>
+</head>
+<body class="recipe-page">
+
+  <nav>
+    <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="../start-here.html">Start Here</a></li>
+      <li><a href="../recipes.html">Recipes</a></li>
+      <li><a href="../learn.html">Learn</a></li>
+      <li><a href="../../index.html#newsletter" class="nav-cta">Free Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="recipe-hero-split">
+    <div class="recipe-hero-image">
+      <img src="../../images/braised-lamb-heart.webp" alt="Persian-style braised lamb heart in a rich golden broth with onions and herbs" />
+    </div>
+    <div class="recipe-hero-info">
+      <span class="label">Slow-Cooked Family Meals · Persian Tradition</span>
+      <span class="age-badge">✓ 9 Months+</span>
+      <h1>Persian-Style Braised Lamb Heart</h1>
+      <div class="recipe-meta-strip">
+        <div class="recipe-meta-item"><span class="meta-label">Prep</span><span class="meta-value">15 min</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Cook</span><span class="meta-value">2½–3 hrs</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Serves</span><span class="meta-value">4</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Age</span><span class="meta-value">9 months+</span></div>
+        <div class="recipe-meta-item"><span class="meta-label">Storage</span><span class="meta-value">2 days fridge / 3 months freezer</span></div>
+      </div>
+      <div class="hero-ingredients">
+        <h2>Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2 lamb hearts (about 1 to 1½ lbs)</li>
+          <li>2 tbsp grass-fed butter, ghee, or tallow</li>
+          <li>1 large yellow onion, thinly sliced</li>
+          <li>4 garlic cloves, minced</li>
+          <li>1 tsp ground turmeric</li>
+          <li>¼ tsp ground cinnamon</li>
+          <li>2 bay leaves</li>
+          <li>2 cups homemade beef or lamb broth</li>
+          <li>1 tbsp fresh lemon juice</li>
+          <li>1 tsp sea salt (omit for babies under 12 months)</li>
+          <li>¼ tsp black pepper (optional)</li>
+        </ul>
+        <span class="optional-label">Optional</span>
+        <ul class="ingredients-list">
+          <li>A few saffron strands bloomed in 2 tbsp warm broth</li>
+          <li>1 tbsp tomato paste (adds richness)</li>
+        </ul>
+        <div class="source-note">Lamb heart is a muscle — not a filtering organ like the liver or kidneys. It does not accumulate toxins, making it one of the most approachable organ meats for families new to nose-to-tail cooking.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-main">
+
+    <div class="intro-block">
+      <strong>Why lamb heart?</strong>
+      Lamb heart is one of the most overlooked cuts of meat — and one of the most rewarding once you try it. It is milder than beef heart, naturally tender when braised low and slow, and rich in nutrients that are difficult to find in muscle meat alone. Because the heart is a muscle rather than a filtering organ, it has a clean, deep flavor that pairs beautifully with the simple Persian spices that have complemented it for centuries. Slow braising transforms it completely — what starts as a firm, dense cut becomes melt-in-your-mouth tender after two and a half to three hours of gentle cooking.
+    </div>
+
+    <h2 class="section-title">Instructions</h2>
+    <ol class="steps-list">
+      <li class="step-item"><span class="step-number">1</span><span class="step-text">Trim the lamb hearts — remove excess fat, valves, and any tough connective tissue. Keep the hearts whole or halved for braising. Rinse well and pat dry. Braise whole and shred or chop after cooking for the best texture, especially for younger babies.</span></li>
+      <li class="step-item"><span class="step-number">2</span><span class="step-text">Heat the butter, ghee, or tallow in a Dutch oven over medium-high heat. Brown the hearts for about 2 minutes per side. Do not cook through — you are building color and flavor only. Transfer to a plate.</span></li>
+      <li class="step-item"><span class="step-number">3</span><span class="step-text">Reduce the heat to medium. Add the sliced onion and cook for 8 to 10 minutes until golden. Add the garlic and turmeric and cook for another 30 seconds. If using tomato paste, stir it in now and cook for 1 minute.</span></li>
+      <li class="step-item"><span class="step-number">4</span><span class="step-text">Return the hearts to the pot. Add the broth, bay leaves, cinnamon, and saffron if using. Bring to a gentle simmer.</span></li>
+      <li class="step-item"><span class="step-number">5</span><span class="step-text">Cover and cook on low heat for 2½ to 3 hours, until completely fork tender and melt-in-your-mouth soft. Stir occasionally and add a splash of broth if the pot looks dry. The longer cook time ensures the texture is appropriate for younger children.</span></li>
+      <li class="step-item"><span class="step-number">6</span><span class="step-text">Remove the hearts and let cool slightly. Trim away any remaining tough connective tissue. Finely chop, shred, or slice depending on age and preference. Return to the braising liquid.</span></li>
+      <li class="step-item"><span class="step-number">7</span><span class="step-text">Remove the bay leaves. Stir in the lemon juice. Season with salt and pepper if serving older children or adults.</span></li>
+    </ol>
+
+    <h2 class="section-title">Serving Suggestions</h2>
+    <ul class="serving-list">
+      <li>Buttered Persian saffron rice</li>
+      <li>Mashed sweet potatoes</li>
+      <li>Creamy mashed potatoes</li>
+      <li>Roasted carrots or root vegetables</li>
+      <li>Steamed green beans</li>
+      <li>Plain yogurt alongside</li>
+      <li>Fresh herbs (sabzi khordan)</li>
+    </ul>
+
+    <h2 class="section-title">Adaptations by Age</h2>
+    <table class="age-table">
+      <thead><tr><th>Age</th><th>How to serve</th></tr></thead>
+      <tbody>
+        <tr><td><strong>9–12 months</strong></td><td>Omit salt. Braise until extremely tender (closer to 3 hours). Finely mince or pulse briefly in a food processor. Mix with mashed potatoes, sweet potato, squash, or rice. Add a spoonful of the braising broth to keep it moist.</td></tr>
+        <tr><td><strong>12–18 months</strong></td><td>Omit salt. Finely chop the braised heart into very small pieces. Mix into rice, mashed vegetables, or soft stews.</td></tr>
+        <tr><td><strong>18 months+</strong></td><td>Serve as small soft bite-sized pieces alongside rice and vegetables. The meat will be tender enough to cut with a spoon.</td></tr>
+        <tr><td><strong>Family</strong></td><td>Serve with all accompaniments seasoned with salt and pepper to taste. A squeeze of extra lemon before serving brightens the whole dish.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-title">Storage</h2>
+    <div class="storage-grid">
+      <div class="storage-item">
+        <h4>🧊 Fridge</h4>
+        <p>Up to 2 days in an airtight container. The flavor deepens overnight — this dish is often better the next day.</p>
+      </div>
+      <div class="storage-item">
+        <h4>❄️ Freezer</h4>
+        <p>Up to 3 months. Freeze the braised heart with its cooking liquid in portioned containers. Reheat gently over low heat.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Tips</h2>
+    <ul class="tips-list">
+      <li>Braise the hearts whole or in halves — do not cube before cooking. Shredding or chopping after braising gives a better texture and prevents smaller pieces from drying out.</li>
+      <li>Trimming the valves and connective tissue properly before cooking is the most important prep step — it ensures a clean flavor and tender result.</li>
+      <li>Low and slow is non-negotiable. Three hours at a gentle simmer produces melt-in-your-mouth tenderness. Rushing the braise results in tough, chewy meat.</li>
+      <li>Brown the heart well before braising — this step builds color and depth of flavor that carries through the entire dish.</li>
+      <li>The dish tastes better the next day after the flavors have had time to meld overnight in the fridge.</li>
+      <li>Ask your butcher to trim the hearts for you if you are new to preparing organ meats — most are happy to help.</li>
+    </ul>
+
+    <h2 class="section-title">Making it Fun</h2>
+    <div class="fun-grid">
+      <div class="fun-item">🍚 <strong>Mix it in</strong> — for younger babies, finely mince the braised heart and mix into familiar foods like rice, mashed potatoes, or soft vegetables. The mild flavor and tender texture blend in easily without changing the dish significantly.</div>
+      <div class="fun-item">🫙 <strong>Introduce gradually</strong> — start with a small amount mixed into a meal they already love. Lamb heart has a mild, meaty flavor that most children accept easily once they have tried it, especially after slow braising softens any sharpness.</div>
+      <div class="fun-item">🌿 <strong>Save the broth</strong> — use homemade lamb or beef broth for the richest result. The braising liquid becomes a golden, deeply flavored sauce worth spooning over rice or potatoes for the whole family.</div>
+    </div>
+
+    <h2 class="section-title">Why This Nourishes</h2>
+    <div class="nourish-grid">
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">CoQ10</div><div class="nourish-desc">Heart is one of the richest dietary sources of coenzyme Q10 — a powerful antioxidant that supports cellular energy production</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🩸</span><div class="nourish-title">Iron</div><div class="nourish-desc">Rich in heme iron — the most absorbable form — essential for brain development and preventing iron deficiency</div></div>
+      <div class="nourish-item"><span class="nourish-icon">💪</span><div class="nourish-title">Zinc</div><div class="nourish-desc">Supports immune function, healthy growth, and brain development throughout the first years of life</div></div>
+      <div class="nourish-item"><span class="nourish-icon">⚡</span><div class="nourish-title">Vitamin B12</div><div class="nourish-desc">Essential for nervous system development and healthy red blood cell production — abundant in heart muscle</div></div>
+      <div class="nourish-item"><span class="nourish-icon">🌿</span><div class="nourish-title">Selenium</div><div class="nourish-desc">An important antioxidant mineral that supports thyroid function and immune health — often lacking in modern diets</div></div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 1.5rem 6rem; text-align: center;">
+    <p style="font-size: 0.8rem; color: var(--text-light); line-height: 1.7; max-width: 800px; margin: 0 auto;">
+      The content on this site is based on personal experience and research and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your pediatrician or a qualified healthcare provider before introducing new foods or making changes to your baby's diet.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../../index.html" class="nav-logo">Nourished From Birth<span>Ancestral Wisdom · Real Food</span></a>
+        <p>Real food and ancestral wisdom for the journey from pregnancy through toddlerhood — from Avishan, a mom of two figuring it out alongside you.</p>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="../start-here.html">Start Here</a></li><li><a href="../recipes.html">Recipes</a></li><li><a href="../learn.html">Learn</a></li></ul></div>
+      <div class="footer-col"><h4>Topics</h4><ul><li><a href="#">Gut Health</a></li><li><a href="#">Meat Stock & Broths</a></li><li><a href="#">First Foods</a></li><li><a href="#">Toddler Meals</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="../../index.html#newsletter">Newsletter</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nourished From Birth. All rights reserved.</p>
+      <p>Made with love, bone broth, and a lot of research.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
